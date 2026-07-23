@@ -40,27 +40,39 @@ def google_news_rss(query: str) -> str:
 RSS_SOURCES = {
     "台股": [
         ("Yahoo奇摩股市-台股動態", "https://tw.stock.yahoo.com/rss?category=tw-market"),
-        ("鉅亨網-台股", google_news_rss("site:cnyes.com 台股 when:2d")),
+        ("鉅亨網-台股個股", google_news_rss("site:cnyes.com 台股 個股 when:2d")),
+        ("鉅亨網-科技產業", google_news_rss("site:cnyes.com 科技產業 when:2d")),
     ],
     "美股": [
         ("Yahoo奇摩股市-國際財經", "https://tw.stock.yahoo.com/rss?category=intl-markets"),
-        ("鉅亨網-美股", google_news_rss("site:cnyes.com 美股 when:2d")),
+        ("鉅亨網-美股個股", google_news_rss("site:cnyes.com 美股 個股 when:2d")),
+        ("鉅亨網-科技產業", google_news_rss("site:cnyes.com 科技產業 when:2d")),
     ],
     "AI": [
         ("TechCrunch-AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("VentureBeat-AI", "https://venturebeat.com/category/ai/feed/"),
-        ("數位時代-AI", google_news_rss("site:bnext.com.tw AI when:3d")),
+        ("OpenAI 官方新聞", "https://openai.com/news/rss.xml"),
+        ("Google DeepMind 官方部落格", "https://deepmind.google/blog/feed/basic/"),
+        ("NVIDIA 官方部落格", "https://blogs.nvidia.com/feed"),
+        ("SemiAnalysis", "https://www.semianalysis.com/feed"),
+        # 以下三家官方沒有公開 RSS，改用 Google 新聞限定該網站的方式抓取
+        ("Anthropic 官方新聞", google_news_rss("site:anthropic.com when:3d")),
+        ("Meta AI 官方部落格", google_news_rss("site:ai.meta.com when:3d")),
+        ("Reuters AI", google_news_rss("site:reuters.com AI when:2d")),
     ],
     "新創": [
         ("Y Combinator Blog", "https://www.ycombinator.com/blog/rss"),
         ("a16z", "https://a16z.com/feed/"),
         ("創業小聚", google_news_rss("site:meet.bnext.com.tw when:5d")),
+        ("數位時代-新創", google_news_rss("site:bnext.com.tw 新創 when:3d")),
+        # 紅杉資本官方沒有公開 RSS，改用 Google 新聞限定該網站的方式抓取
+        ("紅杉資本 Sequoia", google_news_rss("site:sequoiacap.com when:7d")),
     ],
 }
 
-# 總經新聞：一樣透過 Google 新聞抓鉅亨網的總經relevant新聞，鎖定Fed/CPI/非農等關鍵字
+# 總經新聞：只抓鉅亨網（依你的要求，不混入其他來源）
 MACRO_KEYWORDS_SOURCES = [
-    ("鉅亨網-總經", google_news_rss("site:cnyes.com (聯準會 OR Fed OR CPI OR 非農) when:3d")),
+    ("鉅亨網-總經", google_news_rss("site:cnyes.com (總經 OR 聯準會 OR Fed OR 央行 OR CPI OR 非農) when:2d")),
 ]
 
 TIMEZONE_OFFSET_HOURS = 8  # 台北時間 UTC+8
@@ -73,12 +85,30 @@ BROWSER_HEADERS = {
 }
 
 
+def is_published_yesterday(entry, now_tw: datetime.datetime):
+    """判斷這則新聞是否發布在「台北時間昨天」這一個完整日曆日內。
+    抓不到日期的項目一律視為不符合（不確定就不要顯示，避免顯示過期或無法驗證的新聞）。"""
+    parsed = entry.get("published_parsed") or entry.get("updated_parsed")
+    if not parsed:
+        return False
+    try:
+        dt_utc = datetime.datetime(*parsed[:6], tzinfo=datetime.timezone.utc)
+    except Exception:
+        return False
+    dt_tw = dt_utc + datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)
+    yesterday_tw = (now_tw - datetime.timedelta(days=1)).date()
+    return dt_tw.date() == yesterday_tw
+
+
 # ============================================================
 # 2. 抓 RSS 新聞（任何一個來源失敗都不會讓程式中斷）
 # ============================================================
 
-def fetch_rss_category(sources, max_per_source=8):
-    """抓一個分類底下所有來源的新聞，回傳 list of dict"""
+def fetch_rss_category(sources, max_per_source=20, max_keep_per_source=15, now_tw=None):
+    """抓一個分類底下所有來源的新聞，只保留「昨天」發布的項目，回傳 list of dict。
+    每個來源會先抓一批（max_per_source），過濾掉不是昨天的項目後，
+    最多保留 max_keep_per_source 篇；如果昨天實際的新聞不到這個數字，
+    就照實際數量顯示，不會為了湊數而放進不是昨天的新聞。"""
     items = []
     for source_name, url in sources:
         try:
@@ -90,7 +120,11 @@ def fetch_rss_category(sources, max_per_source=8):
             if not feed.entries:
                 print(f"[警告] 來源可能失效或格式不符，略過：{source_name} ({url})")
                 continue
+
+            kept = 0
             for entry in feed.entries[:max_per_source]:
+                if now_tw is not None and not is_published_yesterday(entry, now_tw):
+                    continue
                 items.append({
                     "id": len(items),
                     "source": source_name,
@@ -99,6 +133,10 @@ def fetch_rss_category(sources, max_per_source=8):
                     "published": entry.get("published", entry.get("updated", "")),
                     "summary": (entry.get("summary", "") or "")[:300],
                 })
+                kept += 1
+                if kept >= max_keep_per_source:
+                    break
+            print(f"[資訊] {source_name}：昨天的新聞共 {kept} 篇")
         except Exception as e:
             print(f"[警告] 抓取失敗，略過：{source_name} -> {e}")
             continue
@@ -283,7 +321,9 @@ def call_gemini(raw_data: dict) -> dict:
 
     system_instruction = """
 你是使用者的私人財經與科技新聞助理，語氣親切、像信任的朋友在跟他簡報，但內容要專業精準，不浮誇。
-我提供的原始資料裡，每一則新聞都有一個數字 "id"。
+我提供的原始資料裡，每一則新聞都有一個數字 "id"。這些新聞都已經事先篩選過，全部都是「昨天」真實發布的新聞，
+你的工作是【針對我提供的每一則新聞都各自寫一句摘要，全部列出、不要省略任何一則、不要合併多則成一則，
+也絕對不可以自己編造原始資料裡不存在的新聞】。如果某個分類的新聞很少，就照實際數量列出，不用湊數。
 請根據原始資料，整理成「今日晨報」，並且【只能輸出 JSON，不要有任何其他文字、不要markdown code fence】，格式如下：
 
 {
@@ -292,23 +332,22 @@ def call_gemini(raw_data: dict) -> dict:
     "night_futures_note": "根據原始資料整理台指期夜盤漲跌重點，若無資料請寫'今日無夜盤資料，建議至台灣期貨交易所官網查看'",
     "top_volume_note": "用一句話總結成交量最大的個股是誰、量有多大",
     "hot_sector_note": "用一句話總結最熱的類股是誰、漲了多少",
-    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要，用你自己的話說重點，不要照抄原文整段"} ... 從 taiwan_stock_news 裡選最多十條最重要的 ]
+    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要，用你自己的話說重點，不要照抄原文整段"} ... 把 taiwan_stock_news 裡「每一則」都列出 ]
   },
   "us_stocks": {
     "market_summary": "用1-2句話總結美股大盤走勢",
     "tsm_adr_note": "台積電ADR漲跌幅一句話重點",
-    "news": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 裡選最多十條 ]
+    "news": [ {"id": ..., "summary": "..."} ... 把 us_stock_news 裡「每一則」都列出 ]
   },
-  "macro": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 或 macro_news 裡挑最多三條，聚焦美國經濟數據或Fed動態 ],
-  "ai": [ {"id": ..., "summary": "..."} ... 從 ai_news 裡選最多十條，涵蓋LLM、垂直AI應用、AI工具 ],
-  "startup": [ {"id": ..., "summary": "..."} ... 從 startup_news 裡選最多八條 ],
+  "macro": [ {"id": ..., "summary": "..."} ... 把 macro_news 裡「每一則」都列出，這裡只會有鉅亨網總經新聞 ],
+  "ai": [ {"id": ..., "summary": "..."} ... 把 ai_news 裡「每一則」都列出 ],
+  "startup": [ {"id": ..., "summary": "..."} ... 把 startup_news 裡「每一則」都列出 ],
   "closing_note": "一句鼓勵/提醒的結語，15字內"
 }
 
 規則：
-- id 一定要是原始資料裡真實存在的數字，不可以自己編號。
-- 新聞條數不夠就盡量整理現有的，不用湊數，不要編造不存在的新聞。
-- 台股/美股新聞挑當天最重要、對投資人最有意義的。
+- id 一定要是原始資料裡真實存在的數字，不可以自己編號，也不可以跳過任何一個 id。
+- 台股/美股新聞來源包含個股新聞跟科技產業新聞，都要涵蓋。
 """
 
     user_content = json.dumps(raw_data, ensure_ascii=False)
@@ -758,11 +797,11 @@ def main():
 
     print("== 步驟 1/4：抓取新聞 RSS ==")
     raw_data = {
-        "taiwan_stock_news": fetch_rss_category(RSS_SOURCES["台股"]),
-        "us_stock_news": fetch_rss_category(RSS_SOURCES["美股"]),
-        "ai_news": fetch_rss_category(RSS_SOURCES["AI"]),
-        "startup_news": fetch_rss_category(RSS_SOURCES["新創"]),
-        "macro_news": fetch_rss_category(MACRO_KEYWORDS_SOURCES),
+        "taiwan_stock_news": fetch_rss_category(RSS_SOURCES["台股"], now_tw=now_tw),
+        "us_stock_news": fetch_rss_category(RSS_SOURCES["美股"], now_tw=now_tw),
+        "ai_news": fetch_rss_category(RSS_SOURCES["AI"], now_tw=now_tw),
+        "startup_news": fetch_rss_category(RSS_SOURCES["新創"], now_tw=now_tw),
+        "macro_news": fetch_rss_category(MACRO_KEYWORDS_SOURCES, now_tw=now_tw),
     }
 
     print("== 步驟 2/4：抓取行情數據 ==")
@@ -789,9 +828,7 @@ def main():
     digest["us_stocks"]["news"] = resolve_news_items(
         digest["us_stocks"].get("news", []), raw_data["us_stock_news"]
     )
-    digest["macro"] = resolve_news_items(
-        digest.get("macro", []), raw_data["us_stock_news"], raw_data["macro_news"]
-    )
+    digest["macro"] = resolve_news_items(digest.get("macro", []), raw_data["macro_news"])
     digest["ai"] = resolve_news_items(digest.get("ai", []), raw_data["ai_news"])
     digest["startup"] = resolve_news_items(digest.get("startup", []), raw_data["startup_news"])
 

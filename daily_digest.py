@@ -18,16 +18,10 @@ import sys
 import json
 import datetime
 import traceback
-import itertools
-import html as html_lib
-import re
 from urllib.parse import quote
-from email.utils import parsedate_to_datetime
 
 import requests
 import feedparser
-
-NEWS_ID_COUNTER = itertools.count(1)
 
 
 def google_news_rss(query: str) -> str:
@@ -43,55 +37,33 @@ def google_news_rss(query: str) -> str:
 #    如果之後想增加/替換來源，只要改這裡的網址即可，不用動其他程式碼
 # ============================================================
 
-# 新聞策略：
-# - Yahoo / 鉅亨：透過 Google News RSS 的 site: 限定，避免依賴不穩定的站內 RSS。
-# - 官方 AI / VC 媒體：有穩定 RSS 的直接用 RSS；其餘透過 Google News RSS 限定官方網域。
-# - when:1d 用來鎖定近一天；程式端還會再做時間過濾與去重。
 RSS_SOURCES = {
     "台股": [
-        ("Yahoo奇摩股市-台股個股", google_news_rss("site:tw.stock.yahoo.com 台股 個股 when:1d")),
-        ("Yahoo奇摩股市-台灣科技", google_news_rss("site:tw.stock.yahoo.com (科技 OR 半導體 OR 電子 OR AI OR 伺服器 OR 晶片) when:1d")),
-        ("鉅亨網-台股個股", google_news_rss("site:cnyes.com 台股 個股 when:1d")),
-        ("鉅亨網-台灣科技", google_news_rss("site:cnyes.com (台股 OR 台灣) (科技 OR 半導體 OR 電子 OR AI OR 伺服器 OR 晶片) when:1d")),
+        ("Yahoo奇摩股市-台股動態", "https://tw.stock.yahoo.com/rss?category=tw-market"),
+        ("鉅亨網-台股", google_news_rss("site:cnyes.com 台股 when:2d")),
     ],
     "美股": [
-        ("Yahoo Finance-美股個股", google_news_rss("site:finance.yahoo.com stocks company shares when:1d")),
-        ("Yahoo Finance-美國科技", google_news_rss("site:finance.yahoo.com (technology OR semiconductor OR AI OR chip OR cloud) stocks when:1d")),
-        ("鉅亨網-美股個股", google_news_rss("site:cnyes.com 美股 個股 when:1d")),
-        ("鉅亨網-美國科技", google_news_rss("site:cnyes.com 美股 (科技 OR 半導體 OR AI OR 晶片 OR 雲端 OR 伺服器) when:1d")),
+        ("Yahoo奇摩股市-國際財經", "https://tw.stock.yahoo.com/rss?category=intl-markets"),
+        ("鉅亨網-美股", google_news_rss("site:cnyes.com 美股 when:2d")),
     ],
     "AI": [
         ("TechCrunch-AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("VentureBeat-AI", "https://venturebeat.com/category/ai/feed/"),
-        ("Reuters-AI", google_news_rss("site:reuters.com artificial intelligence AI when:1d")),
-        ("OpenAI-News", google_news_rss("site:openai.com/news when:1d")),
-        ("Anthropic-News", google_news_rss("site:anthropic.com/news when:1d")),
-        ("Google-DeepMind", google_news_rss("site:deepmind.google/blog when:1d")),
-        ("Meta-AI", google_news_rss("site:ai.meta.com/blog when:1d")),
-        ("NVIDIA-AI", google_news_rss("site:blogs.nvidia.com AI when:1d")),
-        ("NVIDIA-Newsroom-AI", google_news_rss("site:nvidianews.nvidia.com AI when:1d")),
-        ("SemiAnalysis", google_news_rss("site:semianalysis.com when:1d")),
-        ("Y Combinator-AI", google_news_rss("site:ycombinator.com/blog (AI OR artificial intelligence OR LLM OR model) when:1d")),
+        ("數位時代-AI", google_news_rss("site:bnext.com.tw AI when:3d")),
     ],
     "新創": [
-        ("Y Combinator", google_news_rss("site:ycombinator.com/blog when:1d")),
-        ("創業小聚", google_news_rss("site:meet.bnext.com.tw when:1d")),
-        ("數位時代", google_news_rss("site:bnext.com.tw (新創 OR 創業 OR startup) when:1d")),
-        ("a16z", google_news_rss("site:a16z.com when:1d")),
-        ("Sequoia Capital", google_news_rss("site:sequoiacap.com when:1d")),
+        ("Y Combinator Blog", "https://www.ycombinator.com/blog/rss"),
+        ("a16z", "https://a16z.com/feed/"),
+        ("創業小聚", google_news_rss("site:meet.bnext.com.tw when:5d")),
     ],
 }
 
-# 總經只取鉅亨網。拆成多個 query，增加涵蓋率，再由程式去重。
+# 總經新聞：一樣透過 Google 新聞抓鉅亨網的總經relevant新聞，鎖定Fed/CPI/非農等關鍵字
 MACRO_KEYWORDS_SOURCES = [
-    ("鉅亨網-總經", google_news_rss("site:cnyes.com (聯準會 OR Fed OR 央行 OR 利率 OR 降息 OR 升息) when:1d")),
-    ("鉅亨網-總經", google_news_rss("site:cnyes.com (CPI OR PCE OR 非農 OR GDP OR PMI OR 通膨 OR 就業) when:1d")),
-    ("鉅亨網-總經", google_news_rss("site:cnyes.com (美元 OR 美債 OR 殖利率 OR 關稅 OR 匯率 OR 原油 OR 黃金) when:1d")),
+    ("鉅亨網-總經", google_news_rss("site:cnyes.com (聯準會 OR Fed OR CPI OR 非農) when:3d")),
 ]
 
-
 TIMEZONE_OFFSET_HOURS = 8  # 台北時間 UTC+8
-NEWS_LOOKBACK_HOURS = int(os.environ.get("NEWS_LOOKBACK_HOURS", "30"))  # 晨報預設抓近30小時，涵蓋美股前一交易日
 
 # 模擬真實瀏覽器的請求標頭，避免部分網站把伺服器的請求誤判為機器人而拒絕回應
 BROWSER_HEADERS = {
@@ -105,83 +77,31 @@ BROWSER_HEADERS = {
 # 2. 抓 RSS 新聞（任何一個來源失敗都不會讓程式中斷）
 # ============================================================
 
-def _entry_datetime(entry):
-    """盡量解析 RSS/Atom 的發布時間，回傳 aware UTC datetime；解析不到則回 None。"""
-    for key in ("published", "updated", "created"):
-        value = entry.get(key)
-        if not value:
-            continue
-        try:
-            dt = parsedate_to_datetime(value)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=datetime.timezone.utc)
-            return dt.astimezone(datetime.timezone.utc)
-        except Exception:
-            pass
-
-    # feedparser 有時提供 *_parsed time_struct
-    for key in ("published_parsed", "updated_parsed", "created_parsed"):
-        value = entry.get(key)
-        if value:
-            try:
-                return datetime.datetime(*value[:6], tzinfo=datetime.timezone.utc)
-            except Exception:
-                pass
-    return None
-
-
-def fetch_rss_category(sources, max_per_source=50, lookback_hours=NEWS_LOOKBACK_HOURS):
-    """抓分類新聞、去重，並優先保留近 lookback_hours 小時的項目。
-
-    注意：Google News 的 site: 搜尋與 RSS 無法保證枚舉網站「絕對全部」文章，
-    但此設計會把每個指定來源能抓到的近一天結果盡量完整保留，而不是先讓 LLM 刪減。
-    """
+def fetch_rss_category(sources, max_per_source=8):
+    """抓一個分類底下所有來源的新聞，回傳 list of dict"""
     items = []
-    seen = set()
-    now_utc = datetime.datetime.now(datetime.timezone.utc)
-    cutoff = now_utc - datetime.timedelta(hours=lookback_hours)
-
     for source_name, url in sources:
         try:
-            resp = requests.get(url, headers=BROWSER_HEADERS, timeout=20)
+            # 先用一般 requests 帶上瀏覽器標頭抓內容，避免被網站當成機器人擋掉，
+            # 再把抓到的內容交給 feedparser 解析
+            resp = requests.get(url, headers=BROWSER_HEADERS, timeout=15)
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
             if not feed.entries:
                 print(f"[警告] 來源可能失效或格式不符，略過：{source_name} ({url})")
                 continue
-
-            source_added = 0
             for entry in feed.entries[:max_per_source]:
-                title = entry.get("title", "").strip()
-                link = entry.get("link", "").strip()
-                if not title or not link:
-                    continue
-
-                dt = _entry_datetime(entry)
-                if dt is not None and dt < cutoff:
-                    continue
-
-                # 同一篇被不同 query 抓到時避免重複
-                dedupe_key = (re.sub(r"\s+", " ", title).lower(), link)
-                if dedupe_key in seen:
-                    continue
-                seen.add(dedupe_key)
-
                 items.append({
-                    "id": next(NEWS_ID_COUNTER),
+                    "id": len(items),
                     "source": source_name,
-                    "title": title,
-                    "link": link,
+                    "title": entry.get("title", "").strip(),
+                    "link": entry.get("link", ""),
                     "published": entry.get("published", entry.get("updated", "")),
-                    "summary": (entry.get("summary", "") or "")[:500],
+                    "summary": (entry.get("summary", "") or "")[:300],
                 })
-                source_added += 1
-
-            print(f"[新聞抓取] {source_name}: 新增 {source_added} 則")
         except Exception as e:
             print(f"[警告] 抓取失敗，略過：{source_name} -> {e}")
             continue
-
     return items
 
 
@@ -285,28 +205,11 @@ CAL_CALENDAR_ID = os.environ.get("GOOGLE_CALENDAR_ID", "primary")
 
 
 def fetch_todays_events(now_tw: datetime.datetime):
-    """抓今天（台北時間）的 Google Calendar 行程。
-
-    會先用 refresh token 換 access token，再讀取使用者 Calendar List，
-    並合併所有「已選取/可見」且可讀取的日曆，而不是只讀 primary。
-    這比較接近 Google Calendar 網頁上你實際看到的「我的行程」。
-    """
-    missing = []
-    if not CAL_CLIENT_ID:
-        missing.append("GOOGLE_CLIENT_ID")
-    if not CAL_CLIENT_SECRET:
-        missing.append("GOOGLE_CLIENT_SECRET")
-    if not CAL_REFRESH_TOKEN:
-        missing.append("GOOGLE_REFRESH_TOKEN")
-
-    if missing:
-        print(f"[日曆錯誤] 缺少 GitHub Actions 環境變數：{', '.join(missing)}")
-        print("[日曆錯誤] Python 本身無法讀取 GitHub Secret；workflow 必須把 Secrets 放進 env。")
+    """抓今天 (台北時間) 的 Google 日曆行程，依開始時間排序"""
+    if not (CAL_CLIENT_ID and CAL_CLIENT_SECRET and CAL_REFRESH_TOKEN):
+        print("[提示] 尚未設定 Google 日曆憑證，略過今日任務區塊")
         return []
-
     try:
-        print("[日曆] 已讀取 OAuth 環境變數，開始交換 Access Token")
-
         token_resp = requests.post(
             "https://oauth2.googleapis.com/token",
             data={
@@ -315,166 +218,44 @@ def fetch_todays_events(now_tw: datetime.datetime):
                 "refresh_token": CAL_REFRESH_TOKEN,
                 "grant_type": "refresh_token",
             },
-            timeout=20,
+            timeout=15,
         )
-        if token_resp.status_code != 200:
-            raise RuntimeError(
-                f"Refresh Token 換取 Access Token 失敗，HTTP {token_resp.status_code}: "
-                f"{token_resp.text[:800]}"
-            )
+        token_resp.raise_for_status()
+        access_token = token_resp.json()["access_token"]
 
-        access_token = token_resp.json().get("access_token")
-        if not access_token:
-            raise RuntimeError("Google Token API 沒有回傳 access_token")
-
-        headers = {"Authorization": f"Bearer {access_token}"}
-        tz_tw = datetime.timezone(datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS))
-
-        if now_tw.tzinfo is None:
-            now_tw_aware = now_tw.replace(tzinfo=tz_tw)
-        else:
-            now_tw_aware = now_tw.astimezone(tz_tw)
-
-        day_start = now_tw_aware.replace(hour=0, minute=0, second=0, microsecond=0)
+        day_start = now_tw.replace(hour=0, minute=0, second=0, microsecond=0)
         day_end = day_start + datetime.timedelta(days=1)
+        time_min = (day_start - datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)).isoformat() + "Z"
+        time_max = (day_end - datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)).isoformat() + "Z"
 
-        # 先確認 primary calendar，方便 GitHub Actions log 判斷 OAuth 到底綁哪個帳號
-        primary_resp = requests.get(
-            "https://www.googleapis.com/calendar/v3/calendars/primary",
-            headers=headers,
-            timeout=20,
+        resp = requests.get(
+            f"https://www.googleapis.com/calendar/v3/calendars/{CAL_CALENDAR_ID}/events",
+            headers={"Authorization": f"Bearer {access_token}"},
+            params={
+                "timeMin": time_min,
+                "timeMax": time_max,
+                "singleEvents": "true",
+                "orderBy": "startTime",
+            },
+            timeout=15,
         )
-        if primary_resp.status_code == 200:
-            primary_meta = primary_resp.json()
-            print(
-                "[日曆] OAuth 已成功連線。Primary Calendar："
-                f"id={primary_meta.get('id', '(unknown)')} / "
-                f"summary={primary_meta.get('summary', '(unknown)')} / "
-                f"timeZone={primary_meta.get('timeZone', '(unknown)')}"
-            )
-        else:
-            raise RuntimeError(
-                f"無法讀取 primary calendar，HTTP {primary_resp.status_code}: "
-                f"{primary_resp.text[:800]}"
-            )
-
-        # 讀取帳號中的 calendar list。Google Calendar UI 可能同時顯示多個日曆，
-        # 所以只抓 primary 會漏掉「其他日曆」中的行程。
-        calendars = []
-        page_token = None
-        while True:
-            params = {"maxResults": 250}
-            if page_token:
-                params["pageToken"] = page_token
-
-            list_resp = requests.get(
-                "https://www.googleapis.com/calendar/v3/users/me/calendarList",
-                headers=headers,
-                params=params,
-                timeout=20,
-            )
-            if list_resp.status_code != 200:
-                raise RuntimeError(
-                    f"Calendar List API 失敗，HTTP {list_resp.status_code}: "
-                    f"{list_resp.text[:800]}"
-                )
-
-            payload = list_resp.json()
-            calendars.extend(payload.get("items", []))
-            page_token = payload.get("nextPageToken")
-            if not page_token:
-                break
-
-        # 優先讀取使用者在 Google Calendar UI 中「已選取」的日曆。
-        selected_calendars = [
-            cal for cal in calendars
-            if cal.get("selected", False)
-            and cal.get("accessRole") in ("reader", "writer", "owner", "freeBusyReader")
-        ]
-
-        # 如果 API 沒有任何 selected=true，至少抓 primary，避免整段空掉。
-        if not selected_calendars:
-            selected_calendars = [
-                cal for cal in calendars
-                if cal.get("primary", False)
-            ]
-
-        print(
-            "[日曆] 將讀取以下日曆："
-            + ", ".join(
-                f"{cal.get('summary', '(無名稱)')}<{cal.get('id', '')}>"
-                for cal in selected_calendars
-            )
-        )
-
-        merged_events = []
-        seen = set()
-
-        for cal in selected_calendars:
-            cal_id = cal.get("id")
-            if not cal_id:
-                continue
-
-            events_resp = requests.get(
-                f"https://www.googleapis.com/calendar/v3/calendars/{quote(cal_id, safe='')}/events",
-                headers=headers,
-                params={
-                    "timeMin": day_start.isoformat(),
-                    "timeMax": day_end.isoformat(),
-                    "singleEvents": "true",
-                    "orderBy": "startTime",
-                    "timeZone": "Asia/Taipei",
-                    "maxResults": 250,
-                },
-                timeout=20,
-            )
-
-            if events_resp.status_code != 200:
-                print(
-                    f"[日曆警告] 無法讀取 {cal.get('summary', cal_id)}："
-                    f"HTTP {events_resp.status_code} {events_resp.text[:400]}"
-                )
-                continue
-
-            for item in events_resp.json().get("items", []):
-                # 略過已取消事件
-                if item.get("status") == "cancelled":
-                    continue
-
-                start_obj = item.get("start", {})
-                start_str = start_obj.get("dateTime", start_obj.get("date", ""))
-                time_label = "整天"
-
-                if "dateTime" in start_obj:
-                    dt = datetime.datetime.fromisoformat(start_str.replace("Z", "+00:00"))
-                    time_label = dt.astimezone(tz_tw).strftime("%H:%M")
-
-                dedupe_key = (
-                    item.get("iCalUID") or item.get("id"),
-                    start_str,
-                )
-                if dedupe_key in seen:
-                    continue
-                seen.add(dedupe_key)
-
-                merged_events.append({
-                    "time": time_label,
-                    "title": item.get("summary", "(無標題)"),
-                    "location": item.get("location", ""),
-                    "calendar": cal.get("summary", ""),
-                    "_sort": start_str,
-                })
-
-        merged_events.sort(key=lambda x: x.get("_sort", ""))
-        for event in merged_events:
-            event.pop("_sort", None)
-
-        print(f"[日曆] 今日共抓到 {len(merged_events)} 筆行程")
-        return merged_events
-
+        resp.raise_for_status()
+        events = []
+        for item in resp.json().get("items", []):
+            start = item.get("start", {})
+            start_str = start.get("dateTime", start.get("date", ""))
+            time_label = "整天"
+            if "dateTime" in start:
+                dt = datetime.datetime.fromisoformat(start_str.replace("Z", "+00:00"))
+                time_label = dt.astimezone(datetime.timezone(datetime.timedelta(hours=8))).strftime("%H:%M")
+            events.append({
+                "time": time_label,
+                "title": item.get("summary", "(無標題)"),
+                "location": item.get("location", ""),
+            })
+        return events
     except Exception as e:
-        print(f"[日曆錯誤] 日曆行程抓取失敗：{e}")
-        traceback.print_exc()
+        print(f"[警告] 日曆行程抓取失敗：{e}")
         return []
 
 
@@ -511,30 +292,23 @@ def call_gemini(raw_data: dict) -> dict:
     "night_futures_note": "根據原始資料整理台指期夜盤漲跌重點，若無資料請寫'今日無夜盤資料，建議至台灣期貨交易所官網查看'",
     "top_volume_note": "用一句話總結成交量最大的個股是誰、量有多大",
     "hot_sector_note": "用一句話總結最熱的類股是誰、漲了多少",
-    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要"} ... 從 taiwan_stock_news 中保留所有與個股或科技產業直接相關的當日新聞 ]
+    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要，用你自己的話說重點，不要照抄原文整段"} ... 從 taiwan_stock_news 裡選最多十條最重要的 ]
   },
   "us_stocks": {
     "market_summary": "用1-2句話總結美股大盤走勢",
     "tsm_adr_note": "台積電ADR漲跌幅一句話重點",
-    "news": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 中保留所有與個股或科技產業直接相關的當日新聞 ]
+    "news": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 裡選最多十條 ]
   },
-  "macro": [ {"id": ..., "summary": "..."} ... 只從 macro_news 整理所有當日重要總經新聞，不要使用 us_stock_news ],
-  "ai": [ {"id": ..., "summary": "..."} ... 從 ai_news 整理所有當日重要更新，優先保留官方模型/產品/研究發布與 Reuters 重大報導 ],
-  "startup": [ {"id": ..., "summary": "..."} ... 從 startup_news 整理所有當日官方新創/VC更新 ],
+  "macro": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 或 macro_news 裡挑最多三條，聚焦美國經濟數據或Fed動態 ],
+  "ai": [ {"id": ..., "summary": "..."} ... 從 ai_news 裡選最多十條，涵蓋LLM、垂直AI應用、AI工具 ],
+  "startup": [ {"id": ..., "summary": "..."} ... 從 startup_news 裡選最多八條 ],
   "closing_note": "一句鼓勵/提醒的結語，15字內"
 }
 
 規則：
 - id 一定要是原始資料裡真實存在的數字，不可以自己編號。
 - 新聞條數不夠就盡量整理現有的，不用湊數，不要編造不存在的新聞。
-- 台股與美股：不要只挑少數新聞；只要與上市個股或科技產業直接相關，就應保留。
-- 總經：只能使用 macro_news，macro_news 本身只包含鉅亨網來源。
-- AI：來源要多元，包含 TechCrunch、VentureBeat、Reuters、OpenAI、Anthropic、Google DeepMind、Meta AI、NVIDIA、SemiAnalysis、Y Combinator。
-- 新創：若 YC、創業小聚、數位時代、a16z、Sequoia 當日有資料，至少保留該來源一則。
 - 台股/美股新聞挑當天最重要、對投資人最有意義的。
-- 若 taiwan_stock_news 中存在 source 以「鉅亨網」開頭的新聞，台股 news 至少選 1 則鉅亨網。
-- 若 us_stock_news 中存在 source 以「鉅亨網」開頭的新聞，美股 news 至少選 1 則鉅亨網。
-- macro_news 若有資料，macro 優先選 macro_news，且至少選 1 則鉅亨網總經新聞。
 """
 
     user_content = json.dumps(raw_data, ensure_ascii=False)
@@ -577,96 +351,6 @@ def resolve_news_items(gemini_items, *source_lists):
             "link": original["link"],
         })
     return resolved
-
-
-def _plain_text(value: str) -> str:
-    """把 RSS 原始摘要清成可直接顯示的短文字。"""
-    value = value or ""
-    value = re.sub(r"<[^>]+>", " ", value)
-    value = html_lib.unescape(value)
-    value = re.sub(r"\s+", " ", value).strip()
-    return value[:120]
-
-
-def ensure_source_coverage(resolved_items, raw_items, required_source_prefixes, max_items=10):
-    """如果 Gemini 沒挑到指定來源，就從原始 RSS 補一則，避免整個來源被 AI 選文邏輯淘汰。"""
-    result = list(resolved_items or [])
-    existing_sources = {item.get("source", "") for item in result}
-
-    for prefix in required_source_prefixes:
-        if any(src.startswith(prefix) for src in existing_sources):
-            continue
-
-        candidate = next(
-            (item for item in raw_items if item.get("source", "").startswith(prefix)),
-            None,
-        )
-        if candidate:
-            fallback_summary = _plain_text(candidate.get("summary", ""))
-            if not fallback_summary:
-                fallback_summary = candidate.get("title", "")
-            result.append({
-                "title": candidate.get("title", ""),
-                "summary": fallback_summary,
-                "source": candidate.get("source", ""),
-                "link": candidate.get("link", ""),
-            })
-            existing_sources.add(candidate.get("source", ""))
-
-    return result[:max_items]
-
-
-def ensure_minimum_per_source(resolved_items, raw_items, min_per_source=5, max_total=200):
-    """確保每個實際抓到新聞的來源，最終頁面至少保留 min_per_source 篇。
-
-    若某來源在指定時間範圍內本來就少於 min_per_source 篇，則全部保留，
-    不會為了湊數而捏造不存在的新聞。
-    """
-    result = list(resolved_items or [])
-
-    # 已經顯示的標題，避免重複
-    shown_keys = {
-        (item.get("source", ""), re.sub(r"\s+", " ", item.get("title", "")).strip().lower())
-        for item in result
-    }
-
-    # 依 raw_items 中實際存在的來源分組
-    source_groups = {}
-    for item in raw_items or []:
-        source_groups.setdefault(item.get("source", ""), []).append(item)
-
-    for source_name, candidates in source_groups.items():
-        current_count = sum(1 for item in result if item.get("source") == source_name)
-        needed = max(0, min(min_per_source, len(candidates)) - current_count)
-
-        if needed <= 0:
-            continue
-
-        for candidate in candidates:
-            key = (
-                candidate.get("source", ""),
-                re.sub(r"\s+", " ", candidate.get("title", "")).strip().lower(),
-            )
-            if key in shown_keys:
-                continue
-
-            fallback_summary = _plain_text(candidate.get("summary", ""))
-            if not fallback_summary:
-                fallback_summary = candidate.get("title", "")
-
-            result.append({
-                "title": candidate.get("title", ""),
-                "summary": fallback_summary,
-                "source": candidate.get("source", ""),
-                "link": candidate.get("link", ""),
-            })
-            shown_keys.add(key)
-            needed -= 1
-
-            if needed <= 0 or len(result) >= max_total:
-                break
-
-    return result[:max_total]
 
 
 # ============================================================
@@ -1081,13 +765,6 @@ def main():
         "macro_news": fetch_rss_category(MACRO_KEYWORDS_SOURCES),
     }
 
-    # GitHub Actions 日誌直接顯示每個分類實際抓到哪些來源，避免「有設定但沒抓到」看不出原因。
-    for category_key in ["taiwan_stock_news", "us_stock_news", "macro_news", "ai_news", "startup_news"]:
-        source_counts = {}
-        for item in raw_data[category_key]:
-            source_counts[item["source"]] = source_counts.get(item["source"], 0) + 1
-        print(f"[新聞來源] {category_key}: {source_counts}")
-
     print("== 步驟 2/4：抓取行情數據 ==")
     raw_data["twse_top_volume"] = fetch_twse_top_volume()
     raw_data["twse_hot_sector"] = fetch_twse_hot_sector()
@@ -1113,60 +790,10 @@ def main():
         digest["us_stocks"].get("news", []), raw_data["us_stock_news"]
     )
     digest["macro"] = resolve_news_items(
-        digest.get("macro", []), raw_data["macro_news"]
+        digest.get("macro", []), raw_data["us_stock_news"], raw_data["macro_news"]
     )
     digest["ai"] = resolve_news_items(digest.get("ai", []), raw_data["ai_news"])
     digest["startup"] = resolve_news_items(digest.get("startup", []), raw_data["startup_news"])
-
-    # Gemini 可能因篇數或排序漏掉來源；只要原始抓取有資料，就至少保留該來源一則。
-    digest["taiwan_stocks"]["news"] = ensure_source_coverage(
-        digest["taiwan_stocks"]["news"],
-        raw_data["taiwan_stock_news"],
-        ["Yahoo", "鉅亨網"],
-        max_items=100,
-    )
-    digest["us_stocks"]["news"] = ensure_source_coverage(
-        digest["us_stocks"]["news"],
-        raw_data["us_stock_news"],
-        ["Yahoo", "鉅亨網"],
-        max_items=100,
-    )
-    digest["macro"] = ensure_source_coverage(
-        digest["macro"],
-        raw_data["macro_news"],
-        ["鉅亨網"],
-        max_items=50,
-    )
-    digest["ai"] = ensure_source_coverage(
-        digest["ai"],
-        raw_data["ai_news"],
-        ["TechCrunch", "VentureBeat", "Reuters", "OpenAI", "Anthropic", "Google-DeepMind",
-         "Meta-AI", "NVIDIA", "SemiAnalysis", "Y Combinator-AI"],
-        max_items=100,
-    )
-    digest["startup"] = ensure_source_coverage(
-        digest["startup"],
-        raw_data["startup_news"],
-        ["Y Combinator", "創業小聚", "數位時代", "a16z", "Sequoia"],
-        max_items=100,
-    )
-
-    # 每個來源至少顯示 5 篇；若該來源當日實際少於 5 篇，就全部顯示，不捏造新聞。
-    digest["taiwan_stocks"]["news"] = ensure_minimum_per_source(
-        digest["taiwan_stocks"]["news"], raw_data["taiwan_stock_news"], min_per_source=5
-    )
-    digest["us_stocks"]["news"] = ensure_minimum_per_source(
-        digest["us_stocks"]["news"], raw_data["us_stock_news"], min_per_source=5
-    )
-    digest["macro"] = ensure_minimum_per_source(
-        digest["macro"], raw_data["macro_news"], min_per_source=5
-    )
-    digest["ai"] = ensure_minimum_per_source(
-        digest["ai"], raw_data["ai_news"], min_per_source=5
-    )
-    digest["startup"] = ensure_minimum_per_source(
-        digest["startup"], raw_data["startup_news"], min_per_source=5
-    )
 
     print("== 步驟 3.5/4：抓取今日 Google 日曆行程 ==")
     calendar_events = fetch_todays_events(now_tw)

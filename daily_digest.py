@@ -85,19 +85,27 @@ BROWSER_HEADERS = {
 }
 
 
-def is_published_yesterday(entry, now_tw: datetime.datetime):
-    """判斷這則新聞是否發布在「台北時間昨天」這一個完整日曆日內。
-    抓不到日期的項目一律視為不符合（不確定就不要顯示，避免顯示過期或無法驗證的新聞）。"""
+def get_published_tw_date(entry, now_tw: datetime.datetime):
+    """取得這則新聞在台北時間的發布日期（date物件），抓不到就回傳 None"""
     parsed = entry.get("published_parsed") or entry.get("updated_parsed")
     if not parsed:
-        return False
+        return None
     try:
         dt_utc = datetime.datetime(*parsed[:6], tzinfo=datetime.timezone.utc)
     except Exception:
-        return False
+        return None
     dt_tw = dt_utc + datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)
+    return dt_tw.date()
+
+
+def is_published_yesterday(entry, now_tw: datetime.datetime):
+    """判斷這則新聞是否發布在「台北時間昨天」這一個完整日曆日內。
+    抓不到日期的項目一律視為不符合（不確定就不要顯示，避免顯示過期或無法驗證的新聞）。"""
+    published_date = get_published_tw_date(entry, now_tw)
+    if published_date is None:
+        return False
     yesterday_tw = (now_tw - datetime.timedelta(days=1)).date()
-    return dt_tw.date() == yesterday_tw
+    return published_date == yesterday_tw
 
 
 # ============================================================
@@ -122,21 +130,28 @@ def fetch_rss_category(sources, max_per_source=20, max_keep_per_source=15, now_t
                 continue
 
             kept = 0
+            skipped_dates = []
             for entry in feed.entries[:max_per_source]:
-                if now_tw is not None and not is_published_yesterday(entry, now_tw):
-                    continue
+                pub_date = get_published_tw_date(entry, now_tw) if now_tw is not None else None
+                if now_tw is not None:
+                    yesterday_tw = (now_tw - datetime.timedelta(days=1)).date()
+                    if pub_date != yesterday_tw:
+                        skipped_dates.append(str(pub_date) if pub_date else "無日期")
+                        continue
                 items.append({
                     "id": len(items),
                     "source": source_name,
                     "title": entry.get("title", "").strip(),
                     "link": entry.get("link", ""),
+                    "published_date": str(pub_date) if pub_date else "",
                     "published": entry.get("published", entry.get("updated", "")),
                     "summary": (entry.get("summary", "") or "")[:300],
                 })
                 kept += 1
                 if kept >= max_keep_per_source:
                     break
-            print(f"[資訊] {source_name}：昨天的新聞共 {kept} 篇")
+            print(f"[資訊] {source_name}：昨天的新聞共 {kept} 篇"
+                  + (f"，略過的日期有：{skipped_dates[:10]}" if skipped_dates else ""))
         except Exception as e:
             print(f"[警告] 抓取失敗，略過：{source_name} -> {e}")
             continue
@@ -388,6 +403,7 @@ def resolve_news_items(gemini_items, *source_lists):
             "summary": g_item.get("summary", ""),
             "source": original["source"],
             "link": original["link"],
+            "published_date": original.get("published_date", ""),
         })
     return resolved
 
@@ -730,10 +746,11 @@ def render_task_list(events):
 def render_news_list(items):
     html = ""
     for item in items:
+        date_label = f" · {item['published_date']}" if item.get("published_date") else ""
         html += f"""<li>
           <div class="news-title"><a href="{item.get('link','#')}" target="_blank">{item.get('title','')}</a></div>
           <div class="news-summary">{item.get('summary','')}</div>
-          <div class="news-source">{item.get('source','')}</div>
+          <div class="news-source">{item.get('source','')}{date_label}</div>
         </li>"""
     return html
 

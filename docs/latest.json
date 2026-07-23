@@ -1,174 +1,173 @@
 {
-  "greeting": "早安！今天市場震盪劇烈，喝杯咖啡配晨報，我們一起掌握動態！",
+  "greeting": "早安！今天市場震盪劇烈，我們一起來看看最新重點！",
   "taiwan_stocks": {
     "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
-    "top_volume_note": "成交量最大個股為群益臺灣加權正2，成交量超過3億股。",
-    "hot_sector_note": "盤面表現最熱門的類股為特選大蘋果報酬正向兩倍指數，大漲8.38%。",
+    "top_volume_note": "成交量最大個股為群益臺灣加權正2，成交量達300,616,657股。",
+    "hot_sector_note": "表現最熱類股為特選大蘋果報酬正向兩倍指數，大漲8.38%。",
     "news": [
       {
-        "title": "台股震盪！不敗教主點名2檔「大跌就買進」 這ETF報酬率贏0050達260％",
-        "summary": "美股四大指數漲跌互見，台股早盤雖強勢上揚但隨後震盪，專家點名特定ETF及標的在拉回時可留意。",
+        "title": "台股震盪！不敗教主點名2檔「大跌就買進」　這ETF報酬率贏0050達260％",
+        "summary": "美股費半微漲但台積電ADR收跌，台股早盤雖強勢上揚但隨後湧現賣壓翻黑震盪。",
         "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E9%9C%87%E7%9B%AA-%E4%B8%8D%E6%95%97%E6%95%99%E4%B8%BB%E9%BB%9E%E5%90%8D2%E6%AA%94-%E5%A4%A7%E8%B7%8C%E5%B0%B1%E8%B2%B7%E9%80%B2-%E9%80%99etf%E5%A0%B1%E9%85%AC%E7%8E%87%E8%B4%8F0050%E9%81%94260-035500326.html"
+        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E9%9C%87%E7%9B%AA-%E4%B8%8D%E6%95%97%E6%95%97%E6%95%97%E4%B8%BB%E9%BB%9E%E5%90%8D2%E6%AA%94-%E5%A4%A7%E8%B7%8C%E5%B0%B1%E8%B2%B7%E9%80%B2-%E9%80%99etf%E5%A0%B1%E9%85%AC%E7%8E%87%E8%B4%8F0050%E9%81%94260-035500326.html"
       },
       {
-        "title": "台積電赴美設廠掀人才需求！1學校攜ASU開六大科技課 設備跨海來台",
-        "summary": "因應台積電亞利桑那州廠擴大布局，國內高中與美國名校合作開設科技專題營，提前培養半導體人才。",
+        "title": "台積電赴美設廠掀人才需求！1學校攜ASU開六大科技課　設備跨海來台",
+        "summary": "因應台積電美國亞利桑那州廠擴廠的人才需求，國內高中與ASU合作開設跨域科技專題營。",
         "source": "Yahoo奇摩股市-台股動態",
         "link": "https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B5%B4%E7%BE%8E%E8%A8%AD%E5%BB%A0%E6%8E%80%E4%BA%BA%E6%89%8D%E9%9C%80%E6%B1%82-1%E5%AD%B8%E6%A0%A1%E6%94%9Casu%E9%96%8B%E5%85%AD%E5%A4%A7%E7%A7%91%E6%8A%80%E8%AA%B2-%E8%A8%AD%E5%82%99%E8%B7%A8%E6%B5%B7%E4%BE%86%E5%8F%B0-035000222.html"
       },
       {
         "title": "【Hot台股】大盤衝上4萬5後跳水600點...網哭「大媽救救」 分析師看法出爐",
-        "summary": "台股盤中攻高後遇短線賣壓跳水，指數翻黑引發投資人熱議，分析師認為多頭修正屬正常結構。",
+        "summary": "台股早盤突破45000點後隨即跳水大跌逾600點，引發投資人熱烈討論與對後市的擔憂。",
         "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E3%80%90hot%E5%8F%B0%E8%82%A1%E3%80%91%E5%A4%A7%E7%9B%A4%E8%A...-034901704.html"
+        "link": "https://tw.stock.yahoo.com/news/%E3%80%90hot%E5%8F%B0%E8%82%A1%E3%80%91%E5%A4%A7%E7%9B%A4%E8%A1%9D%E4%B8%8A4%E8%90%AC5%E5%BE%8C%E8%B7%B3%E6%B0%B4600%E9%BB%9E%E7%B6%B2%E5%93%AD%E3%80%8C%E5%A4%A7%E5%AA%BD%E6%95%91%E6%95%91%E3%80%8D-%E5%88%86%E6%9E%90%E5%B8%AB%E7%9C%8B%E6%B3%95%E5%87%BA%E7%88%90-034901704.html"
       },
       {
-        "title": "台積電擴廠搶人才！「這高中」與美國名校合開課 學生免出國玩頂級設備",
-        "summary": "薇閣中學引進亞利桑那州立大學專利教學設備，讓學生在台體驗機械手臂與邊緣AI等頂尖課程。",
+        "title": "台積電擴廠搶人才！「這高中」與美國名校合開課　學生免出國玩頂級設備",
+        "summary": "薇閣中學暑期引進美國亞利桑那州立大學專利教學設備，提前培養半導體實務人才。",
         "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%93%B4%E5%BB%A0%E6%90%B6%E4%BA%BA%E6%89%8D-%E9%80%99%E9%AB%98%E4%B8%AD-%E8%88%87%E7%BE%8E%E5%9C%8B%E5%90%8D%E6%A0%A1%E5%90%88%E9%96%8B%E8%AA%B2-%E5%AD%B8%E7%94%9F%E5%85%8D%E5%87%BA%E5%9C%8B%E7%8E%A9%E9%A0%82%E7%B4%9A%E8%A8%AD%E5%82%99-034700823.html"
+        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%93%B4%E5%BB%A0%E6%90%B6%E4%BA%BA%E6%89%8D-%E9%80%99%E9%AB%98%E4%B8%AD-%E8%88%87%E7%BE%8E%E5%9C%8B%E5%90%8D%E6%A0%A1%E5%90%88%E9%96%8B%E8%AA%B2-%E5%AD%B8%E7%94%9F%E5%85%8D%E5%87%B8%E5%9C%8B%E7%8E%A9%E9%A0%8D%E7%B4%9A%E8%A8%AD%E5%82%99-034700823.html"
       },
       {
         "title": "拉回是老天送的折價券？ 杜金龍點名「這時機」：台股衝6萬",
-        "summary": "資深分析師指出台股回檔僅為多頭修正，半導體基本面無虞，第三季震盪反而是長線布局良機。",
+        "summary": "分析師指出台股回檔屬多頭修正，第三季震盪是良機，看好未來挑戰5萬至6萬點。",
         "source": "Yahoo奇摩股市-台股動態",
         "link": "https://tw.stock.yahoo.com/news/%E6%8B%89%E5%9B%9E%E6%98%AF%E8%80%81%E5%A4%A7%E9%80%81%E7%9A%84%E6%8A%98%E5%83%B9%E5%88%B8-%E6%9D%9C%E9%87%91%E9%BE%8D%E9%BB%9E%E5%90%8D-%E9%80%99%E6%99%82%E6%A9%9F-%E5%8F%B0%E8%82%A1%E8%A1%9D6%E8%90%AC-033800907.html"
       },
       {
-        "title": "輝達、台積電、Micron入列！009827布局全球50檔算力菁英",
-        "summary": "玉山投信看好全球算力需求長線爆發，宣佈推出全台首檔全球算力相關ETF，涵蓋AI頂尖供應鏈。",
+        "title": "台積電之外還有它！外媒盛讚台灣「護國級」產業 全球搶著要",
+        "summary": "台灣無人機產業產值目標持續上看，外媒報導看好台灣在全球供應鏈的重要地位。",
         "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E8%BC%9D%E9%81%94-%E5%8F%B0%E7%A9%8D%E9%9B%BB-micron%E5%85%A5%E5%88%97-009827%E5%B8%83%E5%B1%80%E5%85%A8%E7%90%8350%E6%AA%94%E7%AE%97%E5%8A%9B%E8%8F%81%E8%8B%B1-033131786.html"
+        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E4%B9%8B%E5%A4%96%E9%82%84%E6%9C%89%E5%AE%83-%E5%A4%96%E5%AA%92%E7%9B%9B%E8%AE%9A%E5%8F%B0%E7%81%A3-%E8%AD%B7%E5%9C%8B%E7%B4%9A-%E7%94%A2%E6%A5%AD-%E5%85%A8%E7%90%83%E6%90%B6%E8%91%97%E8%A6%81-033556176.html"
       },
       {
-        "title": "【台股盤中】電金傳產弱勢 台股紅翻黑45000點得而復失",
-        "summary": "台股早盤突破45000點後賣壓湧現，電子、金融與傳產全面走弱，指數終場由紅翻黑回測。",
+        "title": "輝達、台積電、Micron入列！009827布局全球50檔算力菁英",
+        "summary": "投信看好全球算力需求，推出首檔全球算力ETF，網羅輝達與台積電等科技巨頭。",
         "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD-%E9%9B%BB%E9%87%91%E5%82%B3%E7%94%A2%E5%BC%B1%E5%8B%A2-%E5%8F%B0%E8%82%A1%E7%B4%85%E7%BF%BB%E9%BB%9145000%E9%BB%9E%E5%BE%97%E8%80%8C%E5%BE%A9%E5%A4%B1-030748959.html"
+        "link": "https://tw.news.yahoo.com/%E8%BC%9D%E9%81%94-%E5%8F%B0%E7%A9%8D%E9%9B%BB-micron%E5%85%A5%E5%88%97-009827%E5%88%83%E5%B1%80%E5%85%A8%E7%90%8350%E6%AA%94%E7%AE%97%E5%8A%9B%E8%8F%81%E8%8B%B1-033131786.html"
+      },
+      {
+        "title": "【台股盤中】電金傳產弱勢　台股紅翻黑45000點得而復失",
+        "summary": "台股盤中受短線賣壓影響由紅翻黑，失守45000點整數關卡。",
+        "source": "Yahoo奇摩股市-台股動態",
+        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD-%E9%9B%BB%E9%87%91%E5%82%B3%E7%94%A2%E5%BC%B1%E5%8B%A2-%E5%8F%B0%E8%82%A1%E7%B4%85%E7%9B%A4%E6%95%9145000%E9%BB%9E%E5%BE%97%E8%80%8C%E5%BE%A9%E5%A4%B1-030748959.html"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股四大指數漲跌互見，科技巨頭財報雖營收報喜但獲利受壓，牽動盤後走勢震盪。",
+    "market_summary": "美股四大指數漲跌互見，科技巨頭財報雖營收亮眼但獲利與現金流表現引發市場疑慮，盤後走跌。",
     "tsm_adr_note": "台積電ADR下跌0.80%，收在421.21美元。",
     "news": [
       {
         "title": "不當利用個資，韓國對TikTok及蘋果子公司處以總計破百億韓元罰款",
-        "summary": "韓國個人資訊保護委員會認定違規使用用戶個資，分別對TikTok與蘋果子公司祭出重罰。",
+        "summary": "韓國個人資訊保護委員會以違法利用個資為由，對TikTok及蘋果子公司開罰。",
         "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E4%B8%8D%E7%95%B6%E5%88%A9%E7%94%A8%E5%80%8B%E8%B3%87-%E9%9F%93%E5%9C%8B%E5%B0%8Dtiktok%E5%8F%8A%E8%98%8B%E6%9E%9C%E5%AD%90%E5%8%AC%E5%8F%B8%E8%99%95%E4%BB%A5%E7%B8%BD%E8%A8%88%E7%A0%B4%E7%99%BE%E5%84%84%E9%9F%93%E5%85%83%E7%BD%B0%E6%AC%BE-034711254.html"
+        "link": "https://tw.stock.yahoo.com/news/%E4%B8%8D%E7%95%B6%E5%88%A9%E7%94%A8%E5%80%8B%E8%B3%87-%E9%9F%93%E5%9C%8B%E5%B0%8Dtiktok%E5%8F%8A%E8%98%8B%E6%9E%9C%E5%AD%90%E5%85%AC%E5%8F%B8%E8%99%95%E4%BB%A5%E7%B8%BD%E8%A8%88%E7%A0%B4%E7%99%BE%E5%84%84%E9%9F%93%E5%85%83%E7%BD%B0%E6%AC%BE-034711254.html"
       },
       {
-        "title": "Q2營收雖開紅盤獲利卻遜色！Alphabet、特斯拉因「1理由」 盤後重挫4%",
-        "summary": "兩大巨頭第二季營收雖優於預期，但獲利表現及資本支出疑慮引發賣壓，盤後股價皆下跌逾4%。",
+        "title": "Q2營收雖開紅盤獲利卻遜色！Alphabet、特斯拉因「1理由」　盤後重挫4%",
+        "summary": "Alphabet與特斯拉第二季營收超越預期，但獲利與現金流隱憂導致盤後股價重挫。",
         "source": "Yahoo奇摩股市-國際財經",
         "link": "https://tw.news.yahoo.com/q2%E7%87%9F%E6%94%B6%E9%9B%96%E9%96%8B%E7%B4%85%E7%9B%A4%E7%8D%B2%E5%88%A9%E5%8D%BB%E9%81%9C%E8%89%B2-alphabet-%E7%89%B9%E6%96%AF%E6%8B%89%E5%9B%A0-1%E7%90%86%E7%94%B1-%E7%9B%A4%E5%BE%8C%E9%87%8D%E6%8C%AB4-033500218.html"
       },
       {
-        "title": "特斯拉獲利不如預期、自由現金流轉負... 馬斯克淡定：正佈局「二戰以來最快的工業擴張」",
-        "summary": "特斯拉Q2現金流轉負，馬斯克強調正全力推進大規模工業與產能擴張計畫以應對未來需求。",
+        "title": "輝達、台積電、Micron入列！009827布局全球50檔算力菁英",
+        "summary": "玉山投信發行全球算力ETF，聚焦AI產業鏈上游晶片與製造大廠。",
         "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.news.yahoo.com/%E7%89%B9%E6%96%AF%E6%8B%89%E7%8D%B2%E4%5F%8F%E4%B8%8D%E5%A6%82%E9%A0%90-%E8%87%...-032911275.html"
+        "link": "https://tw.news.yahoo.com/%E8%BC%9D%E9%81%94-%E5%8F%B0%E7%A9%8D%E9%9B%BB-micron%E5%85%A5%E5%88%97-009827%E5%88%83%E5%B1%80%E5%85%A8%E7%90%8350%E6%AA%94%E7%AE%97%E5%8A%9B%E8%8F%81%E8%8B%B1-033131786.html"
+      },
+      {
+        "title": "特斯拉獲利不如預期、自由現金流轉負... 馬斯克淡定：正佈局「二戰以來最快的工業擴張」",
+        "summary": "特斯拉Q2現金流轉負但營收年增逾2成，馬斯克強調正進行大規模工業擴張。",
+        "source": "Yahoo奇摩股市-國際財經",
+        "link": "https://tw.news.yahoo.com/%E7%89%B9%E6%96%AF%E6%8B%89%E7%8D%B2%E5%88%A9%E4%B8%8D%E5%A6%82%E9%A0%90%E6%9C%9F-%E8%87%AA%E7%94%B1%E7%8F%BE%E9%87%91%E6%B5%81%E8%BD%89%E8%B2%A0-%E9%A6%AC%E6%96%AF%E5%85%8B%E6%B7%A1%E5%AE%9A-%E6%AD%A3%E4%BD%88%E5%B1%80-%E4%BA%8C%E6%88%B0%E4%BB%A5%E4%BE%86%E6%9C%80%E5%BF%AB%E7%9A%84%E5%B7%A5%E6%A5%AD%E6%93%B4%E5%BC%B5-032911275.html"
       },
       {
         "title": "日本政府斥逾3,800億日圓扶植Noetra，採購2.75萬顆輝達Rubin晶片",
-        "summary": "日本新創Noetra獲得龐大資金挹注，計畫採購大量輝達最新晶片以建立自主AI基礎設施。",
+        "summary": "日本AI新創Noetra獲得政府重金扶植，將採購大量輝達最新Rubin晶片打造自主算力。",
         "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E6%94%BF%E5%BA%9C%E6%96%85%E9%80%BE3-800%E5%84%84%E6%97%A5%E5%9C%93%E6%89%B6%E6%A4%8Dnoetra-%E6%8E%A1%E8%B3%BC2-75%E8%90%AC%E9%A1%86%E8%BC%9D%E9%81%94rubin%E6%99%B6%E7%89%87-032630130.html"
+        "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E6%94%BF%E5%BA%9C%E6%96%A5%E9%80%BE3-800%E5%84%84%E6%97%A5%E5%9C%93%E6%89%B6%E6%A4%8Dnoetra-%E6%8E%A1%E8%B3%BC2-75%E8%90%AC%E9%A1%86%E8%BC%9D%E9%81%94rubin%E6%99%B6%E7%89%87-032630130.html"
       },
       {
         "title": "統一投信打造「美債文武雙全」新兵 00987D靠一招搶市",
-        "summary": "面對震盪債市，投信業者推出主動式美國公債ETF，透過量化增益策略搶佔市場資金。",
+        "summary": "統一投信推出主動式美國公債ETF，搶攻震盪債市的資金配置需求。",
         "source": "Yahoo奇摩股市-國際財經",
         "link": "https://tw.news.yahoo.com/%E7%B5%B1-%E6%8A%95%E4%BF%A1%E6%89%93%E9%80%A0-%E7%BE%8E%E5%82%B5%E6%96%87%E6%AD%A6%E9%9B%99%E5%85%A8-%E6%96%B0%E5%85%B5-00987d%E9%9D%A0-032254835.html"
       },
       {
         "title": "日本央行名義有效匯率指數創新低，日圓全面性疲軟引發通膨警訊",
-        "summary": "日圓兌一籃子貨幣指標跌至新低，全面疲軟態勢加劇了日本國內的輸入型通膨壓力。",
+        "summary": "日圓有效匯率指數創下歷史新低，全面性疲軟為日本帶來潛在通膨壓力。",
         "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E5%A4%AE%E8%A1%8C%E5%90%8D%E7%BE%A9%E6%9C%89%E6%95%88%E5%8C%AF%E7%8E%87%E6%95%B8%E5%89%B5%E6%96%B0%E4%BD%8E-%E6%97%A5%E5%9C%93%E5%85%A8%E9%9D%A2%E6%80%A7%E7%96%B2%E8%BB%9F%E5%BC%95%E7%99%BC%E9%80%9A%E8%86%A8%E8%AD%A6%E8%A8%8A-031816927.html"
+        "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E5%A4%AE%E8%8D%8C%E5%90%8D%E7%BE%A9%E6%9C%89%E6%95%88%E5%8C%AF%E7%8E%87%E6%8C%87%E6%95%B8%E5%89%B5%E6%96%B0%E4%BD%8E-%E6%97%A5%E5%9C%93%E5%85%A8%E9%9D%A2%E6%80%A7%E7%96%B2%E8%BB%9F%E5%BC%95%E7%99%BC%E9%80%88%E8%86%A8%E8%AD%A6%E8%A8%8A-031816927.html"
       },
       {
         "title": "特斯拉與SpaceX合併？ 馬斯克鬆口了 分析師點頭：機率有9成",
-        "summary": "馬斯克在財報會議上對特斯拉與SpaceX合併持開放態度，法人看好兩者業務重疊性高，合併機率高。",
+        "summary": "馬斯克在財報會議上對特斯拉與SpaceX合併抱持開放態度，法人看好其高度可能性。",
         "source": "Yahoo奇摩股市-國際財經",
         "link": "https://tw.stock.yahoo.com/news/%E7%89%B9%E6%96%AF%E6%8B%89%E8%88%87spacex%E5%90%88%E4%BD%B5-%E9%A6%AC%E6%96%AF%E5%85%8B%E9%AC%86%E5%8F%A3%E4%BA%86-%E5%88%86%E6%9E%90%E5%B8%AB%E9%BB%9E%E9%A0%AD-%E6%A9%9F%E7%8E%87%E6%9C%899%E6%88%90-031400498.html"
       }
     ]
   },
-  "macro": [
+  "macro": [],
+  "ai": [
+    {
+      "title": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+      "summary": "IBM執行長澄清AI支出並未排擠大型主機預算，先前股價大跌僅屬暫時性預算調整。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/"
+    },
     {
       "title": "Google justifies its massive AI spending with a booming cloud business",
-      "summary": "Google憑藉強勁的雲端業務營收支撐龐大的AI基礎設施資本支出，向市場證明AI投資的效益。",
+      "summary": "Google憑藉強勁的雲端業務與AI基礎設施需求，向市場證明龐大AI資本支出的合理性。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/"
     },
     {
       "title": "Treasury threatens sanctions after White House claims Moonshot distilled Anthropic’s Fable",
-      "summary": "美國白宮指控中國新創蒸餾Anthropic模型引發關注，美國財政部隨之威脅祭出制裁。",
+      "summary": "白宮指控中國新創蒸餾Anthropic模型引發華府爭論，美國財政部隨之威脅祭出制裁。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/"
     },
     {
-      "title": "日本央行名義有效匯率指數創新低，日圓全面性疲軟引發通膨警訊",
-      "summary": "日圓持續走貶壓抑匯率指數，牽動區域經濟及貨幣政策走向。",
-      "source": "Yahoo奇摩股市-國際財經",
-      "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E5%A4%AE%E8%A1%8C%E5%90%8D%E7%BE%A9%E6%9C%89%E6%95%88%E5%8C%AF%E7%8E%87%E6%95%B8%E5%89%B5%E6%96%B0%E4%BD%8E-%E6%97%A5%E5%9C%93%E5%85%A8%E9%9D%A2%E6%80%A7%E7%96%B2%E8%BB%9F%E5%BC%95%E7%99%BC%E9%80%9A%E8%86%A8%E8%AD%A6%E8%A8%8A-031816927.html"
-    }
-  ],
-  "ai": [
-    {
-      "title": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
-      "summary": "針對主機銷售疲軟引發的股價重挫，IBM執行長強調AI只是暫時排擠了企業硬體預算。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/"
-    },
-    {
       "title": "How OpenAI’s human mistake led to the AI-powered hack on Hugging Face",
-      "summary": "資安專家指出，OpenAI在隔離測試環境中的人為疏忽，意外促成了針對Hugging Face的AI駭客攻擊。",
+      "summary": "資安專家指出，OpenAI隔離測試環境中的人為疏失，意外導致Hugging Face遭受AI自動化攻擊。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
     },
     {
       "title": "Travis Kalanick’s robotics company raises $1.7B, led by a16z",
-      "summary": "前Uber執行長創辦的工業AI機器人公司Atoms獲得a16z領投高達17億美元資金。",
+      "summary": "Uber創辦人旗下的工業AI機器人公司Atoms獲得a16z領投高達17億美元資金。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/"
     },
     {
+      "title": "Yope raises $12.3M to build a private social network without algorithms or ads",
+      "summary": "社群新創Yope獲1230萬美元種子輪融資，主打無演算法與無廣告的私密親友社群。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/"
+    },
+    {
       "title": "Monday.com lays off hundreds to focus on AI",
-      "summary": "協作軟體平台Monday.com宣布裁員20%約630名員工，全面轉型聚焦AI工作平台。",
+      "summary": "專案管理平台Monday.com裁員20%約630人，全面轉型聚焦AI工作平台。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/"
     },
     {
       "title": "Arcee, a US open source AI lab, says Chinese models are not inherently dangerous",
-      "summary": "美國開源AI實驗室Arcee公開表示，中國開源模型在技術上不具備本質上的危險性。",
+      "summary": "美國開源AI實驗室Arcee公開表示，中國開源模型在技術上並非本身就帶有危險性。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/"
     },
     {
       "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
-      "summary": "企業採購AI基礎設施的速度遠快於其成本評估能力，導致算力支出面臨管理落差。",
+      "summary": "調查顯示多數企業購買AI算力基礎設施的速度，遠大於他們評估與控制成本的能力。",
       "source": "VentureBeat-AI",
       "link": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs"
     },
     {
-      "title": "The agent security gap: 54% of enterprises have already had an AI agent incident",
-      "summary": "過半數企業遭遇過AI代理安全事件，且多數仍允許代理共享憑證，資安防護亟待加強。",
-      "source": "VentureBeat-AI",
-      "link": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials"
-    },
-    {
-      "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
-      "summary": "Google正式重塑維持25年的經典搜尋框介面，全面迎向AI對話與全新互動時代。",
-      "source": "VentureBeat-AI",
-      "link": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think"
-    },
-    {
       "title": "Railway secures $100 million to challenge AWS with AI-native cloud infrastructure",
-      "summary": "雲端平台Railway獲1億美元融資，主打AI原生雲端架構以挑戰傳統AWS霸主地位。",
+      "summary": "雲端新創Railway募資1億美元，透過AI原生架構挑戰亞馬遜AWS的市場地位。",
       "source": "VentureBeat-AI",
       "link": "https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud"
     }
@@ -176,34 +175,46 @@
   "startup": [
     {
       "title": "Christopher Golda and Grey Baker Join YC as General Partners",
-      "summary": "知名新創加速器Y Combinator宣佈增添兩位普通合夥人，強化投資與輔導陣容。",
+      "summary": "Y Combinator 宣布任命 Christopher Golda 與 Grey Baker 為新任普通合夥人。",
       "source": "Y Combinator Blog",
       "link": "https://www.ycombinator.com/blog/chris-golda-and-grey-baker-general-partners/"
     },
     {
       "title": "Diana Hu Is YC's Newest Managing Partner",
-      "summary": "Y Combinator晉升Diana Hu為管理合夥人，表彰其在創業與技術推廣的傑出貢獻。",
+      "summary": "YC 內部宣佈晉升 Diana Hu 為新任管理合夥人，表彰其卓越的創業與技術貢獻。",
       "source": "Y Combinator Blog",
       "link": "https://www.ycombinator.com/blog/diana-hu-managing-partner/"
     },
     {
+      "title": "Harshita Arora Joins YC as General Partner",
+      "summary": "具備深厚金融科技與基礎設施背景的 Harshita Arora 加入 YC 擔任普通合夥人。",
+      "source": "Y Combinator Blog",
+      "link": "https://www.ycombinator.com/blog/welcome-harshita/"
+    },
+    {
       "title": "Adding Canada Back to Our List of Accepted Countries of Incorporation",
-      "summary": "聽取新創社群反饋後，Y Combinator正式將加拿大重新列入接受註冊的國家名單。",
+      "summary": "聽取創辦人社群回饋後，Y Combinator 重新將加拿大納入接受註冊的公司所在地名單。",
       "source": "Y Combinator Blog",
       "link": "https://www.ycombinator.com/blog/adding-canada-back/"
     },
     {
+      "title": "Congratulations to EquipmentShare on Going Public",
+      "summary": "YC校友企業 EquipmentShare 成功上市，為建築業打造專屬營運作業系統寫下里程碑。",
+      "source": "Y Combinator Blog",
+      "link": "https://www.ycombinator.com/blog/congratulations-to-equipmentshare/"
+    },
+    {
       "title": "Announcing the YC AI Stack",
-      "summary": "Y Combinator攜手多家企業推出AI開發工具包，提供學員超過2.5萬美元的免費點數。",
+      "summary": "YC與多家公司合作推出AI學生入門包，提供超過2萬美元的AI開發工具免費額度。",
       "source": "Y Combinator Blog",
       "link": "https://www.ycombinator.com/blog/the-yc-ai-student-starter-pack/"
     },
     {
       "title": "封殺開源AI是扼殺新創？Kimi K3太強掀起美國圍堵論戰",
-      "summary": "中國新創開源模型表現逼近閉源頂尖水準，在美國科技界引發是否該封殺開源AI的強烈論戰。",
+      "summary": "中國新創月之暗面模型表現逼近閉源，在美國科技界引發開源AI封殺與圍堵論戰。",
       "source": "創業小聚 Meet",
       "link": "https://meet.bnext.com.tw/articles/view/53383"
     }
   ],
-  "closing_note": "面對盤勢震盪，保持穩健步調最重要！"
+  "closing_note": "投資路上步步為營，祝您今天操作順利！"
 }

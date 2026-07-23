@@ -1,365 +1,155 @@
 {
-  "greeting": "早安！今天市場氣氛多空交織，台指期夜盤表現給力，我們一起來看看最新重點！",
+  "greeting": "早安！今天市場震盪，來杯咖啡看看最新財經動態吧！",
   "taiwan_stocks": {
-    "night_futures_note": "台指期夜盤率先站上4萬5並收紅，為今日台股注入反彈動能。",
-    "top_volume_note": "成交量最大個股為群創，單日成交量高達2.88億股，展現極高熱度。",
-    "hot_sector_note": "表現最熱的類股為特選大蘋果報酬正向兩倍指數，強漲超過8.38%。",
+    "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
+    "top_volume_note": "成交量最大個股為群創，單日成交量高達2.88億股。",
+    "hot_sector_note": "表現最熱的類股為特選大蘋果報酬正向兩倍指數，大漲8.38%。",
     "news": [
       {
-        "title": "台指期夜盤率先站上4萬5！台股穩了？分析師搖頭揭「4風險」 981A、992A、407A...5檔主動式績效1次評：不配息反而穩 - Yahoo股市",
-        "summary": "台指期夜盤率先站上4萬5千點，分析師提醒留意高檔震盪的4大風險。",
-        "source": "Yahoo奇摩股市-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQQ3dfRFhjQ2dpQWN3RmJrRVd4M0k2aDlFSWs1Zm9aOGowS0FtRVUzVkFoX21qbko5dGhXSW55ODM3WUs3OTZSWGF6TGk5SzVIV3NXWVJqMTJlbkZieHNiRk5KdWxzLVZhbEVyM0FlcTl6V3oxTU1XcVBiTzh1d0ZOVzc0RzVTSkMyaWlaOTcyampzT2ppaC1QZy1KcHlEX29ZaFVwdUtWWEpveG5IQ3lrRFpjZXJBcDI1N2VRZm1CMVl1U3NaR3VYeWtvNG5CSjAwS0FDenNWSTRzU3Fsa0xUdWMyVXVkQWVMOHBqeU1FYndRSzg3cmFrUXQyYUE5XzFJNmcyd2JiZElyd0p5cVBVMTZEVWMzUks3UmNrUFg5blFCdXZRbm1qeDZOdV9LTGdRZGQ0WGRxU3dyNEVxSkJNWUFEQ1ZnNFZhVEdrNGwteXlRY1JuVGhoa1VaUUFRSzBmMWs4S09GdlljMHZDZmJ6UTRR?oc=5"
+        "title": "【Follow法人】台股尾盤誰拉的？外資買超縮水至69億元 三大法人合買164億元",
+        "summary": "台股今開高走低後尾盤急拉，終場小漲25點收在44,850點，三大法人合計買超164.89億元。",
+        "source": "Yahoo奇摩股市-台股動態",
+        "link": "https://tw.stock.yahoo.com/news/%E3%80%90follow%E6%B3%95%E4%BA%BA%E3%80%91%E5%8F%B0%E8%82%A1%E5%B0%BE%E7%9B%A4%E8%AA%B0%E6%8B%89%E7%9A%84%EF%BC%9F%E5%A4%96%E8%B3%87%E8%B2%B7%E8%B6%85%E7%B8%AE%E6%B0%B4%E8%87%B369%E5%84%84%E5%85%83-%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E5%90%88%E8%B2%B7164%E5%84%84%E5%85%83-070758634.html"
       },
       {
-        "title": "Google釋AI壞消息拖累台積電！盤中震盪跌20元 分析師：買黑賣紅 - Yahoo股市",
-        "summary": "Google釋出AI利空消息拖累台積電盤中震盪下跌20元，分析師建議採買黑賣紅策略。",
-        "source": "Yahoo奇摩股市-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiigNBVV95cUxOcGF5T0xSa2x1WEp3NUtaZF96bzR6T1ZmenBwYWxFN3NnMnZHUEhuMjFKX2VYbm1SMndadXhPYno4cjhneWlmT0xNUUpsbTAxbDA1cVdrU1hwQTBTeENneVFFUlZLeGF1MGUtcGdsUUJ6b1U0MDZndUlESnZvVHQ5dEw4ZTZIS2tVMUJXTGtmeXR6SjdMcmlGcFB0RTR3T3V0MEZ5V2tDRno1LWt6a2FERFhfeExGYTR0dDBqcW5OWnRDV1NtWDQtM0xydU1oUGVKbnRTZmEyMDVQcHkwdWJMNEJ2Rnp3cHRwNFhJVW9FcHFjdFJQMnN2bEVqVEhhdkRuZDZLbmFGU3RlWXlLY1ZvNjVFaXNrMXZxNVVTRTZkUjRkQkI1Mkg1bW41RXRKNW0tSXhlQVpvdVlvdGRDT2l1eHJtcjc5emowM2dRT0tvb29KZ0U1a3hxTEFNLXphMFh5YlRFWWlLWGtxaGc1SW9HZHV5TWgxUFFFRV9GSnFMNzhhbDczY09OUUFn?oc=5"
+        "title": "台積電追加投資美國外媒看好　但仍提醒產能過剩風險",
+        "summary": "台積電再加碼1000億美元擴大美國投資，總規模達2650億美元，外媒看好但也提醒產能過剩風險。",
+        "source": "Yahoo奇摩股市-台股動態",
+        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%BF%BD%E5%8A%A0%E6%8A%95%E8%B3%87%E7%BE%8E%E5%9C%8B%E5%A4%96%E5%AA%92%E7%9C%8B%E5%A5%BD-%E4%BD%86%E4%BB%8D%E6%8F%90%E9%86%92%E7%94%A2%E8%83%BD%E9%81%8E%E5%89%A9%E9%A2%A8%E9%9A%AA-070637898.html"
       },
       {
-        "title": "GB300基板+Rubin晶片加持！「ICT巨頭」逼漲停爆量17.6萬張 群創翻黑炸16.5萬張 - Yahoo股市",
-        "summary": "受GB300基板與Rubin晶片加持，ICT巨頭表現強勢逼近漲停，成交量大增。",
-        "source": "Yahoo奇摩股市-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQUVBweEZ6TXRXeWFlUW5FVDRDSXRjd2hCS0phaDVBUVczV1A4MUZRNklweDBnQWlwXzFWalpoeHVMWFVJdVBUZkZlYlJsdGRXM054cjdYLTRoUWo3QUxRZXlaQ1YwT0pvTGcyQ0VTQXRJU0MzU04xZU9qZVA0Um5rZV9WMDgzZ1FfT3lKcWZrNE8zZDRlMG9BSC0zTlZadnNwS3Q4M09Ld1lrcGg2QVBueXlDZlJmcU5zNWVIcUJ2S1ZmeFotNnRFd0plVURVaW5MVHNnWF9Mb0haenRLMVdTTGFGcFZ1N3hRN2RCMzhGUHVpQW5mbjdKNlNRN21fUDRTaElwWFNJemZXbG9RVUJFb2k5VGtmVkpNckI3YmJqY1llVmlOYkdUZ3NB?oc=5"
+        "title": "〈台股盤後〉攻4萬5又失利 靠台積電尾盤神救援翻紅小漲25點收44850點",
+        "summary": "台股早盤曾試圖攻高但失利，盤中一度跌逾470點，靠台積電尾盤神救援才順利翻紅。",
+        "source": "Yahoo奇摩股市-台股動態",
+        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E5%BE%8C-%E6%94%BB4%E8%90%AC5%E5%8F%88%E5%A4%B1%E5%88%A9-%E9%9D%A0%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%B0%BE%E7%9B%A4%E7%A5%9E%E6%95%91%E6%8F%B4%E7%BF%BB%E7%B4%85%E5%B0%8F%E6%BC%B225%E9%BB%9E%E6%94%B644850%E9%BB%9E-062713302.html"
       },
       {
-        "title": "台積電赴美代價浮現！晶片成本恐高出台灣50% 毛利率承壓 - news.cnyes.com",
-        "summary": "台積電赴美設廠成本代價浮現，晶片成本恐較台灣高出50%，毛利率面臨壓力。",
-        "source": "鉅亨網-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE12YXd5XzZoUnhyelR2NmhUa1k3ajRUbFlQTXFncTYzU3ZacFd5MWItSTVhdk5iLWdJSV9Eb1NDZ2wtS1lEZUdPSS1NNDBkNzA?oc=5"
+        "title": "〈焦點股〉輝達傳收購「暗光纖」 點火光通訊股 聯亞連2天漲停 - news.cnyes.com",
+        "summary": "傳出輝達有意收購暗光纖，點火光通訊族群，其中聯亞強勢連拉兩根漲停。",
+        "source": "鉅亨網-台股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtcU9RSUxIMkl1SFdiYTVYTGd3YndydE1aT0R1a1l5TGlORFVTeEZtZmh5ZTh4ZjN2SkJEWGxhQkFKeW94Wm5qakRLWlRWWFU?oc=5"
       },
       {
-        "title": "台股大盤放量突破 44,800 點，夜盤上漲389點！外資轉買超173億、記憶體與IC載板狂飆 - news.cnyes.com",
-        "summary": "台股大盤放量突破44,800點，夜盤大漲389點，外資轉買超173億元，記憶體與載板強勢。",
-        "source": "鉅亨網-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YSzN0S0JrNHBWM1F1WWRYNWpEZUtnRmh2bFdrMlpxc242ZFVZc210MkowMlVDMmZyd2k1U0pJd0JaQWQ3OEh2Q1l0MkhRTjA?oc=5"
+        "title": "〈焦點股〉川普放話回擊油價大漲 台塑三寶亮燈漲停帶頭衝 - news.cnyes.com",
+        "summary": "受油價大漲激勵，台塑三寶等塑化股表現強勁，亮燈漲停帶頭衝鋒。",
+        "source": "鉅亨網-台股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9hSzBTN1pKZ2FjRE53RHdoVEllQ3hDajNyRExwSVI0QkczbWpQbzBPZzZPdURhazZJNjBKYTh4MzNJWjB1SVJsY0VvNW9xYmc?oc=5"
       },
       {
-        "title": "台股一天一個劇本？他嘆「看多就跌、看空又漲」 網點關鍵：別再猜高低點 - Yahoo股市",
-        "summary": "台股一天一個劇本？他嘆「看多就跌、看空又漲」 網點關鍵：別再猜高低點 Yahoo股市",
-        "source": "Yahoo奇摩股市-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPX2RWdGJIbVNSaDA0VEl6dzhDU041MmVUYUJHalF4VE1Uak9wR1hINGNuT1BIUlhXQTRDZnhZZ2N2blVFa0xfNkFvTktSRWVpZHVWR1ViRnFJUjdZLUF4ellBYkJNSHF0Z0Nhb0pqRGo5U3k5VEROaFg1c05yelpzYkFkd0dadGtjUFhISXh4RnRuRmp3aFNSSHVIcTlfYmhlZERudnN5Vm5kdl9QZWMtN2FnTG9OSGJ1dlRuX2NTV0x1RXFmT0xDMGhsaXp5b19pVnhYdWtuSjlicHpWZTdvR3hzcGEwQjNQTndBY2RScEs?oc=5"
-      },
-      {
-        "title": "台人比較會做股票？股民揭「2次大跌沒逾13％」真相 - Yahoo股市",
-        "summary": "台人比較",
-        "source": "Yahoo奇摩股市-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQZ0thQ25BTmxTWWxBZFpuSzNWSGc2N3Z2bjJIaC10RDZtU09BVGRhUWZxNENaM0lJWnhYVnNGeWdEVjJpa3Fwc3dtQmlOWF9mbGY4SUtuTkdKWE9KbzhKd0pkeHNnbkpyQTFTTU5BMVd0MVZWQi1UcXQydTFCM3RpX2pVd29oVzFnaXR3alBkNjdkNlAxSWxTelVBUzQydUJkWGxndWZ6X1FlbzQ4NmRpQUh0U0F3WkZHM2pYTUwwUzZMYmFIZDlJc1VpdWNZaUtpSXF4QkRVWGkyck93LWtiMzg3WlQwM1VsdXVsM3NIeTBWbWxsVEs5cjF3TWJIRkdPRUptVTd3d1dqUUMwWHBfd3BvQlhEeDhIbXBlbEt4QUo0aVd5MzdBNENXSFpUUnhOeUtvN0tPU0JVbG8?oc=5"
-      },
-      {
-        "title": "【Hot台股】大盤衝上4萬5後跳水600點...網哭「大媽救救」 分析師看法出爐 - Yahoo股市",
-        "summary": "<a href=\"https://news.google.com/rss/articles/CBMitwNBVV95cUxNY1k2M0RCUTl4Y1d6YnhoQ3hkTUh2NVVTVzh1aTA4elNtQWpXNW9tWldNd1",
-        "source": "Yahoo奇摩股市-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMitwNBVV95cUxNY1k2M0RCUTl4Y1d6YnhoQ3hkTUh2NVVTVzh1aTA4elNtQWpXNW9tWldNd1JacXJIWEtVYU9rbl9TUkExazlhbkJBRGxOZUFoajZncGxXaWY3azMzUVFwSVZIclhVdUxEXzRSUkVEMjlaRGlDTjhXWXdIQVR1SzBxSjFiVHF5djlqMVc0SzR6T0EtUDkwTnB3MUJKeHpLbzdSblpXWHh3N0dVTXNUc210TUh6ZEN0OHFUMGJtYWVlTHNiQS1Senp0ejRrZTBkXzVMMklUR2hYbWtKcG5RbXkxZjNXVjJhRU1aM3owTHRIa01kZW5id1VkbzNCZHVwVTczWnhuR2dPVmVxaXdBUFhBNlU2OV9rWnpQeEoxVTZmOTktNDdpQ1FTVFhsNFV0V09OWGZwYzVlZmlqaTBEUWluWjNWbTk5bzYzT3dWZHktU1JXUHQzZDlCRTJmcmRXSG9ncU52N1dXck5uWVpZVUdPT0UwOEdqQlIxUUlNTlIwT2wzTU9Uelp6dk12dWNYU3N5Qko3MWZoTWhEX3JXN2V0X1VNLS1pVG1pWnFsZDVXaEJORFdrVWFN?oc=5"
-      },
-      {
-        "title": "馬斯克出手搶晶片！美光「大手筆」供應特斯拉記憶體 AI軍備戰全面升溫 - Yahoo股市",
-        "summary": "<a href=\"https://news.google.com/rss/articles/CBMiswNBVV95cUxPcUY4bGZMNEFiN2t4R2dHbi1LMkZjaUJiTDA5aVBBM1FEUkJobHpIU2JYN2",
-        "source": "Yahoo奇摩股市-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxPcUY4bGZMNEFiN2t4R2dHbi1LMkZjaUJiTDA5aVBBM1FEUkJobHpIU2JYN21ZcDhyeUVvNDNmRi03VWJKQV9odVNNWGNaTjJuR2o1TE9iM25NeXo5ZEtod0FYWXRCOWpSYlJsMXpIUFAxV0JBQjdxSno0WnZ4Q1pLRzdKcFE3VW94SEY2NUtVTDY2bWg0NXRSdnRoaG5FLVlLQ3dWdmVoY0d2Y3F3NTRxTlVwVDl1bE5pV21Vb3FvTVJycjRJNVUtcWFCbmtRTzRuMVQ5MlBNbS1xX2didFZSZWZpcU1ELVF6ZTVVWE9MbkFacDVoQzFBbGpPUmRuN1duZGFob2JDcDlHT2lhV3Z6a1BKT1dPRC1fbi15UTlXNV9HX2JsZ0RxeTZReWV0TUd5SXhjS24wRFk0dzU1emNJQnFRWmxaMTJLcVB0VjFYa0dNWDBhSHdydUlqTjlDcWc2TXRpZFd2TXZQNmNzRlF5aXZ1ZEVVMUs1eUtCbTc5MHRYNGFZQ0pDUmFpY0oxbUFQYVZvWm5iWGQ3TFZXa3EwUnRJdjhWU1BLSTNnUzg1elN2bHM?oc=5"
-      },
-      {
-        "title": "OpenAI模型自主攻擊Hugging Face 揭AI失控風險引熱議 - Yahoo股市",
-        "summary": "OpenAI模型自主攻擊Hugging Face 揭AI失控風險引熱議 &n",
-        "source": "Yahoo奇摩股市-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQcEh0UFg4bmtHQncxc2VDbDYwZWlRdmhvUTNsWk54YWJPZXhLamF6dUxXLWMwMjJRVGVBZ0sxNV9FQ1FGX3dUb2xhSGU5c1pvTkpJVDdwZklPMFl2SHBQSkhidThHNjVWNXNQOEpKMlltem42NHo2RWNJaGoxMmdjR3Z6VEFBYVg5NU9hVU80YzVSdXlaOXBaWkoxaWRUWGRzU19IT0FPdG0yaUd2NDdlMlVZT084TmxySmNRdThQREJxUU5ZdGxLUlVRYnN2LU9BYlZ4ZFBiTlFubHZmMGdJWkFQNTVkR0FMZFFIS2dHVHlvR2NsN2p4UmxqbEU1UkFIaC1qZ2RNUUs2WVVfd0xjMFFZR0NJd2FaaEJ6Q3Fwaw?oc=5"
-      },
-      {
-        "title": "黃仁勳重磅挺台！喊「救了美國半導體」不用拿槍指台灣 直言赴美投資非被逼 - Yahoo股市",
-        "summary": "<a href=\"https://news.google.com/rss/articles/CBMi1ANBVV95cUxPMnNNV2t1emxFeUliOU5iRExHREhiNWMxSDFoWmV5YnJJRVhJWTlCVlhQV0",
-        "source": "Yahoo奇摩股市-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxPMnNNV2t1emxFeUliOU5iRExHREhiNWMxSDFoWmV5YnJJRVhJWTlCVlhQV0pSS1p3MkJ0dDNSMlZLX2o4ZE1GQ2VVYWhZT1JXSVItZ29pMmZYSExzWm55Mm1zWkxPSUlMaHgxSVRvaVo0TlZCaklPWmg5cTVQc0ZBYXNBYlNFTmJOMDVJZW9KZ01QeHd5VnVaSzZDUFg1NDRjSmFtV19kY2hLbW1Ud09EYm02aG4tOE5XSG4yby1CX3dETGRYX2lFV1hVWHNSbUotbGxPTVIyZ2pMQnJsZjBxNm5VTU45eGZ4ZDcyMXJncmNFYTI2VENTcGZtTEM0TFJSU0hpSzJpLXBIZGNzTVAyXzI1czB4c2M5bUcwcVpQdWNRTUhUc2hPV01QQ1cxWU5NZGR6ZXI5OXk3V09HLXJRRmpHdXM2YkpJRWw4aG9IYm80T2todUZYYmZaOFgyQnhaN1V0UG05MzVTemxVVXo4NVByaEUzUGlnUFBLVEY4T1NORnh1U3BOSERGRTRuWjZfZ3FZdWxBQXE0LWowWjlTbTJHRVdXMjFQaE16T19YQ0s3WXVaTlNUWUIwUDhLeW81UGdSdTd6cTNfMFNvZ2tRTHQ1azQ?oc=5"
-      },
-      {
-        "title": "AI資料中心拚自帶電！引爆「這3檔ETF」今年狂飆超過20% AI工業級能源爭奪戰開打 - Yahoo股市",
-        "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgNBVV95cUxPS1NWekUyMWs3ZHVuUWYwcUhuMzNmMUs1RHBRQ2xsc1poQlBLYVphbUhheW",
-        "source": "Yahoo奇摩股市-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMivgNBVV95cUxPS1NWekUyMWs3ZHVuUWYwcUhuMzNmMUs1RHBRQ2xsc1poQlBLYVphbUhheWc0R3lsOWtRRWJETDNFakloOWJKbzBwU1lrWEhWWWRPeWVOQ3ZEeEY4U204MWpSSVJ6bHhEU2YxT21DM0pyWjBZV2ZEQjNheU1LTTJlUGMzTkpzQjAzYWFJWkRPa216NnpIbEpUMDNCQThGM0VFTkV0ZVpYdkVxdnJWSmdjdkFCa0lzZkVoeVZQWFNLTkpzcmo1ZFZRRkkwQm5lWUJVSVo3MEM4NGFMTzdSaGVPQVlmYzdZdnQ0LXVSamRiUWtVQzVVYXA3N1ZERzFLMktkaVh3Ul94MHcyT0k0RTl2UGJQRlNfcERQLWg5V1VMSDFGRTdrSGJRejJZZ19Td0pHaFFaU0RYN2ZKOFpxSjA1U2IyRmVKcFlNYTd0UGZUaldTOXJNUi1OQkRQblZOMV9aOHJyU2xpTm1fRExjVWpGV0F2Q1pKTVY0NmdQbWFBX21WcmQtSkJNOUNtLUJ5ZlFlZTBqY0IxRnZ5a3pIbndmalI4ZllyODdWN1JEa0xVd2NOR21TUk9TS0hqZnRjdw?oc=5"
-      },
-      {
-        "title": "外資近3日買超個股 - news.cnyes.com",
-        "summary": "外資近3日買超個股 news.cnyes.com",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9oNHBFZS1KZGVDZUpnOUx0ajlXR08xbzBHd2duTjFob0JtaE5iS1FrY2o2TmpxMmxkNEx0MFJQSVBIUDFFb0k1THFXUTBNcWM?oc=5"
-      },
-      {
-        "title": "外資近3日賣超個股 - news.cnyes.com",
-        "summary": "外資近3日賣超個股 news.cnyes.com",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1rWTZMMTM3WXpHd3I3NFJkUlQxOXlVZUpnUTUwU0tDYmdjeFhLTlZ1VkFEek9MdlZ1d244RHhWOThpcmIwRkRjSTlMRHBDWnc?oc=5"
-      },
-      {
-        "title": "投信近5日賣超個股 - news.cnyes.com",
-        "summary": "投信近5日賣超個股 news.cnyes.com",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5hTmZrZlRLZExabEF1ZDMxRUZ3c2duc2NxZkpLLTdWcElaZjgwbFlnUHNlWDB4bjhaWG5XTTJuaHU5MUVrT2J3ekhmdUlhUjQ?oc=5"
-      },
-      {
-        "title": "外資近5日買超個股 - 鉅亨網",
-        "summary": "外資近5日買超個股 鉅亨網",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAwaFNjUWpCdzFUOXliMWp4dXliZzFyYW1CUTNDWHFtUUdmTVhGNlYyY0VEZHN4ODRMbUl4U0NlOWNXclNCSVZOeXFHRQ?oc=5"
-      },
-      {
-        "title": "投信近5日買超個股 | 鉅亨網 - 台股盤前 - news.cnyes.com",
-        "summary": "投信近5日買超個股 | 鉅亨網 - 台股盤前 news.cnyes.com",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ZOFU3VjRoLTcxYjFTWklFdktxa0d0TF9tOXdLXzlpUzQ3MlBjd3l2TnBVNjJBelpWSVR4SHhNNmFCeWFRTENrZnhtdDR1elk?oc=5"
-      },
-      {
-        "title": "台鎔科技今上市掛牌交易歡度蜜月 早盤最高上漲近2成 - news.cnyes.com",
-        "summary": "台鎔科技今上市掛牌交易歡度蜜月 早盤最高上漲近2成 news.cnyes.com",
-        "source": "鉅亨網-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1TTUd4bmVYaU9OV094WXRxS0VIZFVMMlQwemxTaGo4OGtJZmdob09tREZaNzAtZ3hiRGJhVDZFd3BUaDZXTU03eXhZUFFzd00?oc=5"
-      },
-      {
-        "title": "遠銀主辦逸科亞2億美元聯貸 助攻晶圓測試產能升級 - 鉅亨網",
-        "summary": "遠銀主辦逸科亞2億美元聯貸 助攻晶圓測試產能升級 鉅亨網",
-        "source": "鉅亨網-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBndmp1QVJRUDdDeDluelN6bTkwQjJMbWhFcl9iYzFiSnBsUG5XNV9rMC1VSzF0TDc0MTdWZkNITURyS1hIWF9uOWtsOA?oc=5"
-      },
-      {
-        "title": "典範:台灣典範半導體股份有限公司（公司代號：3372）115年現金增資股款繳納憑證上櫃開始買賣日期。 - news.cnyes.com",
-        "summary": "典範:台灣典範半導體股份有限公司（公司代號：3372）115年現金增資股款繳納憑證上櫃開始買賣日期。 news.cnyes.com",
-        "source": "鉅亨網-台灣科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Xckh1eFRwZkprYXdOeXJmQnRlLTQwTFpNVTdkdkNYSjN4anQ3WDkxX0hZWjVvejA1QnFGQWh6b1l6cVZHZHVSX2xaLVJoeGc?oc=5"
+        "title": "〈焦點股〉散熱三雄下半年成長動能可期 紛紛漲逾半根停板 - news.cnyes.com",
+        "summary": "散熱三雄看好下半年成長動能，今日股價紛紛大漲超過半根停板。",
+        "source": "鉅亨網-台股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RekZGbUIzQTZWdmRPWlRJQmg0cXZlcVRHSjBJRUxkUnFoaW9DU1dsR2VoRXNVcjZwUGE4NF9tTkVpQ3Via3NDX296OHdNeUk?oc=5"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股主要指數承壓收跌，主要受到油價飆升以及加息預期重燃影響，科技巨頭財報動向備受關注。",
-    "tsm_adr_note": "台積電ADR隨美股科技股震盪，短線面臨成本壓力與市場情緒調節。",
+    "market_summary": "美股主要指數多數收跌，標普與那指因科技股走弱而下跌，能源股則受油價推升逆勢走高。",
+    "tsm_adr_note": "台積電ADR在前一個交易日下滑0.80%。",
     "news": [
       {
-        "title": "〈美股盤後〉油價飆升 標普那指收跌 投資人靜待科技巨頭財報 - news.cnyes.com",
-        "summary": "美股盤後油價飆升、標普與那斯達克收跌，市場正靜待大型科技巨頭的最新財報出爐。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5wY3hMSzU5MEpfOUs0LTFqa3lsQVRKakZKc3pPTEZyZkt5NVFJeWNHcElYSTIwQkpCN3kwYXJURkpmZTVZeXlqSWVvUmNJMGs?oc=5"
+        "title": "AI記憶體需求爆發，特斯拉獲美光大額供貨，馬斯克讚條件合理",
+        "summary": "特斯拉獲得美光提供大量AI記憶體晶片供貨配額，馬斯克公開稱讚條件相當合理。",
+        "source": "Yahoo奇摩股市-國際財經",
+        "link": "https://tw.stock.yahoo.com/news/ai%E8%A8%98%E6%86%B6%E9%AB%94%E9%9C%80%E6%B1%82%E7%88%86%E7%99%BC-%E7%89%B9%E6%96%AF%E6%8B%89%E7%8D%B2%E7%BE%8E%E5%85%89%E5%A4%A7%E9%A1%8D%E4%BE%9B%E8%B2%A8-%E9%A6%AC%E6%96%AF%E5%85%8B%E8%AE%9A%E6%A2%9D%E4%BB%B6%E5%90%88%E7%90%86-072826478.html"
       },
       {
-        "title": "美股收盤 | 加息預期重燃，三大股指承壓收跌；輝達強勢收漲2%領跑Mag7；超微電腦飆升20%；軟件股疲軟，Palantir跌超6%；油價飆至六周高位 - 鉅亨號",
-        "summary": "美股收盤加息預期重燃導致指數承壓，但輝達強勢收漲2%領跑科技七雄，超微電腦飆升20%。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1QSHBsOVVjTHN4cGtaNUhtenhEeUxnVlN4OTAtV3RTM01EbXFiNkZpZjVfSF9qUFpmNjMxTzM4b0JHbkhMNTVrMA?oc=5"
+        "title": "美股水餃股拉警報！SEC批准那斯達克下市新制，低價中概股首當其衝",
+        "summary": "美國SEC批准那斯達克下市新制，市值連30日低於500萬美元將面臨除牌，低價中概股首當其衝。",
+        "source": "Yahoo奇摩股市-國際財經",
+        "link": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E6%B0%B4%E9%A4%83%E8%82%A1%E6%8B%89%E8%AD%A6%E5%A0%B1-sec%E6%89%B9%E5%87%86%E9%82%A3%E6%96%AF%E9%81%94%E5%85%8B%E4%B8%8B%E5%B8%82%E6%96%B0%E5%88%B6-%E4%BD%8E%E5%83%B9%E4%B8%AD%E6%A6%82%E8%82%A1%E9%A6%96%E7%95%B6%E5%85%B6%E8%A1%9D-072411026.html"
       },
       {
-        "title": "〈財報〉Alphabet Q2優於預期 但AI資本支出衝2050億美元嚇壞市場 盤後跌近4% - news.cnyes.com",
-        "summary": "Alphabet第二季財報雖優於預期，但AI資本支出暴衝至2050億美元嚇壞市場，盤後跌近4%。",
-        "source": "鉅亨網-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE52aGZuaTZSNERYUlRNc2Z6MTVTVEZlMFV6a3JtVFU2MS1FRkRsaktRVGhXZ05qREVJV2xFRTNRVkhMOURNdXdGR3k5WF9DX1k?oc=5"
+        "title": "CPU需求飆升　英特爾與AMD要求中國客戶簽長約",
+        "summary": "因CPU需求強勁，英特爾與AMD要求中國伺服器客戶簽署長期採購協議。",
+        "source": "Yahoo奇摩股市-國際財經",
+        "link": "https://tw.stock.yahoo.com/news/cpu%E9%9C%80%E6%B1%82%E9%A3%86%E5%8D%87-%E8%8B%B1%E7%89%B9%E7%88%BE%E8%88%87amd%E8%A6%81%E6%B1%82%E4%B8%AD%E5%9C%8B%E5%AE%A2%E6%88%B6%E7%B0%BD%E9%95%B7%E7%B4%84-071004271.html"
       },
       {
-        "title": "〈財報〉特斯拉Q2不如預期 自由現金流轉負 盤後跌4% - news.cnyes.com",
-        "summary": "特斯拉第二季財報不如預期且自由現金流轉負，拖累盤后股價下跌4%。",
-        "source": "鉅亨網-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ta0E5N3pSVGltOGN0ZkZiTmx6ZDU3RkxxNHExaTV2WUFXMUlkamdWUHc3OHlyenN6eVNYRVRfbS0tLVNqN3FHelVLTWJ6bjA?oc=5"
-      },
-      {
-        "title": "Apple Inc. (AAPL) 股價、新聞、報價和記錄 - Yahoo 財經",
-        "summary": "Apple Inc. (AAPL) 股價、新聞、報價和記錄 Yahoo 財經",
-        "source": "Yahoo Finance-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5sUzEybFVQaGJucTVzT2FhWGdVb3lpZmhuanFXMlpiYUYxSjRkWElaT3B2YmZCWmk2dGlmMVRTYlV5bUJzdVdxZVUtMlhNZHZIV0E?oc=5"
-      },
-      {
-        "title": "中國平安 (2318.HK) 股價、新聞、報價和記錄 - Yahoo 財經",
-        "summary": "中國平安 (2318.HK) 股價、新聞、報價和記錄 Yahoo 財經",
-        "source": "Yahoo Finance-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0wY1hHdUh2bTJKYTk1OG44alhhZXFzNkxCZ0RfbFhib05wV3lpWXJHY01VdmFzRjZndGlVel9QRkJDazZhMmtLRHFWbGx6ZDB2eThTS2hR?oc=5"
-      },
-      {
-        "title": "Infleqtion, Inc. (INFQ) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Infleqtion, Inc. (INFQ) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBINGptbGxuQm05VFlicVRkc3c0R2U3aTNHc2pqNlA2cUJjbVROZFJGenQ1cWdLQ2x4Y1JBOTFxLWF6SHdGTjNQMXNfVF9vdjZaYzB4dTBRS0w?oc=5"
-      },
-      {
-        "title": "Liquidia Corporation (LQDA) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Liquidia Corporation (LQDA) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QUVgzbkx0UnAxaUIybUlnbUI2QXRxLW1nNlNKQm9OVXFxWEZiSkRsS3oxaHhoM3hTbXd3UzdvM3pqYTlWLTVxR0R4Y0NEQnV5Vjh6bmwzZEY?oc=5"
-      },
-      {
-        "title": "Applied Materials, Inc. (AMAT) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Applied Materials, Inc. (AMAT) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBDLXlOeTVKUHI4THBraTJtbE9WRVhrNGxYVzlaZWZraFE2MXN5bXRKTFRtX0NSQWxUVE5tTWdQZHdBTm5uMmYtSHY2S3pfSUVUWnhZSDl2U0c?oc=5"
-      },
-      {
-        "title": "Defiance Daily Target 2X Long Oust ETF (OUSL) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Defiance Daily Target 2X Long Oust ETF (OUSL) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oaS1VNVg0S1o3ME5VWDRjN2lvYVl3Y1FfaWF4eTJjTXNSMmdybVZad2N6cUlOeEM4WkZYNXFJRWVJR0ZvaXQtMlZyZU9sdUVxR0FGbjFtQTE?oc=5"
-      },
-      {
-        "title": "Cerebras Systems Inc. (CBRS) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Cerebras Systems Inc. (CBRS) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1EOHRKRXZBSDRBRnhJZmJJZ2VuSVFRXzNROWp5WFJicHE4MFZ3SWROMXJVZlZ3TXlQMHFsZENDNE10RnFJZlJnSUVrMjRpa3pOb19nTDY4UjA?oc=5"
-      },
-      {
-        "title": "Roundhill Memory ETF (DRAM) 股價、新聞、報價和記錄 - Yahoo 財經",
-        "summary": "Roundhill Memory ETF (DRAM) 股價、新聞、報價和記錄 Yahoo 財經",
-        "source": "Yahoo Finance-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0SXpINi1jSTFtd2ptZlJZWDFybzhuN3VGMDBXWHBfcDQzN0Via1JpS2lBXzJLVjlBZkd2MnBETTU2RG1xWmZXZlB1SC10ckR0X1E?oc=5"
-      },
-      {
-        "title": "iShsIII-EO Gov.B.10-15yr U.ETFR (EUN8.DU) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "iShsIII-EO Gov.B.10-15yr U.ETFR (EUN8.DU) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBoVUpXR0NCZzVzWnc0eEw0NHBiYkFCVDNmYWhnZ2laMXRUSGFXeWJKdTcyTkMybmQtWlhVdWIycWZJTEdPY2RNeDdpeTRkeG96SVBlT19vang3c0Rs?oc=5"
-      },
-      {
-        "title": "Lumentum Holdings Inc. (LITE) 最新股票消息和頭條新聞 - Yahoo 財經",
-        "summary": "Lumentum Holdings Inc. (LITE) 最新股票消息和頭條新聞 Yahoo 財經",
-        "source": "Yahoo Finance-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rVkFPa2Y5WDFDZ2xaLUg2SFF2Zm8zenh0czl1Vk1VRkFSV0YtZkd0MWpFY0xYdmktckpScXhxNGdnU0V4ZHdBc1AxbnR2NmJtY2pQUzQzVHg?oc=5"
-      },
-      {
-        "title": "〈美股早盤〉晶片股疲弱與油價上漲牽動市場 主要指數開低 - news.cnyes.com",
-        "summary": "〈美股早盤〉晶片股疲弱與油價上漲牽動市場 主要指數開低 news.cnyes.com",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1GaDJhdWpUTFBCdGphY1oxQTIyMzlKRGtyRmN4MjNUcmpNTk41UEk3S1RVbnJON0o4NlRSRnkwSGxwU0tDS0JzcGNnTTcxSTg?oc=5"
-      },
-      {
-        "title": "華爾街集體看好記憶體股！喊話堅守AI硬體、稱Kimi K3將催生新需求 - news.cnyes.com",
-        "summary": "華爾街集體看好記憶體股！喊話堅守AI硬體、稱Kimi K3將催生新需求 news.cnyes.com",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RNWE5MmgwanJQYmwxYjNzcGxkWFd6aXgtVkhmcVNfZUs1STkwLU1SOFlTZW5CenQ3aG5ZbHNhR29OOVNqblNGTlVhbkhFUDg?oc=5"
-      },
-      {
-        "title": "華爾街堅定看好AI硬體製造商！值得繼續持有股票、看好模型競爭利多晶片 - news.cnyes.com",
-        "summary": "華爾街堅定看好AI硬體製造商！值得繼續持有股票、看好模型競爭利多晶片 news.cnyes.com",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAxYTBBY0dpUExramh3Y3pIQVJZcXRjQU9ZTDFNWVNwVXUwT0Fjakk0WnlTVVd6SWpKY0tXT3FRNXBTcDZTN2s2bWR1LWRIZVE?oc=5"
-      },
-      {
-        "title": "黃仁勳談中國AI模型：非常優秀 就該用 - news.cnyes.com",
-        "summary": "黃仁勳談中國AI模型：非常優秀 就該用 news.cnyes.com",
-        "source": "鉅亨網-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9lYWZvTVJMZjRVRmY5akZPc1dqZ0dxdG1uZG13LXN2eElFNF9GWVRDWjhkemE0S3I5MnBBeENBSGYxaWFXd25MY1NjdHFYT3c?oc=5"
-      },
-      {
-        "title": "Google AI搜索吸走流量 美國老牌媒體醞釀「斷供」 - news.cnyes.com",
-        "summary": "Google AI搜索吸走流量 美國老牌媒體醞釀「斷供」 news.cnyes.com",
-        "source": "鉅亨網-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBEZHUxWThobTY4RW5LVVVFNHdHNm1hWjdDRnMxTnpnY3NxdU5XM0tyaDg5aUdhSVdSTkhHaXo4SG1QSnA0eXByb3AtQ21QNlE?oc=5"
-      },
-      {
-        "title": "Hugging Face遭OpenAI模型沙盒「越獄」攻擊 中國AI工具GLM-5.2臨危救場 - news.cnyes.com",
-        "summary": "Hugging Face遭OpenAI模型沙盒「越獄」攻擊 中國AI工具GLM-5.2臨危救場 news.cnyes.com",
-        "source": "鉅亨網-美國科技",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE55M0FLQXlVQzZOMmJOd0dOaElSUTVtazQ1NDhLTXVpRmR3b0ljcHhhb2ZkZ1VZa0tqbjVoUE9HdXdndTFhekl4LUNpaWdPcFE?oc=5"
+        "title": "超微搶下AI超級大單！Anthropic砸數百億美元買晶片 - news.cnyes.com",
+        "summary": "超微奪下AI大單，AI新創Anthropic砸數百億美元採購其晶片。",
+        "source": "鉅亨網-美股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtX0hlVUlsWWRLU1NRUERfUWR5TVo0SFUtblZ1UU1sUFowY3hmdDdrNFVkZk41bzhWUFg5SEpzTGdxNkQ1NWxud3hCOWRFYU0?oc=5"
       }
     ]
   },
   "macro": [
     {
-      "title": "「債券義警」捲土重來！30年期殖利率飆回2008年 今年27天站5%上方 美債麻煩大了？ - news.cnyes.com",
-      "summary": "30年期美債殖利率再度飆回2008年高點，債券義警捲土重來，市場高度關注聯準會動向。",
+      "title": "油價衝擊重燃升息恐慌！美國長天期公債擊穿關鍵防線、Fed下週會議成關鍵 - news.cnyes.com",
+      "summary": "油價衝擊重新點燃市場對通膨與升息的恐慌，美國長天期公債防線被擊穿，聯準會動向備受關注。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE92djY3T2RtNEh6ZlNKdFNEdG1HUV9tMzNsRktpS1lKQ0tFUjFocTduRTJMRXFpTkRtRFhsUnNXQURzUTZiTVlzeDN0UUZwYW8?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qNVc2ZjZEa2xNZ2xIQmVtWlBFNnB0Qy1YMmJUdm5oQzlBRmpXdTRZSXhGcDFEUEZmd1BSY3RBdVF4UE5WR2F3c0lPWEJqTWc?oc=5"
     },
     {
-      "title": "油價衝擊重燃升息恐慌！美國長天期公債擊穿關鍵防線、Fed下週會議成關鍵 - 鉅亨網",
-      "summary": "油價衝擊重燃市場對通膨與升息的恐慌，美國長天期公債殖利率擊穿關鍵防線。",
+      "title": "Fed真的要升息了？三分之二經濟學家認為機率很高 - news.cnyes.com",
+      "summary": "總經市場觀望氣氛濃厚，調查顯示約三分之二的經濟學家認為聯準會未來升息機率不低。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5pVThpOWVXUlFkZTFBdWRXWWdRVHBTSmoyRkJoa2xpZE9oM3pubzYtTTFfdFBWblBTSFZhSDBfNHh1UlJURlBmWjFXSQ?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yUERRbVk0cnIwd0tmUmIwQ0E5MENNMzllME5iUUcxa2xLa3dqazRjc0xwQy1RQ1Y0SnN6QXRUaGZFemJsNzhYRUx1Qk96SUU?oc=5"
     },
     {
-      "title": "中東衝突加劇 布蘭特原油自6月11日以來首度升破95美元 - 鉅亨網",
-      "summary": "中東衝突加劇，布蘭特原油自6月以來首度升破95美元，能源市場面臨地緣政治嚴峻挑戰。",
+      "title": "Fed進入沉默時代 華爾街祭出「華許GPT」破解政策風向 - 鉅亨網",
+      "summary": "面對Fed進入政策沉默期，華爾街甚至出動AI工具來試圖破解其政策風向。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8tUElSRGJTY181ekY1aFNzNmV1OV81QXpwTmR5VUpKTk5GMy1mT3Y0NXhaUWpBb1o5QldtMHc1UVphMy14U2dscFEwTQ?oc=5"
-    },
-    {
-      "title": "台積電赴美代價浮現！晶片成本恐高出台灣50% 毛利率承壓 - news.cnyes.com",
-      "summary": "台積電赴美代價浮現！晶片成本恐高出台灣50% 毛利率承壓 news.cnyes.com",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE12YXd5XzZoUnhyelR2NmhUa1k3ajRUbFlQTXFncTYzU3ZacFd5MWItSTVhdk5iLWdJSV9Eb1NDZ2wtS1lEZUdPSS1NNDBkNzA?oc=5"
-    },
-    {
-      "title": "日元跌到央行坐不住了？市場押注日銀10月前再升息 機率破七成 - 鉅亨網",
-      "summary": "日元跌到央行坐不住了？市場押注日銀10月前再升息 機率破七成 鉅亨網",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1HdEdSMGw4V25sSFJUMUFLdXpWMTNKdjdhdXVDeEJkS2xjd2JZTENRRFFBTlBJMzBXQXFJZ0VTRjhILUp0TGd4ekpYNkhYVlU?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1OVktkM1NJNEdKMkxYZmlYRGp6Mlo2NmYxUjd1d2FyZXJ1bHNhY0N2RWFsR196VWZacFdYV29uVDd5cV9lMUxGcWpETnAtemc?oc=5"
     }
   ],
   "ai": [
     {
-      "title": "How OpenAI’s human mistake led to the AI-powered hack on Hugging Face",
-      "summary": "OpenAI因內部測試環境設定失誤，導致其AI代理模型成功對Hugging Face發動越獄攻擊。",
+      "title": "Google justifies its massive AI spending with a booming cloud business",
+      "summary": "Google藉由蓬勃發展的雲端與AI基礎設施業務交出亮眼獲利，成功證明龐大AI資本支出的合理性。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
+      "link": "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/"
     },
     {
-      "title": "OpenAI’s AI spending spree has ballooned to $750B",
-      "summary": "OpenAI的AI基礎設施建置支出持續膨脹，預計到2030年前總支出將高達7500億美元。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
+      "title": "直擊｜緯創德州廠開出全美第一片GB300基板！黃仁勳：台灣不再代表便宜，代表的是先進 - 數位時代",
+      "summary": "黃仁勳參訪緯創德州廠開出全美第一片GB300基板，並直言台灣代表的就是先進技術。",
+      "source": "數位時代-AI",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1aSXdjVWxrbEp1SlJjbkk0eGhBU1kyTGtHU25IWkp6QTdKdS1SLVNYNlFMRkFscW5rRUdhbnBYcU1fc0NHRXRoT2RQd3pNY09kd1JxeEZIY1hna0xaN01EdHpVTVBuX04wTjk3V3k0Q0lFMFZJTkx0WDZOQQ?oc=5"
     },
     {
-      "title": "Glow emerges from stealth at $1.2B valuation to challenge endpoint security in the AI era",
-      "summary": "安全新創Glow浮出水面，以12億美元估值獲得巨額融資，專注應對AI時代的端點安全風險。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/"
+      "title": "AI兆元資本支出大噴發！台積電上修至640億美元創新高，二奈米、先進封裝供應鏈誰受惠 - 數位時代",
+      "summary": "台積電資本支出上修至640億美元創新高，二奈米與先進封裝供應鏈全面受惠。",
+      "source": "數位時代-AI",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVSENrTVpvU3lXVTRLUV95Q21uVDQ4b1FaQ0tzUGZCZm1JR0sxdWhqT3F6UGp3b1cwWjlTeXFRT2JKa01PVkNYSXNJNWVTcFgyMzcwNWpvR2V3TDQ1MV9FQW5B?oc=5"
     },
     {
-      "title": "ServiceNow bets $40 million on Indian banking software specialist to expand its financial services push",
-      "summary": "ServiceNow's investment gives BusinessNext a strategic partner to expand its AI-powered banking software globally.",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/servicenow-bets-40m-on-indian-firm-businessnext-at-700m-valuation-to-deepen-banking-ai-push/"
+      "title": "「這個廠給輝達，就不再給別人了」緯創德州D1廠開幕，林建勳：產能很快就會滿載 - 數位時代",
+      "summary": "緯創德州D1廠正式開幕，執行長林建勳透露該廠專屬輝達且產能很快就會滿載。",
+      "source": "數位時代-AI",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVXlPVS0yQ3EyT3ZDeTdjaFROcG1jZkFyUHQ1dEpmVmdQTFlJWGUzak9wdHptNnVjVkY3RkFSWE16ZHVCUUgxR3YxZ1pWWW5Ya1pIdWtIU0hfZHJmeV9ORmlPdW5jNXRLMnR5bmdfaDl3cHQyRzJuRnFCUDhPMEtKWXJB?oc=5"
     },
     {
-      "title": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
-      "summary": "After IBM's stock crashed last week on warnings of poor mainframe sales, the CEO explained that AI wrecked corporate har",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/"
+      "title": "軍用AI加速進戰場！Palantir、Anduril搶進五角大廈，科技巨頭改寫下一代戰爭 - 數位時代",
+      "summary": "隨著Palantir與Anduril等科技巨頭積極搶進五角大廈，軍用AI正全面加速進入現代戰場。",
+      "source": "數位時代-AI",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeDdDT0VwZ212ekVPZTVNZjdraGVaX2M3aGxKVVU2X1l5TndTNkpkTEpyYXRhem5qNFAyYmd3UzRLWlU3LTZtX0dOeHBiY0NwTDdpZnFEWFltTFRXeGlFSHJvZ1VrVVhsTjczaU5BcmxYZEhzeGtQMVdlVS1MTmdFQmJzYUk?oc=5"
     }
   ],
   "startup": [
     {
-      "title": "Kimi K3引爆美國 AI 封殺論戰！OpenAI主管喊「AI共產主義」，為何被批扼殺創新？ - 數位時代",
-      "summary": "中國AI新星Kimi K3效能引發美國AI圈高度震撼，並再度掀起關於開源與封殺的激烈論戰。",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNGgwaFFnZk5zOXYxbXRhYmFnMFRlS3k4eVRfU0Vhb25RekVTQi1ZMWFkcXFFaDI0VUEyQnJReUt5Nl9hel9odllHV3NJSGhKZ0I5LVFlZVNpTzBPYWRrMElYX0QwY0tiMkhMT0pKZkRIMGlHTnJ0cGhvcnQtbkI0Rw?oc=5"
-    },
-    {
-      "title": "Claude Cowork推「Record a skill」新功能！3步驟複製你的工作流程，把SOP變AI技能庫 - 數位時代",
-      "summary": "Claude推出「Record a skill」新功能，讓使用者能透過簡單步驟將日常工作流程轉換為AI技能庫。",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmlmM3MyeEhYREdDQzI1c3dWYUdRYWh1bUlfWlUyXzNHN05UdU9GcmdWQ3FlYVhpQi1odk1ndHBDbkFtdUdrSzdKUkZNOE4tZk52RmRmNWFEN0NLTHlFN0UwNUlQQ1AxSDlTaG5GcDQzZ3I1UjFJSDdBdkc2cTJvaXVNd2lSR2JDR3A2THBrZw?oc=5"
-    },
-    {
-      "title": "- Meet創業小聚",
-      "summary": "<font color=\"#6f6f6f",
+      "title": "沒人脈、沒產業背景，他卻把每個弱勢變強項：新創Pax靠「退稅」闖進YC - Meet創業小聚",
+      "summary": "台灣新創Pax善用退稅優勢將弱勢轉為強項，成功闖進知名加速器YC。",
       "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOMUJVMWhhbHpfV2I3SHUxN20tWEl4MndaOVVyU0dYQlExOWl4TUFGd21NV01JOHZZUS1iYmZMUXZhU1ZxQklNcjhodEVOR29WeWxVTGdsbEhwUUgzRjd0V005SFFyN1VvbmpaaDFpV0FGWTdLQ1BPbjFwSUNZWkM5SW5UaEh0eDhjY0drWl9GbWhoRkpUMWlSUlJySGxRYU5NSGp3WlVPQzRJdk5Zam5rb01oSnRCQ3BucFJzQ0VtWmd4ZWJ5eTlmNmRLb2RadUFMWHhJZmlxQ0Z5aGw2cmJqYWtZczUyTlF3TV9qV1lFRVp4T0RNdThyUFlZVFNMNElucVZOeEdOT3UyUDgxeEgxdUJsZmVyd1lHOTNOVjZPcW1rdGM?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XZkl1NjloZWZEazJiZnBMQV8tU3lvdWZmY2xHY1UtdjdKQTJlMmpNT3JpLWdNNW95alVNMHJMdllFYjBGWUJpcFY0LUVzQ3B2VmJuNUFMTl8?oc=5"
     },
     {
-      "title": "封殺開源AI是扼殺新創？Kimi K3太強掀起美國圍堵論戰 - Meet創業小聚",
-      "summary": "封殺開源AI是扼殺新創？Kimi K3太強掀起美國圍堵論戰 Meet創業小聚",
+      "title": "提前5天預警心衰竭、VR治療兒童弱視，比翼生醫Demo Day十組國際醫療新創還有哪些亮點？ - Meet創業小聚",
+      "summary": "比翼生醫Demo Day展出十組國際醫療新創，涵蓋心衰竭提前預警與VR治療弱視等亮點。",
       "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5mTi03NmdiUEltdFRlSl9YVERRdVYyWnJEUFY2WHIyQTRGa3lrTi1YUjdhWmNsVl9KdTAteVFRalRhZmpHSS1YLXprT2dzQ0g1TEM0VEFQemQ?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1vUXRTWUUyVVFIV2VzS1ctZzFmeUNYQVZwc2VHUjlIcFJzQ2pjTHFncWliTmNIOTRZZzFraFRqbjMwMEo5TmhyUEsweC1JZ28yTktlYWF5TVM?oc=5"
     },
     {
-      "title": "台積電利多不漲 AI供應鏈面臨財報與籌碼雙重考驗 - 數位時代",
-      "summary": "台積電利多不漲 AI供應鏈面臨財報與籌碼雙重考驗 數位時代",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1xdFd6aGkxS3NEb2JBaV9JTGJXcVZMVmhBamtpRHc4MXdMNnhBS0haNVpjTGJLZ3pONE1HUHU4aTU4b2dLZWZuNkRvUFZMR2xhX3Awc180QUhRN0hWRk03X2VTOUdjMmU5U0E?oc=5"
+      "title": "團隊少 25% 估值卻更高？哈佛商學院教授解析「AI 原生公司」的 4 大精實特徵 - Meet創業小聚",
+      "summary": "哈佛商學院教授解析AI原生公司的4大精實特徵，指出其團隊雖小但估值往往更高。",
+      "source": "創業小聚",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA5SFJ6LTlfNklTMDEtZkhQUUUtaGRhdnNXRkdXOENHaXQzSkN0NHZ4Ykgyb09xckNSUVBaa1NnQ1JYMnRWYjJDM3RxUGljWkVEWWdhRVN0dlQ?oc=5"
     },
     {
-      "title": "三星Galaxy Z Fold8首度一分為二！3款摺疊機分攻商務多工、影音娛樂 - 數位時代",
-      "summary": "三星Galaxy Z Fold8首度一分為二！3款摺疊機分攻商務多工、影音娛樂 數位時代",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQXzdfOVl5QURmSkFPVWx5VnljTkNZVXZwVjA1Yl9BQnpwRkUyT3lqXzlOMGNnSFh5ajFwS1c4UGRVSDNXeWhGaG41MkROMWY0S1I0bE1kZk4xQVpwdldZNGdNYlYyT2puZ0pBc095Mk1TQ21FbmVKQVJLUkNGV2R6ajF2MEl0S3JQZk9mZy1DYU8?oc=5"
-    },
-    {
-      "title": "EP299. 節能減碳加AI用電，如何把能源管理從小眾變熱門？ ft.慧景科技共同創辦人暨執行長黃建峰 - 數位時代",
-      "summary": "EP299. 節能減碳加AI用電，如何把能源管理從小眾變熱門？ ft.慧景科技共同創辦人暨執行長黃建峰 數位時代",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE50Szhhd0ZmcmxqQUs0OWk2RTB1V2t3NWExaXFpbEVvelpwdy1INFRzbFVLMHA0bUFDeERyenlGam8zVWFnOG5KcGFyY0RsQ1BmUnREUGxCSGpjajJJTE0tM3A0V2xybThDTlpOUktjWkxoMUsy?oc=5"
+      "title": "不只做AI代理：Nous Research再佈局去中心化算力網路，估值達15億美元 - Meet創業小聚",
+      "summary": "AI新創Nous Research不只深耕代理技術，更進一步佈局估值達15億美元的去中心化算力網路。",
+      "source": "創業小聚",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxMld3OFpIQ3daX1RtY1lhV2ZlZFRiZVJ5QS1BUWhLOXBvOC1kUEJBeTFnU3Y3eFQxT0xyUGVUaWZBVGVMR3pYUjN2cmstVUFtYk9saXBlRWY?oc=5"
     }
   ],
-  "closing_note": "保持彈性，穩健布局！"
+  "closing_note": "掌握趨勢，穩健投資，祝您今天操作順利！"
 }

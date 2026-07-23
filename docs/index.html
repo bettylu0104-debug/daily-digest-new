@@ -1,8 +1,437 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><meta charset="UTF-8"><title>晨報準備中</title></head>
-<body style="font-family: sans-serif; text-align:center; padding-top:100px; color:#444;">
-  <h1>晨報尚未產生</h1>
-  <p>請先到 GitHub 的 Actions 頁面手動執行一次「每日晨報」流程。</p>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026/07/23 晨報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Noto+Serif+TC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #faf9f6;
+    --line: #d8d5cd;
+    --accent: #a6772c;
+    --muted: #6b6b66;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', 'Noto Serif TC', sans-serif;
+    line-height: 1.7;
+  }
+  .masthead {
+    text-align: center;
+    padding: 48px 24px 24px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .masthead .date {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .masthead h1 {
+    font-family: 'Playfair Display', 'Noto Serif TC', serif;
+    font-size: 42px;
+    margin: 8px 0 4px;
+    letter-spacing: 1px;
+  }
+  .greeting {
+    max-width: 700px;
+    margin: 32px auto 8px;
+    padding: 0 24px;
+    font-style: italic;
+    color: var(--muted);
+    text-align: center;
+    font-size: 16px;
+  }
+  .filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 16px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .filter-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border: 1px solid var(--ink);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-btn:hover { background: rgba(0,0,0,0.05); }
+  .filter-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 24px; }
+  section { margin-bottom: 48px; scroll-margin-top: 90px; }
+  section.hidden { display: none; }
+  section h2 {
+    font-family: 'Playfair Display', 'Noto Serif TC', serif;
+    font-size: 24px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  section h2 .en {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+  .highlight-box {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .highlight-box div { margin-bottom: 6px; }
+  .highlight-box b { color: var(--accent); }
+  ul.news-list { list-style: none; margin: 0; padding: 0; }
+  ul.news-list li {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  ul.news-list li:last-child { border-bottom: none; }
+  .news-title { font-weight: 600; font-size: 16px; }
+  .news-title a { color: var(--ink); text-decoration: none; }
+  .news-title a:hover { color: var(--accent); }
+  .news-summary { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .news-source { font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; display: inline-block; }
+  ul.task-list { list-style: none; margin: 0; padding: 0; }
+  ul.task-list li {
+    display: flex;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+    align-items: baseline;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+  }
+  ul.task-list li:last-child { border-bottom: none; }
+  ul.task-list li.done { opacity: 0.4; }
+  ul.task-list li.done .task-title { text-decoration: line-through; }
+  .task-time {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 64px;
+    font-size: 15px;
+  }
+  .task-check {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 3px;
+    position: relative;
+  }
+  ul.task-list li.done .task-check::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
+  }
+  .task-title { font-weight: 600; font-size: 16px; }
+  .task-location { color: var(--muted); font-size: 13px; margin-left: 8px; }
+  .no-task { color: var(--muted); font-size: 14px; font-style: italic; padding: 8px 0; }
+  .task-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 26px 28px;
+    margin: 32px auto 0;
+    max-width: 712px;
+  }
+  .task-card-title {
+    font-family: 'Playfair Display', 'Noto Serif TC', serif;
+    font-size: 22px;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .task-card-title .en {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+  footer {
+    text-align: center;
+    padding: 32px 24px 60px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="date">星期四 · 2026/07/23</div>
+    <h1>每日晨報</h1>
+  </div>
+  <div class="greeting">早安！今天市場震盪劇烈，喝杯咖啡配晨報，我們一起掌握動態！</div>
+
+  <div class="container">
+    <div class="task-card" id="taskCard">
+      <h2 class="task-card-title">今日任務 <span class="en">Today's Agenda</span></h2>
+      <div class="no-task">今天沒有排定的行程，好好安排自己的時間吧。</div>
+    </div>
+  </div>
+
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-target="all">全部</button>
+    <button class="filter-btn" data-target="tw">台股</button>
+    <button class="filter-btn" data-target="us">美股</button>
+    <button class="filter-btn" data-target="macro">總經</button>
+    <button class="filter-btn" data-target="ai">AI</button>
+    <button class="filter-btn" data-target="startup">新創</button>
+  </div>
+
+  <div class="container">
+
+    <section data-category="tw">
+      <h2>台股 <span class="en">Taiwan Market</span></h2>
+      <div class="highlight-box">
+        <div><b>台指期夜盤　</b>今日無夜盤資料，建議至台灣期貨交易所官網查看</div>
+        <div><b>成交量王　</b>成交量最大個股為群益臺灣加權正2，成交量超過3億股。</div>
+        <div><b>最熱類股　</b>盤面表現最熱門的類股為特選大蘋果報酬正向兩倍指數，大漲8.38%。</div>
+      </div>
+      <ul class="news-list"><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E9%9C%87%E7%9B%AA-%E4%B8%8D%E6%95%97%E6%95%99%E4%B8%BB%E9%BB%9E%E5%90%8D2%E6%AA%94-%E5%A4%A7%E8%B7%8C%E5%B0%B1%E8%B2%B7%E9%80%B2-%E9%80%99etf%E5%A0%B1%E9%85%AC%E7%8E%87%E8%B4%8F0050%E9%81%94260-035500326.html" target="_blank">台股震盪！不敗教主點名2檔「大跌就買進」 這ETF報酬率贏0050達260％</a></div>
+          <div class="news-summary">美股四大指數漲跌互見，台股早盤雖強勢上揚但隨後震盪，專家點名特定ETF及標的在拉回時可留意。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B5%B4%E7%BE%8E%E8%A8%AD%E5%BB%A0%E6%8E%80%E4%BA%BA%E6%89%8D%E9%9C%80%E6%B1%82-1%E5%AD%B8%E6%A0%A1%E6%94%9Casu%E9%96%8B%E5%85%AD%E5%A4%A7%E7%A7%91%E6%8A%80%E8%AA%B2-%E8%A8%AD%E5%82%99%E8%B7%A8%E6%B5%B7%E4%BE%86%E5%8F%B0-035000222.html" target="_blank">台積電赴美設廠掀人才需求！1學校攜ASU開六大科技課 設備跨海來台</a></div>
+          <div class="news-summary">因應台積電亞利桑那州廠擴大布局，國內高中與美國名校合作開設科技專題營，提前培養半導體人才。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E3%80%90hot%E5%8F%B0%E8%82%A1%E3%80%91%E5%A4%A7%E7%9B%A4%E8%A...-034901704.html" target="_blank">【Hot台股】大盤衝上4萬5後跳水600點...網哭「大媽救救」 分析師看法出爐</a></div>
+          <div class="news-summary">台股盤中攻高後遇短線賣壓跳水，指數翻黑引發投資人熱議，分析師認為多頭修正屬正常結構。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%93%B4%E5%BB%A0%E6%90%B6%E4%BA%BA%E6%89%8D-%E9%80%99%E9%AB%98%E4%B8%AD-%E8%88%87%E7%BE%8E%E5%9C%8B%E5%90%8D%E6%A0%A1%E5%90%88%E9%96%8B%E8%AA%B2-%E5%AD%B8%E7%94%9F%E5%85%8D%E5%87%BA%E5%9C%8B%E7%8E%A9%E9%A0%82%E7%B4%9A%E8%A8%AD%E5%82%99-034700823.html" target="_blank">台積電擴廠搶人才！「這高中」與美國名校合開課 學生免出國玩頂級設備</a></div>
+          <div class="news-summary">薇閣中學引進亞利桑那州立大學專利教學設備，讓學生在台體驗機械手臂與邊緣AI等頂尖課程。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E6%8B%89%E5%9B%9E%E6%98%AF%E8%80%81%E5%A4%A7%E9%80%81%E7%9A%84%E6%8A%98%E5%83%B9%E5%88%B8-%E6%9D%9C%E9%87%91%E9%BE%8D%E9%BB%9E%E5%90%8D-%E9%80%99%E6%99%82%E6%A9%9F-%E5%8F%B0%E8%82%A1%E8%A1%9D6%E8%90%AC-033800907.html" target="_blank">拉回是老天送的折價券？ 杜金龍點名「這時機」：台股衝6萬</a></div>
+          <div class="news-summary">資深分析師指出台股回檔僅為多頭修正，半導體基本面無虞，第三季震盪反而是長線布局良機。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E8%BC%9D%E9%81%94-%E5%8F%B0%E7%A9%8D%E9%9B%BB-micron%E5%85%A5%E5%88%97-009827%E5%B8%83%E5%B1%80%E5%85%A8%E7%90%8350%E6%AA%94%E7%AE%97%E5%8A%9B%E8%8F%81%E8%8B%B1-033131786.html" target="_blank">輝達、台積電、Micron入列！009827布局全球50檔算力菁英</a></div>
+          <div class="news-summary">玉山投信看好全球算力需求長線爆發，宣佈推出全台首檔全球算力相關ETF，涵蓋AI頂尖供應鏈。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD-%E9%9B%BB%E9%87%91%E5%82%B3%E7%94%A2%E5%BC%B1%E5%8B%A2-%E5%8F%B0%E8%82%A1%E7%B4%85%E7%BF%BB%E9%BB%9145000%E9%BB%9E%E5%BE%97%E8%80%8C%E5%BE%A9%E5%A4%B1-030748959.html" target="_blank">【台股盤中】電金傳產弱勢 台股紅翻黑45000點得而復失</a></div>
+          <div class="news-summary">台股早盤突破45000點後賣壓湧現，電子、金融與傳產全面走弱，指數終場由紅翻黑回測。</div>
+          <div class="news-source">Yahoo奇摩股市-台股動態</div>
+        </li></ul>
+    </section>
+
+    <section data-category="us">
+      <h2>美股 <span class="en">US Market</span></h2>
+      <div class="highlight-box">
+        <div><b>大盤走勢　</b>美股四大指數漲跌互見，科技巨頭財報雖營收報喜但獲利受壓，牽動盤後走勢震盪。</div>
+        <div><b>台積電ADR　</b>台積電ADR下跌0.80%，收在421.21美元。</div>
+      </div>
+      <ul class="news-list"><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E4%B8%8D%E7%95%B6%E5%88%A9%E7%94%A8%E5%80%8B%E8%B3%87-%E9%9F%93%E5%9C%8B%E5%B0%8Dtiktok%E5%8F%8A%E8%98%8B%E6%9E%9C%E5%AD%90%E5%8%AC%E5%8F%B8%E8%99%95%E4%BB%A5%E7%B8%BD%E8%A8%88%E7%A0%B4%E7%99%BE%E5%84%84%E9%9F%93%E5%85%83%E7%BD%B0%E6%AC%BE-034711254.html" target="_blank">不當利用個資，韓國對TikTok及蘋果子公司處以總計破百億韓元罰款</a></div>
+          <div class="news-summary">韓國個人資訊保護委員會認定違規使用用戶個資，分別對TikTok與蘋果子公司祭出重罰。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/q2%E7%87%9F%E6%94%B6%E9%9B%96%E9%96%8B%E7%B4%85%E7%9B%A4%E7%8D%B2%E5%88%A9%E5%8D%BB%E9%81%9C%E8%89%B2-alphabet-%E7%89%B9%E6%96%AF%E6%8B%89%E5%9B%A0-1%E7%90%86%E7%94%B1-%E7%9B%A4%E5%BE%8C%E9%87%8D%E6%8C%AB4-033500218.html" target="_blank">Q2營收雖開紅盤獲利卻遜色！Alphabet、特斯拉因「1理由」 盤後重挫4%</a></div>
+          <div class="news-summary">兩大巨頭第二季營收雖優於預期，但獲利表現及資本支出疑慮引發賣壓，盤後股價皆下跌逾4%。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E7%89%B9%E6%96%AF%E6%8B%89%E7%8D%B2%E4%5F%8F%E4%B8%8D%E5%A6%82%E9%A0%90-%E8%87%...-032911275.html" target="_blank">特斯拉獲利不如預期、自由現金流轉負... 馬斯克淡定：正佈局「二戰以來最快的工業擴張」</a></div>
+          <div class="news-summary">特斯拉Q2現金流轉負，馬斯克強調正全力推進大規模工業與產能擴張計畫以應對未來需求。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E6%94%BF%E5%BA%9C%E6%96%85%E9%80%BE3-800%E5%84%84%E6%97%A5%E5%9C%93%E6%89%B6%E6%A4%8Dnoetra-%E6%8E%A1%E8%B3%BC2-75%E8%90%AC%E9%A1%86%E8%BC%9D%E9%81%94rubin%E6%99%B6%E7%89%87-032630130.html" target="_blank">日本政府斥逾3,800億日圓扶植Noetra，採購2.75萬顆輝達Rubin晶片</a></div>
+          <div class="news-summary">日本新創Noetra獲得龐大資金挹注，計畫採購大量輝達最新晶片以建立自主AI基礎設施。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.news.yahoo.com/%E7%B5%B1-%E6%8A%95%E4%BF%A1%E6%89%93%E9%80%A0-%E7%BE%8E%E5%82%B5%E6%96%87%E6%AD%A6%E9%9B%99%E5%85%A8-%E6%96%B0%E5%85%B5-00987d%E9%9D%A0-032254835.html" target="_blank">統一投信打造「美債文武雙全」新兵 00987D靠一招搶市</a></div>
+          <div class="news-summary">面對震盪債市，投信業者推出主動式美國公債ETF，透過量化增益策略搶佔市場資金。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E5%A4%AE%E8%A1%8C%E5%90%8D%E7%BE%A9%E6%9C%89%E6%95%88%E5%8C%AF%E7%8E%87%E6%95%B8%E5%89%B5%E6%96%B0%E4%BD%8E-%E6%97%A5%E5%9C%93%E5%85%A8%E9%9D%A2%E6%80%A7%E7%96%B2%E8%BB%9F%E5%BC%95%E7%99%BC%E9%80%9A%E8%86%A8%E8%AD%A6%E8%A8%8A-031816927.html" target="_blank">日本央行名義有效匯率指數創新低，日圓全面性疲軟引發通膨警訊</a></div>
+          <div class="news-summary">日圓兌一籃子貨幣指標跌至新低，全面疲軟態勢加劇了日本國內的輸入型通膨壓力。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E7%89%B9%E6%96%AF%E6%8B%89%E8%88%87spacex%E5%90%88%E4%BD%B5-%E9%A6%AC%E6%96%AF%E5%85%8B%E9%AC%86%E5%8F%A3%E4%BA%86-%E5%88%86%E6%9E%90%E5%B8%AB%E9%BB%9E%E9%A0%AD-%E6%A9%9F%E7%8E%87%E6%9C%899%E6%88%90-031400498.html" target="_blank">特斯拉與SpaceX合併？ 馬斯克鬆口了 分析師點頭：機率有9成</a></div>
+          <div class="news-summary">馬斯克在財報會議上對特斯拉與SpaceX合併持開放態度，法人看好兩者業務重疊性高，合併機率高。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li></ul>
+    </section>
+
+    <section data-category="macro">
+      <h2>總體經濟 <span class="en">Macro</span></h2>
+      <ul class="news-list"><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/" target="_blank">Google justifies its massive AI spending with a booming cloud business</a></div>
+          <div class="news-summary">Google憑藉強勁的雲端業務營收支撐龐大的AI基礎設施資本支出，向市場證明AI投資的效益。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/" target="_blank">Treasury threatens sanctions after White House claims Moonshot distilled Anthropic’s Fable</a></div>
+          <div class="news-summary">美國白宮指控中國新創蒸餾Anthropic模型引發關注，美國財政部隨之威脅祭出制裁。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://tw.stock.yahoo.com/news/%E6%97%A5%E6%9C%AC%E5%A4%AE%E8%A1%8C%E5%90%8D%E7%BE%A9%E6%9C%89%E6%95%88%E5%8C%AF%E7%8E%87%E6%95%B8%E5%89%B5%E6%96%B0%E4%BD%8E-%E6%97%A5%E5%9C%93%E5%85%A8%E9%9D%A2%E6%80%A7%E7%96%B2%E8%BB%9F%E5%BC%95%E7%99%BC%E9%80%9A%E8%86%A8%E8%AD%A6%E8%A8%8A-031816927.html" target="_blank">日本央行名義有效匯率指數創新低，日圓全面性疲軟引發通膨警訊</a></div>
+          <div class="news-summary">日圓持續走貶壓抑匯率指數，牽動區域經濟及貨幣政策走向。</div>
+          <div class="news-source">Yahoo奇摩股市-國際財經</div>
+        </li></ul>
+    </section>
+
+    <section data-category="ai">
+      <h2>AI <span class="en">Artificial Intelligence</span></h2>
+      <ul class="news-list"><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/" target="_blank">After shocking quarter, IBM insists that AI isn’t killing the mainframe</a></div>
+          <div class="news-summary">針對主機銷售疲軟引發的股價重挫，IBM執行長強調AI只是暫時排擠了企業硬體預算。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/" target="_blank">How OpenAI’s human mistake led to the AI-powered hack on Hugging Face</a></div>
+          <div class="news-summary">資安專家指出，OpenAI在隔離測試環境中的人為疏忽，意外促成了針對Hugging Face的AI駭客攻擊。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" target="_blank">Travis Kalanick’s robotics company raises $1.7B, led by a16z</a></div>
+          <div class="news-summary">前Uber執行長創辦的工業AI機器人公司Atoms獲得a16z領投高達17億美元資金。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/" target="_blank">Monday.com lays off hundreds to focus on AI</a></div>
+          <div class="news-summary">協作軟體平台Monday.com宣布裁員20%約630名員工，全面轉型聚焦AI工作平台。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/" target="_blank">Arcee, a US open source AI lab, says Chinese models are not inherently dangerous</a></div>
+          <div class="news-summary">美國開源AI實驗室Arcee公開表示，中國開源模型在技術上不具備本質上的危險性。</div>
+          <div class="news-source">TechCrunch-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs" target="_blank">The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs</a></div>
+          <div class="news-summary">企業採購AI基礎設施的速度遠快於其成本評估能力，導致算力支出面臨管理落差。</div>
+          <div class="news-source">VentureBeat-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials" target="_blank">The agent security gap: 54% of enterprises have already had an AI agent incident</a></div>
+          <div class="news-summary">過半數企業遭遇過AI代理安全事件，且多數仍允許代理共享憑證，資安防護亟待加強。</div>
+          <div class="news-source">VentureBeat-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think" target="_blank">Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.</a></div>
+          <div class="news-summary">Google正式重塑維持25年的經典搜尋框介面，全面迎向AI對話與全新互動時代。</div>
+          <div class="news-source">VentureBeat-AI</div>
+        </li><li>
+          <div class="news-title"><a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" target="_blank">Railway secures $100 million to challenge AWS with AI-native cloud infrastructure</a></div>
+          <div class="news-summary">雲端平台Railway獲1億美元融資，主打AI原生雲端架構以挑戰傳統AWS霸主地位。</div>
+          <div class="news-source">VentureBeat-AI</div>
+        </li></ul>
+    </section>
+
+    <section data-category="startup">
+      <h2>新創 <span class="en">Startups</span></h2>
+      <ul class="news-list"><li>
+          <div class="news-title"><a href="https://www.ycombinator.com/blog/chris-golda-and-grey-baker-general-partners/" target="_blank">Christopher Golda and Grey Baker Join YC as General Partners</a></div>
+          <div class="news-summary">知名新創加速器Y Combinator宣佈增添兩位普通合夥人，強化投資與輔導陣容。</div>
+          <div class="news-source">Y Combinator Blog</div>
+        </li><li>
+          <div class="news-title"><a href="https://www.ycombinator.com/blog/diana-hu-managing-partner/" target="_blank">Diana Hu Is YC's Newest Managing Partner</a></div>
+          <div class="news-summary">Y Combinator晉升Diana Hu為管理合夥人，表彰其在創業與技術推廣的傑出貢獻。</div>
+          <div class="news-source">Y Combinator Blog</div>
+        </li><li>
+          <div class="news-title"><a href="https://www.ycombinator.com/blog/adding-canada-back/" target="_blank">Adding Canada Back to Our List of Accepted Countries of Incorporation</a></div>
+          <div class="news-summary">聽取新創社群反饋後，Y Combinator正式將加拿大重新列入接受註冊的國家名單。</div>
+          <div class="news-source">Y Combinator Blog</div>
+        </li><li>
+          <div class="news-title"><a href="https://www.ycombinator.com/blog/the-yc-ai-student-starter-pack/" target="_blank">Announcing the YC AI Stack</a></div>
+          <div class="news-summary">Y Combinator攜手多家企業推出AI開發工具包，提供學員超過2.5萬美元的免費點數。</div>
+          <div class="news-source">Y Combinator Blog</div>
+        </li><li>
+          <div class="news-title"><a href="https://meet.bnext.com.tw/articles/view/53383" target="_blank">封殺開源AI是扼殺新創？Kimi K3太強掀起美國圍堵論戰</a></div>
+          <div class="news-summary">中國新創開源模型表現逼近閉源頂尖水準，在美國科技界引發是否該封殺開源AI的強烈論戰。</div>
+          <div class="news-source">創業小聚 Meet</div>
+        </li></ul>
+    </section>
+
+  </div>
+  <footer>面對盤勢震盪，保持穩健步調最重要！<br><br>由你的私人助理自動整理 · 2026/07/23</footer>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.filter-btn');
+      var sections = document.querySelectorAll('section[data-category]');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var target = btn.getAttribute('data-target');
+          sections.forEach(function (sec) {
+            if (target === 'all' || sec.getAttribute('data-category') === target) {
+              sec.classList.remove('hidden');
+            } else {
+              sec.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // 任務打勾：點擊切換完成狀態，並記在這台裝置的瀏覽器裡（換一天產生新頁面會自動重置）
+      var storageKey = 'daily-digest-tasks-2026/07/23';
+      var doneIds = [];
+      try {
+        doneIds = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      } catch (e) { doneIds = []; }
+
+      var taskItems = document.querySelectorAll('#taskList li');
+      function applyDoneState() {
+        taskItems.forEach(function (li) {
+          var id = li.getAttribute('data-task-id');
+          if (doneIds.indexOf(id) !== -1) {
+            li.classList.add('done');
+          } else {
+            li.classList.remove('done');
+          }
+        });
+      }
+      applyDoneState();
+
+      taskItems.forEach(function (li) {
+        li.addEventListener('click', function () {
+          var id = li.getAttribute('data-task-id');
+          var idx = doneIds.indexOf(id);
+          if (idx === -1) {
+            doneIds.push(id);
+          } else {
+            doneIds.splice(idx, 1);
+          }
+          try { localStorage.setItem(storageKey, JSON.stringify(doneIds)); } catch (e) {}
+          applyDoneState();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

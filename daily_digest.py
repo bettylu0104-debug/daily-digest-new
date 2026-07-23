@@ -173,6 +173,71 @@ def fetch_market_quotes():
 
 
 # ============================================================
+# 4.5 抓 Google 日曆今天的行程（跟語音記行程共用同一組 OAuth 憑證）
+# ============================================================
+
+CAL_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
+CAL_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", "")
+CAL_REFRESH_TOKEN = os.environ.get("GOOGLE_REFRESH_TOKEN", "")
+CAL_CALENDAR_ID = os.environ.get("GOOGLE_CALENDAR_ID", "primary")
+
+
+def fetch_todays_events(now_tw: datetime.datetime):
+    """抓今天 (台北時間) 的 Google 日曆行程，依開始時間排序"""
+    if not (CAL_CLIENT_ID and CAL_CLIENT_SECRET and CAL_REFRESH_TOKEN):
+        print("[提示] 尚未設定 Google 日曆憑證，略過今日任務區塊")
+        return []
+    try:
+        token_resp = requests.post(
+            "https://oauth2.googleapis.com/token",
+            data={
+                "client_id": CAL_CLIENT_ID,
+                "client_secret": CAL_CLIENT_SECRET,
+                "refresh_token": CAL_REFRESH_TOKEN,
+                "grant_type": "refresh_token",
+            },
+            timeout=15,
+        )
+        token_resp.raise_for_status()
+        access_token = token_resp.json()["access_token"]
+
+        day_start = now_tw.replace(hour=0, minute=0, second=0, microsecond=0)
+        day_end = day_start + datetime.timedelta(days=1)
+        time_min = (day_start - datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)).isoformat() + "Z"
+        time_max = (day_end - datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)).isoformat() + "Z"
+
+        resp = requests.get(
+            f"https://www.googleapis.com/calendar/v3/calendars/{CAL_CALENDAR_ID}/events",
+            headers={"Authorization": f"Bearer {access_token}"},
+            params={
+                "timeMin": time_min,
+                "timeMax": time_max,
+                "singleEvents": "true",
+                "orderBy": "startTime",
+            },
+            timeout=15,
+        )
+        resp.raise_for_status()
+        events = []
+        for item in resp.json().get("items", []):
+            start = item.get("start", {})
+            start_str = start.get("dateTime", start.get("date", ""))
+            time_label = "整天"
+            if "dateTime" in start:
+                dt = datetime.datetime.fromisoformat(start_str.replace("Z", "+00:00"))
+                time_label = dt.astimezone(datetime.timezone(datetime.timedelta(hours=8))).strftime("%H:%M")
+            events.append({
+                "time": time_label,
+                "title": item.get("summary", "(無標題)"),
+                "location": item.get("location", ""),
+            })
+        return events
+    except Exception as e:
+        print(f"[警告] 日曆行程抓取失敗：{e}")
+        return []
+
+
+# ============================================================
 # 5. 呼叫 Google Gemini，把原始資料整理成人性化晨報
 #    Gemini API 有免費額度，一天一次遠遠用不完
 #    免費申請金鑰：https://aistudio.google.com/apikey
@@ -229,7 +294,9 @@ def call_gemini(raw_data: dict) -> dict:
         },
     }
     resp = requests.post(url, json=payload, timeout=90)
-    resp.raise_for_status()
+    if resp.status_code != 200:
+        # 印出 Google 實際回傳的錯誤原因，方便除錯（金鑰問題/格式問題等都會在這裡看到）
+        raise RuntimeError(f"Gemini API 回應 {resp.status_code}：{resp.text[:1000]}")
     data = resp.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
@@ -358,6 +425,73 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .news-title a:hover {{ color: var(--accent); }}
   .news-summary {{ color: var(--muted); font-size: 14px; margin-top: 4px; }}
   .news-source {{ font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; display: inline-block; }}
+  ul.task-list {{ list-style: none; margin: 0; padding: 0; }}
+  ul.task-list li {{
+    display: flex;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line);
+    align-items: baseline;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+  }}
+  ul.task-list li:last-child {{ border-bottom: none; }}
+  ul.task-list li.done {{ opacity: 0.4; }}
+  ul.task-list li.done .task-title {{ text-decoration: line-through; }}
+  .task-time {{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 64px;
+    font-size: 15px;
+  }}
+  .task-check {{
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 3px;
+    position: relative;
+  }}
+  ul.task-list li.done .task-check::after {{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
+  }}
+  .task-title {{ font-weight: 600; font-size: 16px; }}
+  .task-location {{ color: var(--muted); font-size: 13px; margin-left: 8px; }}
+  .no-task {{ color: var(--muted); font-size: 14px; font-style: italic; padding: 8px 0; }}
+  .task-card {{
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 26px 28px;
+    margin: 32px auto 0;
+    max-width: 712px;
+  }}
+  .task-card-title {{
+    font-family: 'Playfair Display', 'Noto Serif TC', serif;
+    font-size: 22px;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }}
+  .task-card-title .en {{
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }}
   footer {{
     text-align: center;
     padding: 32px 24px 60px;
@@ -373,6 +507,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <h1>每日晨報</h1>
   </div>
   <div class="greeting">{greeting}</div>
+
+  <div class="container">
+    <div class="task-card" id="taskCard">
+      <h2 class="task-card-title">今日任務 <span class="en">Today's Agenda</span></h2>
+      {tasks_html}
+    </div>
+  </div>
 
   <div class="filter-bar" id="filterBar">
     <button class="filter-btn active" data-target="all">全部</button>
@@ -440,11 +581,60 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           }});
         }});
       }});
+
+      // 任務打勾：點擊切換完成狀態，並記在這台裝置的瀏覽器裡（換一天產生新頁面會自動重置）
+      var storageKey = 'daily-digest-tasks-{date_str}';
+      var doneIds = [];
+      try {{
+        doneIds = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      }} catch (e) {{ doneIds = []; }}
+
+      var taskItems = document.querySelectorAll('#taskList li');
+      function applyDoneState() {{
+        taskItems.forEach(function (li) {{
+          var id = li.getAttribute('data-task-id');
+          if (doneIds.indexOf(id) !== -1) {{
+            li.classList.add('done');
+          }} else {{
+            li.classList.remove('done');
+          }}
+        }});
+      }}
+      applyDoneState();
+
+      taskItems.forEach(function (li) {{
+        li.addEventListener('click', function () {{
+          var id = li.getAttribute('data-task-id');
+          var idx = doneIds.indexOf(id);
+          if (idx === -1) {{
+            doneIds.push(id);
+          }} else {{
+            doneIds.splice(idx, 1);
+          }}
+          try {{ localStorage.setItem(storageKey, JSON.stringify(doneIds)); }} catch (e) {{}}
+          applyDoneState();
+        }});
+      }});
     }})();
   </script>
 </body>
 </html>
 """
+
+
+def render_task_list(events):
+    if not events:
+        return '<div class="no-task">今天沒有排定的行程，好好安排自己的時間吧。</div>'
+    html = '<ul class="task-list" id="taskList">'
+    for idx, ev in enumerate(events):
+        loc = f'<span class="task-location">📍 {ev["location"]}</span>' if ev.get("location") else ""
+        html += f"""<li data-task-id="{idx}">
+          <div class="task-time">{ev.get('time','')}</div>
+          <div class="task-check"></div>
+          <div><div class="task-title">{ev.get('title','')}</div>{loc}</div>
+        </li>"""
+    html += "</ul>"
+    return html
 
 
 def render_news_list(items):
@@ -458,12 +648,13 @@ def render_news_list(items):
     return html
 
 
-def render_html(digest: dict, now: datetime.datetime) -> str:
+def render_html(digest: dict, now: datetime.datetime, calendar_events=None) -> str:
     weekday_map = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
     return HTML_TEMPLATE.format(
         date_str=now.strftime("%Y/%m/%d"),
         weekday_str=weekday_map[now.weekday()],
         greeting=digest.get("greeting", ""),
+        tasks_html=render_task_list(calendar_events or []),
         night_futures_note=digest["taiwan_stocks"].get("night_futures_note", ""),
         top_volume_note=digest["taiwan_stocks"].get("top_volume_note", ""),
         hot_sector_note=digest["taiwan_stocks"].get("hot_sector_note", ""),
@@ -540,8 +731,11 @@ def main():
         traceback.print_exc()
         sys.exit(1)
 
+    print("== 步驟 3.5/4：抓取今日 Google 日曆行程 ==")
+    calendar_events = fetch_todays_events(now_tw)
+
     print("== 步驟 4/4：產生網頁並推播 ==")
-    html = render_html(digest, now_tw)
+    html = render_html(digest, now_tw, calendar_events)
     os.makedirs("docs", exist_ok=True)
     with open("docs/index.html", "w", encoding="utf-8") as f:
         f.write(html)

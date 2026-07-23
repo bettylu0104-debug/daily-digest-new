@@ -1,0 +1,38 @@
+name: 每日晨報
+
+on:
+  schedule:
+    # 這是 UTC 時間 00:00，等於台北時間早上 08:00
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}  # 讓你可以在 GitHub 網頁上手動按「Run workflow」測試
+
+permissions:
+  contents: write  # 允許程式把產生好的網頁寫回這個 repo
+
+jobs:
+  build-and-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝套件
+        run: pip install -r requirements.txt
+
+      - name: 執行晨報程式
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
+          PAGE_URL: ${{ vars.PAGE_URL }}
+        run: python daily_digest.py
+
+      - name: 把產生的網頁存回 repo（讓 GitHub Pages 更新）
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "自動更新每日晨報"
+          file_pattern: "docs/*"

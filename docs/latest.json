@@ -1,215 +1,497 @@
 {
-  "greeting": "早安！今天市場震盪劇烈，一起來看看最新財經動態吧。",
+  "greeting": "早安！今天市場震盪，我們一起看清重點。",
   "taiwan_stocks": {
     "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
-    "top_volume_note": "成交量最大個股為群創，成交量達2.88億股，收盤上漲1.80元。",
-    "hot_sector_note": "表現最熱的類股為特選大蘋果報酬正向兩倍指數，漲幅達8.38%。",
+    "top_volume_note": "成交量最大為主動統一升級50，成交量高達約3.5億股。",
+    "hot_sector_note": "表現最熱類股為特選大蘋果報酬正向兩倍指數，大漲8.38%。",
     "news": [
       {
-        "title": "台股迎不上不下震盪期　專家曝「聯電、國巨」上下車價",
-        "summary": "台股今上演洗盤行情，盤中下殺逾400點後尾盤小漲，分析師預期震盪將持續，大波段需觀察中秋變盤。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E8%BF%8E%E4%B8%8D%E4%B8%8A%E4%B8%8D%E4%B8%8B%E9%9C%87%E7%9B%AA%E6%9C%9F-%E5%B0%88%E5%AE%B6%E6%9B%9D-%E8%81%AF%E9%9B%BB-%E5%9C%8B%E5%B7%A8-%E4%B8%8A%E4%B8%8B%E8%BB%8A%E5%83%B9-072900464.html"
+        "title": "外資近3日買超個股 - news.cnyes.com",
+        "summary": "盤前提供外資近3日買超個股動向，供投資人觀察法人資金著墨標的。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE93ZllWSHVRUzZTMERRSFBNNUJYTkhPQ1lwX1ZyNHlsTTBXUXZIMnM2RTRGV050UnVqZnJCY0F2M0wwZmRLdzRTWXN5R1hEYkk?oc=5"
       },
       {
-        "title": "三大法人買超台股164.88億元",
-        "summary": "台股終場上漲25.03點收44850.81點，三大法人外資、投信與自營商同步買超，合計買超164.88億元。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E4%B8%89%E5%A4%A7%E6%B3%95%E4%BA%BA%E8%B2%B7%E8%B6%85%E5%8F%B0%E8%82%A1164-88%E5%84%84%E5%85%83-071127089.html"
+        "title": "投信近5日賣超個股 - news.cnyes.com",
+        "summary": "整理投信近5日賣超個股清單，掌握本土法人近期調節籌碼狀況。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBtZ01haEFSa2w1blJwNzR5VnNKLWZwR0VpT2Q0Rlc4ZXNzSEIzMlE1WVFodHp6VHdjWVVlQXhvUlV3RmoxbHRaZG5MTGFrVU0?oc=5"
       },
       {
-        "title": "台積電追加投資美國外媒看好　但仍提醒產能過剩風險",
-        "summary": "台積電加碼1000億美元擴大美國布局，總投資額達2650億美元，外媒看好其先進製程但提醒產能過剩風險。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%BF%BD%E5%8A%A0%E6%8A%95%E8%B3%87%E7%BE%8E%E5%9C%8B%E5%A4%96%E5%AA%92%E7%9C%8B%E5%A5%BD-%E4%BD%86%E4%BB%8D%E6%8F%90%E9%86%92%E7%94%A2%E8%83%BD%E9%81%8E%E5%89%A9%E9%A2%A8%E9%9A%AA-070637898.html"
+        "title": "外資近5日買超個股 | 鉅亨網 - 台股盤前 - news.cnyes.com",
+        "summary": "盤前公布外資近5日買超個股明細，追蹤中長線資金偏好的熱門股。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA5clVnS0ZZZ2VxVnNyU0lNemlpZG9ERjN2U2NiQTViNkdtMUY4QzFUVUFELXVKblAtUmRaMUlnY3RqZWROblh5ZTUybHdpZkk?oc=5"
       },
       {
-        "title": "台股驚險黑翻紅收44850點！台塑化飆9.5%挺油電　和成摜跌停拖累玻璃",
-        "summary": "台股驚險收紅，台塑化受惠油價飆漲大漲9.5%挺油電類股，和成則吞跌停拖累玻璃族群。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E9%A9%9A%E9%9A%AA%E9%BB%91%E7%BF%BB%E7%B4%85%E6%94%B644850%E9%BB%9E-%E5%8F%B0%E5%A1%91%E5%8C%96%E9%A3%869-5-%E6%8C%BA%E6%B2%B9%E9%9B%BB-%E5%92%8C%E6%88%90%E6%91%9C%E8%B7%8C%E5%81%9C%E6%8B%96%E7%B4%AF%E7%8E%BB%E7%92%83-070500264.html"
+        "title": "外資近3日賣超個股 - news.cnyes.com",
+        "summary": "列出外資近3日賣超個股資訊，幫助投資人評估短線調節壓力較大的標的。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4yNzZVelduZzB6Q0g1S2Y5WVB1bHlYWHZTck9uSURVcFRpR0pWRXVVaXNCenN3LThpaURSY1N3aXhBcUEtS015NXJUX2R6d1k?oc=5"
       },
       {
-        "title": "黃鐙輝砸30萬入場台股0050、006208！百萬存款打算這樣用",
-        "summary": "藝人黃鐙輝透露在台股大跌3000點時進場買進0050與006208，展現看好跌深反彈的投資心法。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E9%BB%83%E9%90%99%E8%BC%9D%E7%A0%B830%E8%90%AC%E5%85%A5%E5%A0%B4%E5%8F%B0%E8%82%A10050-006208-%E7%99%BE%E8%90%AC%E5%AD%98%E6%AC%BE%E6%89%93%E7%AE%97%E9%80%99%E6%A8%A3%E7%94%A8-065738148.html"
+        "title": "投信近3日賣超個股 - news.cnyes.com",
+        "summary": "盤點投信近3日賣超個股，觀察國內法人短線出場的產業或個股。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBRWGgybWtaX2ZycEZKVVplcl9yejF4Wk9kbi14S2JTby1KMDRNdWxEMTFhWXczdDd5d291X2lLQ19fOThFMWhuV2x3bnE2aTg?oc=5"
       },
       {
-        "title": "〈焦點股〉輝達傳收購「暗光纖」 點火光通訊股 聯亞連2天漲停 - news.cnyes.com",
-        "summary": "輝達傳出收購暗光纖消息，點火光通訊族群表現，其中聯亞連續兩天亮燈漲停。",
-        "source": "鉅亨網-台股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtcU9RSUxIMkl1SFdiYTVYTGd3YndydE1aT0R1a1l5TGlORFVTeEZtZmh5ZTh4ZjN2SkJEWGxhQkFKeW94Wm5qakRLWlRWWFU?oc=5"
+        "title": "投信近3日買超個股 - news.cnyes.com",
+        "summary": "揭露投信近3日買超個股，鎖定法人資金持續加碼的潛在強勢股。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5IRWdNVWtnSGJHTzk2Uzc0RVoxVUVTYmlqd1U2cGFMT0paWWJ4My1haGNzcGhJaHZxZVdIN1FXa0lxczF2MUx1V0ZMaW5qUGs?oc=5"
       },
       {
-        "title": "〈焦點股〉川普放話回擊油價大漲 台塑三寶亮燈漲停帶頭衝 - news.cnyes.com",
-        "summary": "川普放話回擊推升油價大漲，帶動台塑三寶等塑化股亮燈漲停成為盤面焦點。",
-        "source": "鉅亨網-台股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9hSzBTN1pKZ2FjRE53RHdoVEllQ3hDajNyRExwSVI0QkczbWpQbzBPZzZPdURhazZJNjBKYTh4MzNJWjB1SVJsY0VvNW9xYmc?oc=5"
+        "title": "外資近5日買超個股 - 鉅亨網",
+        "summary": "外資近5日買超個股彙整，提供掌握大型外資中線佈局的參考依據。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9OQU9sX3MwclVCbFpaRnFkNHAwV0FIblRqRHNPN0VfY0IwQVdLMzRYdzhGUTNLd3p6dkxtQUhGcGN0Q2ZtQm5MSzVyRQ?oc=5"
       },
       {
-        "title": "〈焦點股〉散熱三雄下半年成長動能可期 紛紛漲逾半根停板 - news.cnyes.com",
-        "summary": "散熱三雄看好下半年成長動能，股價在盤中紛紛走高，漲幅超過半根停板。",
-        "source": "鉅亨網-台股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RekZGbUIzQTZWdmRPWlRJQmg0cXZlcVRHSjBJRUxkUnFoaW9DU1dsR2VoRXNVcjZwUGE4NF9tTkVpQ3Via3NDX296OHdNeUk?oc=5"
+        "title": "投信近5日買超個股 - news.cnyes.com",
+        "summary": "統計投信近5日買超個股表現，觀察本土基金經紀人積極作帳的方向。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OcG1VclFQM25URkd2cmhETGVKZm1EMG91WnNkQmUxSW1zakNzb0pHOThKRDdXQ0FWdV9Na1l3b1Nmckk2MlE1aTJuRzNmRU0?oc=5"
+      },
+      {
+        "title": "投信近5日賣超個股 - 鉅亨網",
+        "summary": "投信近5日賣超個股名單出爐，留意法人籌碼鬆動的族群風險。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9DaXROdEFKY3ktMUNPQU9rejdZVlpiMlREb3Y4b0FGZHhNMHBZcERRR3lxclBmVy1mTnZXVnFpZVZ2VmE5T0g0V3pTdw?oc=5"
+      },
+      {
+        "title": "外資近3日買超個股 - 鉅亨網",
+        "summary": "外資近3日買超個股更新，即時掌握外資短線資金流向與熱點。",
+        "source": "鉅亨網-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XbzJRVjNQSlpWWXZtTEZkUVd3Yi1PdjFwT1JrcUh2S2c3RDNyTWFhWWRhT0pUZmlCa2Jyd1kxdjlZcGZ1WlpuYldaQTUzQVk?oc=5"
+      },
+      {
+        "title": "中國股市支柱易主？“國家隊”轉向科技股 - 鉅亨號",
+        "summary": "分析中國股市「國家隊」資金配置轉向科技股，可能改變市場支柱。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBmRkVHR3ZpNXRzdXVlWEhSX2VNWlRYME82bF9yeXptZ0hJZE1xdXRQZFBiRzc2TFhfb1Y2cFUzalExVFBDWkpnSQ?oc=5"
+      },
+      {
+        "title": "行業深度研究之記憶體基礎篇（1）：圖文詳解DRAM、NAND、HBM等記憶體技術的前世今生 - 鉅亨號",
+        "summary": "深入探討記憶體技術演進，詳細解析DRAM、NAND與HBM的前世今生。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE14YXI5akE2RWt0bXJrcGZhUDdTSmdnUkhzVDF3WjBUZ0RmVzVoOV9FZkJlYnlQcVZUY19GMEJ0VExZUnQ2dTUzeQ?oc=5"
+      },
+      {
+        "title": "美光大漲12%晶片股全面強彈 中國AI模型反成新催化劑？ - news.cnyes.com",
+        "summary": "美光強彈帶動晶片股，市場關注中國AI模型是否成為產業新催化劑。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NVXdFa1NpWGx0UHRxN3ZabGVVcXJPV0hwS19VRUR3ZlpMVlI1ZU14T0hWdExZT1lDM3g3N1VBSE51dV83ZElrYTEyd0VJVzg?oc=5"
+      },
+      {
+        "title": "無懼台股震盪！ETF大軍逢低搶進 00403A發行張數周增逾百萬張 - 鉅亨網",
+        "summary": "台股震盪之際ETF買氣不減，00403A發行張數單周暴增逾百萬張。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9WYk5tVmZXNm1odkM0S0JqRkpDU2xHRmpLV2llMUUxNHRqa3BndlQ2MnpGQldneF91R3lKY09BNzYxdHZLWUZwTmhKUTVHZjA?oc=5"
+      },
+      {
+        "title": "市場分析：英特爾晶圓代工擴展、Fed升息預期升高及新興市場融資動態 - news.cnyes.com",
+        "summary": "市場剖析英特爾晶圓代工擴展、聯準會升息預期及新興市場動態。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oRzRVZ19GS084LWw0YXhNVTZBQi1WYlpTUy01d3lOZUphOWN1UnlJUUs5N3lDeG12TGMzMlVxcEFqTUZtT3lLall3ejgwUnQ3MktR?oc=5"
+      },
+      {
+        "title": "市場動盪：油價上漲、科技股挑戰與新興市場策略交織影響投資信心 - news.cnyes.com",
+        "summary": "油價上揚與科技股挑戰交織，多重變數持續干擾市場整體投資信心。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5KVEhkTFhXbV93WUl5RnRXSG9EbWp6Q2g4ekxyVGRxQ0dZNGFHaGZ6RFMzWDdMak5IU1I2bThJWWxQeEN0ekFsUlUxaFJTSEVmR0xN?oc=5"
+      },
+      {
+        "title": "戴蒙潑AI投資熱潮冷水 卻看好SpaceX太空資料中心 - 鉅亨網",
+        "summary": "摩根大通戴蒙看衰傳統AI熱潮，但看好SpaceX發展太空資料中心。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14NzA2U2NVeDMwYjdyMkx4UzNyYXBRdnE4blYyU2NfMFI2YUtuN0g5cVNkWEhkY3ZsRGpMUHJHLWh2WDB1VzBNREhmMA?oc=5"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股標普與那指收跌，大型科技股走弱抵銷了能源股因美伊戰爭推動油價上揚的漲幅。",
-    "tsm_adr_note": "台積電ADR在美股中下滑0.80%。",
+    "market_summary": "美股早盤受晶片股疲弱與油價上漲拖累，主要指數全面開低。",
+    "tsm_adr_note": "美光大漲12%帶動半導體強勢反攻，費半指數飆漲逾5%。",
     "news": [
       {
-        "title": "AI記憶體需求爆發，特斯拉獲美光大額供貨，馬斯克讚條件合理",
-        "summary": "特斯拉獲得美光提供大量AI記憶體晶片供貨配額，執行長馬斯克公開稱讚供貨條件相當合理。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/ai%E8%A8%98%E6%86%B6%E9%AB%94%E9%9C%80%E6%B1%82%E7%88%86%E7%99%BC-%E7%89%B9%E6%96%AF%E6%8B%89%E7%8D%B2%E7%BE%8E%E5%85%89%E5%A4%A7%E9%A1%8D%E4%BE%9B%E8%B2%A8-%E9%A6%AC%E6%96%AF%E5%85%8B%E8%AE%9A%E6%A2%9D%E4%BB%B6%E5%90%88%E7%90%86-072826478.html"
+        "title": "〈美股早盤〉晶片股疲弱與油價上漲牽動市場 主要指數開低 - news.cnyes.com",
+        "summary": "美股早盤受到晶片股表現疲弱及油價走高影響，主要指數開低走勢。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1GaDJhdWpUTFBCdGphY1oxQTIyMzlKRGtyRmN4MjNUcmpNTk41UEk3S1RVbnJON0o4NlRSRnkwSGxwU0tDS0JzcGNnTTcxSTg?oc=5"
       },
       {
-        "title": "美股水餃股拉警報！SEC批准那斯達克下市新制，低價中概股首當其衝",
-        "summary": "美國SEC批准那斯達克下市新制，市值連30日低於500萬美元將面臨除牌，低價中概股首當其衝。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E7%BE%8E%E8%82%A1%E6%B0%B4%E9%A4%83%E8%82%A1%E6%8B%89%E8%AD%A6%E5%A0%B1-sec%E6%89%B9%E5%87%86%E9%82%A3%E6%96%AF%E9%81%94%E5%85%8B%E4%B8%8B%E5%B8%82%E6%96%B0%E5%88%B6-%E4%BD%8E%E5%83%B9%E4%B8%AD%E6%A6%82%E8%82%A1%E9%A6%96%E7%95%B6%E5%85%B6%E8%A1%9D-072411026.html"
+        "title": "華爾街集體看好記憶體股！喊話堅守AI硬體、稱Kimi K3將催生新需求 - news.cnyes.com",
+        "summary": "華爾街力挺記憶體與AI硬體，點名Kimi K3將帶動全新市場需求。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RNWE5MmgwanJQYmwxYjNzcGxkWFd6aXgtVkhmcVNfZUs1STkwLU1SOFlTZW5CenQ3aG5ZbHNhR29OOVNqblNGTlVhbkhFUDg?oc=5"
       },
       {
-        "title": "業務重疊持續增加，馬斯克不排除合併特斯拉與SpaceX，惟監管障礙高",
-        "summary": "馬斯克表示不排除未來將特斯拉與SpaceX進行合併，但坦言將面臨相當高的監管障礙。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E6%A5%AD%E5%8B%99%E9%87%8D%E7%96%8A%E6%8C%81%E7%BA%8C%E5%A2%9E%E5%8A%A0-%E9%A6%AC%E6%96%AF%E5%85%8B%E4%B8%8D%E6%8E%92%E9%99%A4%E5%90%88%E4%BD%B5%E7%89%B9%E6%96%AF%E6%8B%89%E8%88%87spacex-%E6%83%9F%E7%9B%A3%E7%AE%A1%E9%9A%9C%E7%A4%99%E9%AB%98-071332729.html"
+        "title": "Iridium第二季營收優於預期Rocket Lab收購案成後市焦點 - news.cnyes.com",
+        "summary": "Iridium上季營收優於預期，Rocket Lab收購案成為後市焦點。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0zem43TTZQZm1hNW1GN0FXWnpJcGtoZzFDWmR3YU5UYTZEWVJpY1h3WHl3UjVMQWxGc1RJZWRqTHQzVEdIUUFueFBETXVOU0E?oc=5"
       },
       {
-        "title": "CPU需求飆升　英特爾與AMD要求中國客戶簽長約",
-        "summary": "因應CPU需求飆升，英特爾與超微開始要求中國伺服器客戶簽署長期的資料中心處理器採購協議。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/cpu%E9%9C%80%E6%B1%82%E9%A3%86%E5%8D%87-%E8%8B%B1%E7%89%B9%E7%88%BE%E8%88%87amd%E8%A6%81%E6%B1%82%E4%B8%AD%E5%9C%8B%E5%AE%A2%E6%88%B6%E7%B0%BD%E9%95%B7%E7%B4%84-071004271.html"
+        "title": "嬌生Ottava機器人手術系統獲FDA放行正面迎戰Intuitive Surgical的達文西系統 - news.cnyes.com",
+        "summary": "嬌生Ottava手術機器人獲FDA放行，正面迎戰達文西系統。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5KQVQ2dmRyZjZUMFZ4MDhadW91UUFxaFZFM0hfWWgyVndLUXFsODJNV2o5TFZjLVRMU2tYVnBZU2NuZzBmeVAtcThPeS1jSmM?oc=5"
       },
       {
-        "title": "〈財報〉半導體業風向球德儀財測亮眼 卻無法驚艷投資人 盤後下挫4% - news.cnyes.com",
-        "summary": "半導體業風向球德儀發布亮眼財測卻未能驚艷市場，盤後股價隨之下挫4%。",
-        "source": "鉅亨網-美股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ray0zaW5jbTJ6c2RDVk00T3pnV2VPa3ZYZkpYd3FSZGdDeWU5dDRaNjdWanlfanpUa1JScWZ3TnNtTVFGS3dtQkpqODJCa1U?oc=5"
+        "title": "科技「七巨頭」時代結束？花旗點AI投資新主角、近半數標普500獲利來自「這族群」 - news.cnyes.com",
+        "summary": "花旗點名AI投資新主角，指出近半數標普500獲利來自特定族群。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ZYUtZTGJkZkI0X1JWb1d6Rlk1QlhwRHM2SjhFS0FtZ0J1eXFoR2JHMUZDOGdJLWFyVlFqSXp4bXlrRFhtcFppaVdfVF84cEE?oc=5"
       },
       {
-        "title": "超微搶下AI超級大單！Anthropic砸數百億美元買晶片 - news.cnyes.com",
-        "summary": "超微傳出搶下人工智慧超級大單，AI新創Anthropic砸下數百億美元採購其晶片。",
-        "source": "鉅亨網-美股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtX0hlVUlsWWRLU1NRUERfUWR5TVo0SFUtblZ1UU1sUFowY3hmdDdrNFVkZk41bzhWUFg5SEpzTGdxNkQ1NWxud3hCOWRFYU0?oc=5"
+        "title": "投信近3日賣超個股 - news.cnyes.com",
+        "summary": "盤點投信近3日賣超個股，提供法人資金流向與風險控管參考。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBRWGgybWtaX2ZycEZKVVplcl9yejF4Wk9kbi14S2JTby1KMDRNdWxEMTFhWXczdDd5d291X2lLQ19fOThFMWhuV2x3bnE2aTg?oc=5"
+      },
+      {
+        "title": "投信近5日買超個股 - news.cnyes.com",
+        "summary": "統計投信近5日買超個股清單，掌握法人資金積極佈局的方向。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OcG1VclFQM25URkd2cmhETGVKZm1EMG91WnNkQmUxSW1zakNzb0pHOThKRDdXQ0FWdV9Na1l3b1Nmckk2MlE1aTJuRzNmRU0?oc=5"
+      },
+      {
+        "title": "外資近5日賣超個股 - 鉅亨網",
+        "summary": "揭露外資近5日賣超個股動向，留意法人調節壓力較大的標的。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1STjhTa1N3MVpNeDNCckJfajVCNHZwT2xYWWtBU2hNbDc0WkxTTDJ6bkhkQ2dnc3BCcFVkQmwyNktPNlNtV3FxbGVRbw?oc=5"
+      },
+      {
+        "title": "〈美股盤後〉晶片股強勢反攻 費半飆逾5% 美光、SK海力士ADR暴漲超12% - news.cnyes.com",
+        "summary": "美股盤後晶片股強勢反攻，費半大漲逾5%，美光與SK海力士ADR飆升超過12%。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9xbkQybzl3SHpzeHdXMVBUYnc0Mjh3MHBQcFZhUm5JY2lPM1plMmFLek5FTS1tejRaVUhFOW05NmRsanVoYUJfVUtIU0xZMVE?oc=5"
+      },
+      {
+        "title": "中國股市支柱易主？“國家隊”轉向科技股 - 鉅亨號",
+        "summary": "中國股市傳出國家隊資金轉向科技股，引發市場對支柱產業轉變的討論。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBmRkVHR3ZpNXRzdXVlWEhSX2VNWlRYME82bF9yeXptZ0hJZE1xdXRQZFBiRzc2TFhfb1Y2cFUzalExVFBDWkpnSQ?oc=5"
+      },
+      {
+        "title": "行業深度研究之記憶體基礎篇（1）：圖文詳解DRAM、NAND、HBM等記憶體技術的前世今生 - 鉅亨號",
+        "summary": "透過深度研究報告，全面解析DRAM、NAND與HBM等記憶體技術發展。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE14YXI5akE2RWt0bXJrcGZhUDdTSmdnUkhzVDF3WjBUZ0RmVzVoOV9FZkJlYnlQcVZUY19GMEJ0VExZUnQ2dTUzeQ?oc=5"
+      },
+      {
+        "title": "美光大漲12%晶片股全面強彈 中國AI模型反成新催化劑？ - news.cnyes.com",
+        "summary": "美光大漲帶動晶片股強彈，中國AI模型崛起成為市場關注的新催化劑。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NVXdFa1NpWGx0UHRxN3ZabGVVcXJPV0hwS19VRUR3ZlpMVlI1ZU14T0hWdExZT1lDM3g3N1VBSE51dV83ZElrYTEyd0VJVzg?oc=5"
+      },
+      {
+        "title": "無懼台股震盪！ETF大軍逢低搶進 00403A發行張數周增逾百萬張 - 鉅亨網",
+        "summary": "台股震盪引發ETF逢低搶進潮，特定主動型ETF發行張數大幅成長。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9WYk5tVmZXNm1odkM0S0JqRkpDU2xHRmpLV2llMUUxNHRqa3BndlQ2MnpGQldneF91R3lKY09BNzYxdHZLWUZwTmhKUTVHZjA?oc=5"
+      },
+      {
+        "title": "市場分析：英特爾晶圓代工擴展、Fed升息預期升高及新興市場融資動態 - news.cnyes.com",
+        "summary": "剖析英特爾代工擴展、聯準會升息預期升溫對新興市場融資的動態影響。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oRzRVZ19GS084LWw0YXhNVTZBQi1WYlpTUy01d3lOZUphOWN1UnlJUUs5N3lDeG12TGMzMlVxcEFqTUZtT3lLall3ejgwUnQ3MktR?oc=5"
+      },
+      {
+        "title": "市場動盪：油價上漲、科技股挑戰與新興市場策略交織影響投資信心 - news.cnyes.com",
+        "summary": "油價上揚與科技股挑戰相互交織，複雜的總經變數影響投資人信心。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5KVEhkTFhXbV93WUl5RnRXSG9EbWp6Q2g4ekxyVGRxQ0dZNGFHaGZ6RFMzWDdMak5IU1I2bThJWWxQeEN0ekFsUlUxaFJTSEVmR0xN?oc=5"
+      },
+      {
+        "title": "戴蒙潑AI投資熱潮冷水 卻看好SpaceX太空資料中心 - 鉅亨網",
+        "summary": "業界大老對部分AI熱潮潑冷水，但同時點名看好太空資料中心的潛力。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14NzA2U2NVeDMwYjdyMkx4UzNyYXBRdnE4blYyU2NfMFI2YUtuN0g5cVNkWEhkY3ZsRGpMUHJHLWh2WDB1VzBNREhmMA?oc=5"
       }
     ]
   },
   "macro": [
     {
+      "title": "日元跌到央行坐不住了？市場押注日銀10月前再升息 機率破七成 - news.cnyes.com",
+      "summary": "日圓貶勢猛烈逼近央行防線，市場預期日本銀行10月前再度升息機率超過七成。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB2Zi1XelBGM19jVEN3bzExSGM3dWJsbWxwZDZBdHNmZ0trbndZYXduVzYxSFoyYnBuNXNlTlRueEdBTEYtMVNVa2I2d3lGbEE?oc=5"
+    },
+    {
+      "title": "市場分析：英特爾晶圓代工擴展、Fed升息預期升高及新興市場融資動態 - news.cnyes.com",
+      "summary": "市場分析聚焦英特爾晶圓代工進展、Fed升息預期升溫及新興市場融資動態。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9oRzRVZ19GS084LWw0YXhNVTZBQi1WYlpTUy01d3lOZUphOWN1UnlJUUs5N3lDeG12TGMzMlVxcEFqTUZtT3lLall3ejgwUnQ3MktR?oc=5"
+    },
+    {
       "title": "油價衝擊重燃升息恐慌！美國長天期公債擊穿關鍵防線、Fed下週會議成關鍵 - news.cnyes.com",
-      "summary": "油價衝擊重燃市場對通膨與升息的恐慌，美國長天期公債殖利率擊穿防線，使聯準會下週會議動態備受關注。",
+      "summary": "油價走高重燃通膨與升息恐慌，美國長天期公債殖利率擊穿防線，聚焦Fed決議。",
       "source": "鉅亨網-總經",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qNVc2ZjZEa2xNZ2xIQmVtWlBFNnB0Qy1YMmJUdm5oQzlBRmpXdTRZSXhGcDFEUEZmd1BSY3RBdVF4UE5WR2F3c0lPWEJqTWc?oc=5"
     },
     {
+      "title": "欣銓:代重要子公司全智科技股份有限公司公告董事會推選董事長及委任總經理。 - news.cnyes.com",
+      "summary": "欣銓代重要子公司全智科技公告董事會推選董事長及委任總經理人事案。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE43cUpWMHF1Rzd6YkJWZWZnU3E0LVFDVnFKNldxaWdPWjAyN2hQVnQ1SUczbUpfemwySDU1bE0yOG45d3djYVpQa1hhMGc2bzQ?oc=5"
+    },
+    {
       "title": "Fed政策路徑不明！美貨幣市場基金集體「縮久期」 8兆美元資金搶進超短期資產避險 - news.cnyes.com",
-      "summary": "面對聯準會政策路徑不明，美國貨幣市場基金集體縮短久期，8兆美元資金湧入超短期資產避險。",
+      "summary": "Fed政策路徑不明，美國貨幣市場基金規模龐大資金湧入超短期資產避險。",
       "source": "鉅亨網-總經",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUnNCc3A1amI1a3MxTXVEcGVxVURMaWRacG5NY1N0bXI3czlLQTZjMVpiOERpRXNydTJneWhsb2kxSHhzc0tjN3VnZWozbE1zNElxV0p0NTVqUmY5T0JWTlo2U1F1b3ZDMTlQeHNQVFdSZTVNaS1Ia0NQVDYwcV9RbElUbUtGeGZMem9GMm9yM2pBd0w1dy1vUExHam1PcEFKNlFrbnhn?oc=5"
     },
     {
-      "title": "Fed真的要升息了？三分之二經濟學家認為機率很高 - news.cnyes.com",
-      "summary": "市場預期升溫，有高達三分之二的經濟學家認為聯準會重新啟動升息的機率相當高。",
+      "title": "金價大跌20%後迎佈局機會？華爾街：逢低買入邏輯仍在| 商品期貨 - 鉅亨號",
+      "summary": "金價先前大跌20%後引發關注，華爾街分析認為逢低買進的長期邏輯依然存在。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yUERRbVk0cnIwd0tmUmIwQ0E5MENNMzllME5iUUcxa2xLa3dqazRjc0xwQy1RQ1Y0SnN6QXRUaGZFemJsNzhYRUx1Qk96SUU?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1FeDdYOGd5dFhXTDBSNmFabVRJa2F3THZVanZ5NkUzQWs1dXpOM2lmNUNOaU1mTXd6QmphenNkV3lieXhZa3BRcw?oc=5"
+    },
+    {
+      "title": "日元創40年新低！美元兌日元漲破163，日當局干預的風險增大| 外匯 - 鉅亨號",
+      "summary": "日圓匯率跌至40年新低，美元兌日圓突破163，市場高度警戒日銀進場干預。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1ld3dtaXBvZ1QwSnMwem1lRXVPcWFUcERHRU5haFBacm5VZHk1aU1VSHBqSlFkc19aSEFnanFMR3Q2YjNUa3RKNQ?oc=5"
+    },
+    {
+      "title": "【遠東商銀】未見日本當局干預，日圓破40年新低 - 鉅亨網",
+      "summary": "遠東商銀指出目前未見日本當局實質干預，導致日圓續創40年來新低紀錄。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5wYTByVWMtaU1uSUFLSUt6N0ZsTnY0MUpJUDNVU1Q3TjNHXzVIcS1KT3N2V1RQTXpzRVNNNlgtWHdEOFp6QjhVQkxiTEJkcFk?oc=5"
+    },
+    {
+      "title": "〈紐約匯市〉美元上漲 避險需求升溫 日元貶至40年新低 - 鉅亨網",
+      "summary": "紐約匯市避險需求升溫帶動美元上漲，日圓則因貶至40年新低成為焦點。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1rU3daOXhMWDBhcmpqeDBfYV9vc01PMVpCZFJvQWctNlRoRzZNekxfQllTQ2dqTzlqWXl4X0E0VVozcDRSVkNpcUwydw?oc=5"
+    },
+    {
+      "title": "新玩家進場 預測平台Kalshi殺入貴金屬永續期貨賽道 - 鉅亨網",
+      "summary": "預測平台Kalshi正式殺入貴金屬永續期貨賽道，吸引新資金與玩家進場。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE91OWtzU0NOajdjOUhycTJyVWdmeWFaR2tSanBCeU1oU2VnR3hHa0xPdUVZdDhkOVlxdTJJcEMwM01hR0VCZ2ludGotQjRPb3M?oc=5"
+    },
+    {
+      "title": "美債長端收益率擊穿關鍵防線！實際利率創16年新高，油價衝擊重燃加息恐慌| 美股 - 鉅亨號",
+      "summary": "美債長端收益率突破關鍵防線，實際利率創16年新高，油價衝擊加劇升息疑慮。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1XNGFRYUhXNXlUSXBzNjJzQzNBdGdkMkVKQV9hUVhjVWxrQkNudHg3Y3lydzdLWUNzVURpb09TUjNRX08tMzMzbA?oc=5"
+    },
+    {
+      "title": "〈貴金屬盤後〉美伊停火露曙光 金價反彈逾1%重返4,000美元關卡 - 鉅亨網",
+      "summary": "美伊停火露曙光使避險降溫，貴金屬盤後金價反彈逾1%重返4,000美元大關。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jejZSX0M4TDVPaWRiRmdyYmVKdlVfc3BoSGxjRzI0VzRSYXdNTExDYlp0Zms4OEM0VjJUOHhNcTMwS2Z5aU5BQ2JlVkpXUkE?oc=5"
     }
   ],
   "ai": [
     {
-      "title": "ServiceNow bets $40 million on Indian banking software specialist to expand its financial services push",
-      "summary": "ServiceNow宣布向印度銀行軟體公司BusinessNext投資40萬美元，深化金融服務領域的AI布局。",
+      "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
+      "summary": "Menlo Ventures合伙人指出Anthropic驚人成長，分享AI新創創辦人的成功心法。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/servicenow-bets-40m-on-indian-firm-businessnext-at-700m-valuation-to-deepen-banking-ai-push/"
+      "link": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/"
     },
     {
-      "title": "Google justifies its massive AI spending with a booming cloud business",
-      "summary": "Google憑藉蓬勃發展的雲端業務與AI基礎設施服務需求，繳出亮眼獲利成績單來 giustifies 其龐大AI支出。",
+      "title": "The browser wars aren’t about search anymore — here are the best alternatives to Chrome and Safari",
+      "summary": "瀏覽器大戰不再只看搜尋引擎，盤點2026年挑戰Chrome與Safari的熱門替代方案。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/"
+      "link": "https://techcrunch.com/2026/07/22/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/"
     },
     {
-      "title": "How OpenAI’s human mistake led to the AI-powered hack on Hugging Face",
-      "summary": "由於OpenAI在測試環境設定上的內部人為疏失，意外造就了Hugging Face遭到AI驅動的駭客攻擊事件。",
+      "title": "Passionfroot raises $15M to expand its B2B creator marketplace to the US",
+      "summary": "德國B2B創作者市場新創Passionfroot獲Insight Partners領投1,500萬美元A輪融資。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
+      "link": "https://techcrunch.com/2026/07/22/passionfroot-raises-15m-to-expand-its-b2b-creator-marketplace-to-the-us/"
     },
     {
-      "title": "Monday.com lays off hundreds to focus on AI",
-      "summary": "Monday.com宣布裁員20%約630名員工，調整營運模式以全力聚焦發展AI工作平台。",
+      "title": "Glow emerges from stealth at $1.2B valuation to challenge endpoint security in the AI era",
+      "summary": "資安新創Glow以12億美元估值亮相，專注解決AI代理時代帶來的端點安全風險。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/"
+      "link": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/"
     },
     {
-      "title": "直擊｜緯創德州廠開出全美第一片GB300基板！黃仁勳：台灣不再代表便宜，代表的是先進 - 數位時代",
-      "summary": "緯創德州廠開出全美第一片GB300基板，黃仁勳強調台灣現在代表的是先進而非便宜。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1aSXdjVWxrbEp1SlJjbkk0eGhBU1kyTGtHU25IWkp6QTdKdS1SLVNYNlFMRkFscW5rRUdhbnBYcU1fc0NHRXRoT2RQd3pNY09kd1JxeEZIY1hna0xaN01EdHpVTVBuX04wTjk3V3k0Q0lFMFZJTkx0WDZOQQ?oc=5"
+      "title": "Synthesia’s AI training platform is moving beyond videos into live coaching",
+      "summary": "Synthesia推出AI角色扮演訓練平台，以互動式真人化身提供企業即時對話教練服務。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/"
     },
     {
-      "title": "南亞科看淡HBM，改押地端AI記憶體！砸近5000億泰山新廠明年投產 - 數位時代",
-      "summary": "南亞科看淡HBM轉向押注地端AI記憶體，砸下近5000億元的泰山新廠預計明年正式投產。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBybWdyYmExTHZJcDcwQmdBcDQ2ckhEd3Z2N29nSmk3SFdnY21Gb2ZQbWdJalJPcTI0R09NQzVPZi1Bc016bThmR2kzZ0FiV1YtekptTElrb0ItdGdNaldpTnMzZU83a1UtbndVcWRhT3c4UEZHMmNiMHhZMWtjZw?oc=5"
+      "title": "The Anthropic-Physical Intelligence rumor roiling AI Twitter",
+      "summary": "Anthropic與OpenAI在2026年的積極併購動作，引發社群平台上的購併傳聞。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/"
     },
     {
-      "title": "AI兆元資本支出大噴發！台積電上修至640億美元創新高，二奈米、先進封裝供應鏈誰受惠 - 數位時代",
-      "summary": "台積電上修AI資本支出至640億美元創新高，帶動二奈米與先進封裝供應鏈成為市場焦點。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVSENrTVpvU3lXVTRLUV95Q21uVDQ4b1FaQ0tzUGZCZm1JR0sxdWhqT3F6UGp3b1cwWjlTeXFRT2JKa01PVkNYSXNJNWVTcFgyMzcwNWpvR2V3TDQ1MV9FQW5B?oc=5"
+      "title": "Meta is testing an AI bedtime story app for people with no imagination",
+      "summary": "Meta正在測試一款專為缺乏想像力的人打造的AI睡前故事應用程式。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/21/meta-is-testing-an-ai-bedtime-story-app-for-people-with-no-imagination/"
     },
     {
-      "title": "軍用AI加速進戰場！Palantir、Anduril搶進五角大廈，科技巨頭改寫下一代戰爭 - 數位時代",
-      "summary": "軍用AI加速進入戰場，Palantir與Anduril積極搶進五角大廈改寫下一代戰爭型態。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeDdDT0VwZ212ekVPZTVNZjdraGVaX2M3aGxKVVU2X1l5TndTNkpkTEpyYXRhem5qNFAyYmd3UzRLWlU3LTZtX0dOeHBiY0NwTDdpZnFEWFltTFRXeGlFSHJvZ1VrVVhsTjczaU5BcmxYZEhzeGtQMVdlVS1MTmdFQmJzYUk?oc=5"
+      "title": "OpenAI says Hugging Face was breached by its pre-release models",
+      "summary": "OpenAI承認Hugging Face先前發生的資安漏洞源自內部模型測試疏失。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
+    },
+    {
+      "title": "Jack Dorsey is taking on Slack with Buzz, a group chat platform for teams and their AI agents",
+      "summary": "傑克多西推出團隊群組聊天平台Buzz，讓人類與AI代理在同一對話中協作。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/"
+    },
+    {
+      "title": "Building AI infrastructure with the Effingham County community",
+      "summary": "OpenAI宣佈在喬治亞州展開「專案山茶花」AI基礎設施建設，兼顧綠能與社區發展。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
+    },
+    {
+      "title": "How news organizations are using AI to advance their vital missions",
+      "summary": "新聞機構正透過OpenAI工具強化報導深度、擴大閱聽眾並優化商業營運。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/how-news-organizations-are-using-ai"
+    },
+    {
+      "title": "Advancing the next era of national science",
+      "summary": "OpenAI攜手美國能源部與國家實驗室，利用前沿AI技術加速國家科學與能源探索。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/advancing-the-next-era-of-national-science"
+    },
+    {
+      "title": "Introducing OpenAI Presence",
+      "summary": "OpenAI推出企業級AI代理平台Presence，協助組織部署可靠的語音與聊天客服。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/introducing-openai-presence"
+    },
+    {
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "summary": "NTT DATA導入ChatGPT企業版與Codex，將事件分析時間大幅縮短至30分鐘。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/ntt-data"
+    },
+    {
+      "title": "Introducing the ChatGPT for small business program",
+      "summary": "OpenAI推出中小企業ChatGPT計畫，協助創業者培養AI技能並自動化工作流程。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/introducing-chatgpt-small-business-program"
+    },
+    {
+      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
+      "summary": "Google向創世紀任務（Genesis Mission）投入4000萬美元的AI算力與點數支援。",
+      "source": "Google DeepMind 官方部落格",
+      "link": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
+    },
+    {
+      "title": "NVIDIA Open Sources First GPU-Accelerated Medical Physics Simulation Framework",
+      "summary": "NVIDIA開源首個GPU加速的醫療物理模擬框架，協助醫療機器人學習真實物理互動。",
+      "source": "NVIDIA 官方部落格",
+      "link": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/"
+    },
+    {
+      "title": "Built in Fort Worth: Wistron Opens Advanced Manufacturing Plant to Produce NVIDIA AI Systems",
+      "summary": "緯創在德州費爾沃思啟用先進製造廠，專門生產NVIDIA最先進的AI系統超晶片。",
+      "source": "NVIDIA 官方部落格",
+      "link": "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/"
     }
   ],
   "startup": [
     {
-      "title": "Congratulations to EquipmentShare on Going Public",
-      "summary": "YC校友企業EquipmentShare成功正式掛牌上市，為美國建築業打造專屬營建作業系統。",
-      "source": "Y Combinator Blog",
-      "link": "https://www.ycombinator.com/blog/congratulations-to-equipmentshare/"
-    },
-    {
-      "title": "Meesho Goes Public",
-      "summary": "印度知名電商平台Meesho歷經十年發展，從YC孵化成功走向公開上市IPO里程碑。",
-      "source": "Y Combinator Blog",
-      "link": "https://www.ycombinator.com/blog/meesho-goes-public/"
-    },
-    {
       "title": "沒人脈、沒產業背景，他卻把每個弱勢變強項：新創Pax靠「退稅」闖進YC - Meet創業小聚",
-      "summary": "台灣新創Pax善用退稅優勢在資源匱乏中突圍，成功吸引全球知名加速器YC目光並順利闖入。",
+      "summary": "新創Pax創辦人善用退稅優勢克服資源劣勢，成功獲得知名加速器YC青睞。",
       "source": "創業小聚",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XZkl1NjloZWZEazJiZnBMQV8tU3lvdWZmY2xHY1UtdjdKQTJlMmpNT3JpLWdNNW95alVNMHJMdllFYjBGWUJpcFY0LUVzQ3B2VmJuNUFMTl8?oc=5"
     },
     {
-      "title": "提前5天預警心衰竭、VR治療兒童弱視，比翼生醫Demo Day十組國際醫療新創還有哪些亮點？ - Meet創業小聚",
-      "summary": "比翼生醫Demo Day展出十組國際醫療新創，涵蓋心衰竭預警與VR治療兒童弱視等亮點技術。",
-      "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1vUXRTWUUyVVFIV2VzS1ctZzFmeUNYQVZwc2VHUjlIcFJzQ2pjTHFncWliTmNIOTRZZzFraFRqbjMwMEo5TmhyUEsweC1JZ28yTktlYWF5TVM?oc=5"
-    },
-    {
       "title": "社區運動比賽也能賺點數？「競賽咖」整合旅遊、保險與贊助，串聯上萬場賽事商機 - Meet創業小聚",
-      "summary": "台灣新創「競賽咖」整合旅遊與保險，透過運動比賽點數經濟串聯上萬場賽事商機。",
+      "summary": "「競賽咖」整合運動賽事的旅遊、保險與贊助商機，搶攻社區運動經濟。",
       "source": "創業小聚",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCcy1qLWxOZXhxdm5DamkxYVFBYmRzeVl6V0VwYnFCUDRGRlBMVGd5LWhNRlVpbXZ3Yk9PdTVwbmdCZzM2ZzV6MEZHRDNmeGhtSk9FZ05KRTY?oc=5"
     },
     {
-      "title": "團隊少 25% 估值卻更高？哈佛商學院教授解析「AI 原生公司」的 4 大精實特徵 - Meet創業小聚",
-      "summary": "哈佛商學院教授解析AI原生公司特徵，點出團隊規模減少25%但估值卻更高的精實模式。",
+      "title": "別誤判PMF！3種假成長訊號：補貼、爆紅、創辦人親售 - Meet創業小聚",
+      "summary": "創業圈提醒應避開補貼、爆紅與創辦人親售等3種容易誤判的假PMF成長訊號。",
       "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA5SFJ6LTlfNklTMDEtZkhQUUUtaGRhdnNXRkdXOENHaXQzSkN0NHZ4Ykgyb09xckNSUVBaa1NnQ1JYMnRWYjJDM3RxUGljWkVEWWdhRVN0dlQ?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qTVJPRWNYVi1uVnRUbHJ1ZXNtalY1bXVKLXZXRkZpSHJ1QUo2VDlGMGR1T3dfNEQ0S0ZLQXlOSmpKU2lqaU9SQlEyTXhVQ1ZVdWNYZWRGXzQ?oc=5"
     },
     {
-      "title": "不只做AI代理：Nous Research再佈局去中心化算力網路，估值達15億美元 - Meet創業小聚",
-      "summary": "Nous Research除了開發AI代理外，更進一步布局去中心化算力網路，估值達到15億美元。",
+      "title": "- Meet創業小聚",
+      "summary": "報導聚焦早期新創團隊在市場驗證與商業模式打造上的關鍵策略與實務分享。",
       "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxMld3OFpIQ3daX1RtY1lhV2ZlZFRiZVJ5QS1BUWhLOXBvOC1kUEJBeTFnU3Y3eFQxT0xyUGVUaWZBVGVMR3pYUjN2cmstVUFtYk9saXBlRWY?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOMUJVMWhhbHpfV2I3SHUxN20tWEl4MndaOVVyU0dYQlExOWl4TUFGd21NV01JOHZZUS1iYmZMUXZhU1ZxQklNcjhodEVOR29WeWxVTGdsbEhwUUgzRjd0V005SFFyN1VvbmpaaDFpV0FGWTdLQ1BPbjFwSUNZWkM5SW5UaEh0eDhjY0drWl9GbWhoRkpUMWlSUlJySGxRYU5NSGp3WlVPQzRJdk5Zam5rb01oSnRCQ3BucFJzQ0VtWmd4ZWJ5eTlmNmRLb2RadUFMWHhJZmlxQ0Z5aGw2cmJqYWtZczUyTlF3TV9qV1lFRVp4T0RNdThyUFlZVFNMNElucVZOeEdOT3UyUDgxeEgxdUJsZmVyd1lHOTNOVjZPcW1rdGM?oc=5"
+    },
+    {
+      "title": "YC看重的新創「想法」具備哪些特質？ - 數位時代",
+      "summary": "分析Y Combinator（YC）看重的新創商業想法究竟具備哪些核心特質。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVW9MNWNadVZPYlhPd2RPeThKaU9FQXNsYkE2NFJhUE5yZ2JETF8tYWUyWkFVRHhVdktUMkd5VW9MVHV1TXpXVXFDdHRKNktZbTBzc0hRQWxkSlAzdi1obHNVdmxNeFZnVy1KalI5Q2hVV3VFRWFJRnMwV0taSFBxbkhHSHRvaVdkUTZF?oc=5"
+    },
+    {
+      "title": "沒人脈、沒產業背景，他卻把每個弱勢變強項：新創Pax靠「退稅」闖進YC - Meet創業小聚",
+      "summary": "新創Pax創辦人如何把弱勢轉為強項，透過獨特切入點闖進全球頂尖加速器。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XZkl1NjloZWZEazJiZnBMQV8tU3lvdWZmY2xHY1UtdjdKQTJlMmpNT3JpLWdNNW95alVNMHJMdllFYjBGWUJpcFY0LUVzQ3B2VmJuNUFMTl8?oc=5"
+    },
+    {
+      "title": "別誤判PMF！3種假成長訊號：補貼、爆紅、創辦人親售 - Meet創業小聚",
+      "summary": "剖析假成長訊號對新創團隊的危害，幫助創辦人正確評估產品市場契合度（PMF）。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qTVJPRWNYVi1uVnRUbHJ1ZXNtalY1bXVKLXZXRkZpSHJ1QUo2VDlGMGR1T3dfNEQ0S0ZLQXlOSmpKU2lqaU9SQlEyTXhVQ1ZVdWNYZWRGXzQ?oc=5"
+    },
+    {
+      "title": "社區運動比賽也能賺點數？「競賽咖」整合旅遊、保險與贊助，串聯上萬場賽事商機 - Meet創業小聚",
+      "summary": "運動科技新創整合跨界資源，串聯上萬場社區運動賽事商機創造獲利點數。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCcy1qLWxOZXhxdm5DamkxYVFBYmRzeVl6V0VwYnFCUDRGRlBMVGd5LWhNRlVpbXZ3Yk9PdTVwbmdCZzM2ZzV6MEZHRDNmeGhtSk9FZ05KRTY?oc=5"
+    },
+    {
+      "title": "2026台灣米其林指南出爐！61家餐廳摘星寫新高，台南、新竹縣首度摘星，完整名單一次看 - 數位時代",
+      "summary": "2026台灣米其林指南公佈，61家餐廳摘星創新高，台南與新竹縣首度入榜。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeFRSRGIyaVplOUZMejZObFp0b1NqUHN5Z3JBQ1RlNjNaVXNrc2N5OTFVWGhiYjMyWHNrdlNOOGpXSGQzTlV2OUxLZWc0OHpiNlJ5WUcwQldKQWFVSzFDcXVNemNSTXN4dkRxaC1YTkdoSEdLRkQ4M0N4dHdoZXdlNGp3?oc=5"
+    },
+    {
+      "title": "Kimi K3引爆美國 AI 封殺論戰！OpenAI主管喊「AI共產主義」，為何被批扼殺創新？ - 數位時代",
+      "summary": "Kimi K3引發美國AI封殺論戰，OpenAI主管言論遭外界批評可能扼殺創新。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNGgwaFFnZk5zOXYxbXRhYmFnMFRlS3k4eVRfU0Vhb25RekVTQi1ZMWFkcXFFaDI0VUEyQnJReUt5Nl9hel9odllHV3NJSGhKZ0I5LVFlZVNpTzBPYWRrMElYX0QwY0tiMkhMT0pKZkRIMGlHTnJ0cGhvcnQtbkI0Rw?oc=5"
+    },
+    {
+      "title": "Claude Cowork推「Record a skill」新功能！3步驟複製你的工作流程，把SOP變AI技能庫 - 數位時代",
+      "summary": "Claude Cowork推出新功能，主打3步驟將繁雜工作流程與SOP轉化為AI技能庫。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBZaldrQU5lbXNUVENIVk1pSzhOOW51TmF5SjJmS0JvY2RrNHdWSXhCNDFRQnBYVmFDYXNvd3gySUFMTng4STZuOGFVZnkya2lITW9zTmxuQUhFU1d3OHRoSGh1VEVWTkJCM29DWkdhczBSd1JXU1E?oc=5"
+    },
+    {
+      "title": "軍用AI加速進戰場！Palantir、Anduril搶進五角大廈，科技巨頭改寫下一代戰爭 - 數位時代",
+      "summary": "國防科技巨頭Palantir與Anduril積極搶進五角大廈，軍用AI加速改寫現代戰爭。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeDdDT0VwZ212ekVPZTVNZjdraGVaX2M3aGxKVVU2X1l5TndTNkpkTEpyYXRhem5qNFAyYmd3UzRLWlU3LTZtX0dOeHBiY0NwTDdpZnFEWFltTFRXeGlFSHJvZ1VrVVhsTjczaU5BcmxYZEhzeGtQMVdlVS1MTmdFQmJzYUk?oc=5"
+    },
+    {
+      "title": "Google開打AI價格戰！Gemini 3.6 Flash等3款新模型登場，力拚「更快更便宜」扳回一城 - 數位時代",
+      "summary": "Google推出Gemini 3.6 Flash等新模型，大打價格戰搶佔更快更便宜市場。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB0cFE2akdSWVJhOWR2Wk5MT0dmcE5xbjJEVm9HME9iODZlOS1XQUlrUkJ3UTJoY0RHTktZSy1PVjcyM19ZN0VhcXVjSFVMLVN5Z1M4alFwQ0hsWkp5cTdfWHB6N25GT1d5cjFJa0Vocw?oc=5"
+    },
+    {
+      "title": "直擊｜緯創德州廠開出全美第一片GB300基板！黃仁勳：台灣不再代表便宜，代表的是先進 - 數位時代",
+      "summary": "黃仁勳直擊緯創德州廠開出全美第一片GB300基板，強調台灣代表先進技術。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1aSXdjVWxrbEp1SlJjbkk0eGhBU1kyTGtHU25IWkp6QTdKdS1SLVNYNlFMRkFscW5rRUdhbnBYcU1fc0NHRXRoT2RQd3pNY09kd1JxeEZIY1hna0xaN01EdHpVTVBuX04wTjk3V3k0Q0lFMFZJTkx0WDZOQQ?oc=5"
+    },
+    {
+      "title": "主管會拚命留你嗎？Netflix高管曝人才測試：AI時代缺乏「系統思考」恐進淘汰名單！ - 數位時代",
+      "summary": "Netflix高管指出AI時代缺乏系統思考能力的人才，恐將面臨職場淘汰風險。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1GTEVGUnpYa2JFa01SQ2NWSHdGS0FrLWJ1MUhLQ0hMeWJTV3BnTUhKWDFrMUExSW5paTBjNVVWSjFSRk1CZGNTQ3ZqODRubUF3dEdTeTFzX3NpTnRmQlhmYmVqSkJabHJCalZqQ01kY3BFMVBo?oc=5"
+    },
+    {
+      "title": "跨足工業AI軟體！漢翔「AIxWARE智慧製造平台」串聯3,000機台，如何解鎖產業升級關鍵？ - 數位時代",
+      "summary": "漢翔跨足工業AI軟體推出智慧製造平台串聯3000機台，助攻產業數位升級。",
+      "source": "數位時代-新創",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1weHhEX0NWUWZOVE1aR0QycEgzbWtJOU9TaXlmVkJ0S3F1Qy0xVFhXTkJUZHJBSFBvQmhGYU5rNkp0LWV6Q2VWMFQxdnNSd3RiNVZSeXNTbkNJREdUY3c4SWQ3djN5ejM4YWJqNDJycWt5ZTNHZ21BNUM2SQ?oc=5"
     }
   ],
-  "closing_note": "穩健布局，掌握市場脈動！"
+  "closing_note": "面對多變局勢，穩健佈局、掌握趨勢！"
 }

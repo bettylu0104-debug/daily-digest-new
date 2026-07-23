@@ -244,8 +244,9 @@ def fetch_todays_events(now_tw: datetime.datetime):
 # ============================================================
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-# 如果之後 Google 更新了免費模型名稱，去 https://ai.google.dev/gemini-api/docs/models 查最新的 flash 免費模型名稱替換掉下面這行
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+# 如果之後 Google 又更新了免費模型名稱，去 https://ai.google.dev/gemini-api/docs/models 查最新的免費模型名稱替換掉下面這行
+# 2026/7 更新：gemini-2.5-flash 已對新用戶關閉，改用 Google 這次(7/21)發布的新模型
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 
 def call_gemini(raw_data: dict) -> dict:

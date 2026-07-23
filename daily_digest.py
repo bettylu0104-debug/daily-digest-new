@@ -18,10 +18,15 @@ import sys
 import json
 import datetime
 import traceback
+import itertools
 from urllib.parse import quote
 
 import requests
 import feedparser
+
+# 全域唯一的新聞編號產生器：整個流程只有一份，確保不同分類的新聞不會撞號
+# （因為之後科技產業、數位時代這些「共用池」要讓 Gemini 跨分類判斷，id 一定要全域唯一）
+_GLOBAL_ID_COUNTER = itertools.count()
 
 
 def google_news_rss(query: str) -> str:
@@ -38,17 +43,22 @@ def google_news_rss(query: str) -> str:
 # ============================================================
 
 RSS_SOURCES = {
-    "台股": [
+    # 台股個股新聞：只放「台股專屬」的個股來源
+    "台股個股": [
         ("Yahoo奇摩股市-台股動態", "https://tw.stock.yahoo.com/rss?category=tw-market"),
         ("鉅亨網-台股個股", google_news_rss("site:cnyes.com 台股 個股 when:2d")),
-        ("鉅亨網-科技產業", google_news_rss("site:cnyes.com 科技產業 when:2d")),
     ],
-    "美股": [
+    # 美股個股新聞：只放「美股專屬」的個股來源
+    "美股個股": [
         ("Yahoo奇摩股市-國際財經", "https://tw.stock.yahoo.com/rss?category=intl-markets"),
         ("鉅亨網-美股個股", google_news_rss("site:cnyes.com 美股 個股 when:2d")),
+    ],
+    # 科技產業新聞：台股、美股共用同一個池子，只抓一次，
+    # 由 Gemini 判斷每一則要放進台股還是美股（同一則不會兩邊都放）
+    "科技產業(共用池)": [
         ("鉅亨網-科技產業", google_news_rss("site:cnyes.com 科技產業 when:2d")),
     ],
-    "AI": [
+    "AI公司官方消息": [
         ("TechCrunch-AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("VentureBeat-AI", "https://venturebeat.com/category/ai/feed/"),
         ("OpenAI 官方新聞", "https://openai.com/news/rss.xml"),
@@ -60,19 +70,24 @@ RSS_SOURCES = {
         ("Meta AI 官方部落格", google_news_rss("site:ai.meta.com when:3d")),
         ("Reuters AI", google_news_rss("site:reuters.com AI when:2d")),
     ],
-    "新創": [
+    "新創資本官方消息": [
         ("Y Combinator Blog", "https://www.ycombinator.com/blog/rss"),
         ("a16z", "https://a16z.com/feed/"),
         ("創業小聚", google_news_rss("site:meet.bnext.com.tw when:5d")),
-        ("數位時代-新創", google_news_rss("site:bnext.com.tw 新創 when:3d")),
         # 紅杉資本官方沒有公開 RSS，改用 Google 新聞限定該網站的方式抓取
         ("紅杉資本 Sequoia", google_news_rss("site:sequoiacap.com when:7d")),
     ],
+    # 數位時代：內容可能是「新創公司的募資/上市/產品發表」也可能是「純技術/產業介紹」，
+    # 這個池子會同時給 AI 跟新創兩邊看，由 Gemini 依內容判斷該歸類哪一邊，不會兩邊重複列出
+    "數位時代(共用池)": [
+        ("數位時代", google_news_rss("site:bnext.com.tw (AI OR 新創) when:3d")),
+    ],
 }
 
-# 總經新聞：只抓鉅亨網（依你的要求，不混入其他來源）
+# 總經新聞：鉅亨網 + Yahoo奇摩股市的財經/民生景氣類新聞
 MACRO_KEYWORDS_SOURCES = [
     ("鉅亨網-總經", google_news_rss("site:cnyes.com (總經 OR 聯準會 OR Fed OR 央行 OR CPI OR 非農) when:2d")),
+    ("Yahoo奇摩股市-研究報告", "https://tw.stock.yahoo.com/rss?category=research"),
 ]
 
 TIMEZONE_OFFSET_HOURS = 8  # 台北時間 UTC+8
@@ -139,7 +154,7 @@ def fetch_rss_category(sources, max_per_source=20, max_keep_per_source=15, now_t
                         skipped_dates.append(str(pub_date) if pub_date else "無日期")
                         continue
                 items.append({
-                    "id": len(items),
+                    "id": next(_GLOBAL_ID_COUNTER),
                     "source": source_name,
                     "title": entry.get("title", "").strip(),
                     "link": entry.get("link", ""),
@@ -336,10 +351,31 @@ def call_gemini(raw_data: dict) -> dict:
 
     system_instruction = """
 你是使用者的私人財經與科技新聞助理，語氣親切、像信任的朋友在跟他簡報，但內容要專業精準，不浮誇。
-我提供的原始資料裡，每一則新聞都有一個數字 "id"。這些新聞都已經事先篩選過，全部都是「昨天」真實發布的新聞，
-你的工作是【針對我提供的每一則新聞都各自寫一句摘要，全部列出、不要省略任何一則、不要合併多則成一則，
-也絕對不可以自己編造原始資料裡不存在的新聞】。如果某個分類的新聞很少，就照實際數量列出，不用湊數。
-請根據原始資料，整理成「今日晨報」，並且【只能輸出 JSON，不要有任何其他文字、不要markdown code fence】，格式如下：
+我提供的原始資料裡，每一則新聞都有一個數字 "id"，這些新聞都已經事先篩選過，全部都是「昨天」真實發布的新聞。
+
+你要做兩件事：【篩選】跟【分類】，規則如下：
+
+【台股/美股篩選規則】
+taiwan_stock_news 跟 us_stock_news 這兩份清單裡，有一部分是「個股新聞」，有一部分是共用的「科技產業新聞」
+（兩份清單裡如果出現 id 相同的項目，代表是同一則科技產業新聞，同時給你判斷放哪邊）。
+請只挑選「科技類股」相關、且內容是在講產品、技術、相關產業動態、競爭對手動態等實質內容的新聞；
+【排除】單純只是價格漲跌、目標價、成交量之類、沒有實質產業內容的新聞。
+如果是共用的科技產業新聞，判斷這則新聞主要跟台股(台灣公司/供應鏈)還是美股(美國公司)更相關，
+只能放進其中一邊，不能台股美股兩邊都放同一個 id。
+
+【AI/新創分類規則】
+ai_news 跟 startup_news 這兩份清單裡，有一部分官方公司新聞，有一部分是共用的「數位時代」新聞
+（兩份清單裡如果出現 id 相同的項目，代表是同一則數位時代新聞，同時給你判斷放哪邊）。
+判斷每一則新聞的內容：如果主要在講「一間新創公司的募資、上市、成立、產品發表、公司里程碑」，歸類到 startup；
+如果主要在講「技術本身、模型、研究、產業趨勢、AI工具與應用」，即使提到公司名稱，也歸類到 ai。
+每一個 id 只能出現在 ai 或 startup 其中一邊，不能兩邊都放。
+
+【共同規則】
+- 針對你決定保留、要放進晨報的每一則新聞，都各自寫一句摘要，用你自己的話說重點，不要照抄原文整段。
+- 不要為了湊數而放進不符合上述篩選規則的新聞，也絕對不可以自己編造原始資料裡不存在的新聞。
+- 如果篩選後某個分類新聞很少甚至是 0 則，就照實際數量列出。
+
+請整理成「今日晨報」，並且【只能輸出 JSON，不要有任何其他文字、不要markdown code fence】，格式如下：
 
 {
   "greeting": "一句今天的簡短問候語，可以提到天氣感或市場氣氛，20字內",
@@ -347,16 +383,16 @@ def call_gemini(raw_data: dict) -> dict:
     "night_futures_note": "根據原始資料整理台指期夜盤漲跌重點，若無資料請寫'今日無夜盤資料，建議至台灣期貨交易所官網查看'",
     "top_volume_note": "用一句話總結成交量最大的個股是誰、量有多大",
     "hot_sector_note": "用一句話總結最熱的類股是誰、漲了多少",
-    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要，用你自己的話說重點，不要照抄原文整段"} ... 把 taiwan_stock_news 裡「每一則」都列出 ]
+    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要"} ... 依上述篩選規則從 taiwan_stock_news 裡挑出符合的每一則 ]
   },
   "us_stocks": {
     "market_summary": "用1-2句話總結美股大盤走勢",
     "tsm_adr_note": "台積電ADR漲跌幅一句話重點",
-    "news": [ {"id": ..., "summary": "..."} ... 把 us_stock_news 裡「每一則」都列出 ]
+    "news": [ {"id": ..., "summary": "..."} ... 依上述篩選規則從 us_stock_news 裡挑出符合的每一則 ]
   },
-  "macro": [ {"id": ..., "summary": "..."} ... 把 macro_news 裡「每一則」都列出，這裡只會有鉅亨網總經新聞 ],
-  "ai": [ {"id": ..., "summary": "..."} ... 把 ai_news 裡「每一則」都列出 ],
-  "startup": [ {"id": ..., "summary": "..."} ... 把 startup_news 裡「每一則」都列出 ],
+  "macro": [ {"id": ..., "summary": "..."} ... 把 macro_news 裡「每一則」都列出，這裡是鉅亨網跟Yahoo的總經新聞 ],
+  "ai": [ {"id": ..., "summary": "..."} ... 依上述AI/新創分類規則，從 ai_news 裡挑出真正屬於AI技術類的每一則 ],
+  "startup": [ {"id": ..., "summary": "..."} ... 依上述AI/新創分類規則，從 startup_news 裡挑出真正屬於新創公司類的每一則 ],
   "closing_note": "一句鼓勵/提醒的結語，15字內"
 }
 
@@ -813,11 +849,20 @@ def main():
     now_tw = now_utc + datetime.timedelta(hours=TIMEZONE_OFFSET_HOURS)
 
     print("== 步驟 1/4：抓取新聞 RSS ==")
+    tw_individual = fetch_rss_category(RSS_SOURCES["台股個股"], now_tw=now_tw)
+    us_individual = fetch_rss_category(RSS_SOURCES["美股個股"], now_tw=now_tw)
+    tech_shared = fetch_rss_category(RSS_SOURCES["科技產業(共用池)"], now_tw=now_tw)
+    ai_official = fetch_rss_category(RSS_SOURCES["AI公司官方消息"], now_tw=now_tw)
+    startup_official = fetch_rss_category(RSS_SOURCES["新創資本官方消息"], now_tw=now_tw)
+    bnext_shared = fetch_rss_category(RSS_SOURCES["數位時代(共用池)"], now_tw=now_tw)
+
     raw_data = {
-        "taiwan_stock_news": fetch_rss_category(RSS_SOURCES["台股"], now_tw=now_tw),
-        "us_stock_news": fetch_rss_category(RSS_SOURCES["美股"], now_tw=now_tw),
-        "ai_news": fetch_rss_category(RSS_SOURCES["AI"], now_tw=now_tw),
-        "startup_news": fetch_rss_category(RSS_SOURCES["新創"], now_tw=now_tw),
+        # 科技產業新聞是台股、美股共用的同一批，讓 Gemini 自己判斷歸類到哪一邊
+        "taiwan_stock_news": tw_individual + tech_shared,
+        "us_stock_news": us_individual + tech_shared,
+        # 數位時代新聞是 AI、新創共用的同一批，讓 Gemini 判斷該歸類哪一邊
+        "ai_news": ai_official + bnext_shared,
+        "startup_news": startup_official + bnext_shared,
         "macro_news": fetch_rss_category(MACRO_KEYWORDS_SOURCES, now_tw=now_tw),
     }
 
@@ -837,6 +882,17 @@ def main():
         print(f"[錯誤] Gemini 整理失敗：{e}")
         traceback.print_exc()
         sys.exit(1)
+
+    # 保險機制：萬一 Gemini 不小心把同一則新聞（同一個 id）同時放進兩邊，
+    # 這裡再做一次去重，只保留第一份清單裡的那一邊
+    def dedupe_ids(keep_list, remove_from_list):
+        keep_ids = {item.get("id") for item in keep_list}
+        return [item for item in remove_from_list if item.get("id") not in keep_ids]
+
+    digest["us_stocks"]["news"] = dedupe_ids(
+        digest["taiwan_stocks"].get("news", []), digest["us_stocks"].get("news", [])
+    )
+    digest["startup"] = dedupe_ids(digest.get("ai", []), digest.get("startup", []))
 
     # 把 Gemini 回傳的 id 對應回原始資料，補上真正可以打開的連結/標題/來源
     digest["taiwan_stocks"]["news"] = resolve_news_items(

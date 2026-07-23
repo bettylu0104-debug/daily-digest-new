@@ -1,119 +1,107 @@
 {
-  "greeting": "早安！今天市場震盪劇烈，帶你迅速掌握關鍵財經動態。",
+  "greeting": "早安！今天市場多空交織，台股高檔震盪，我們一起掌握最新關鍵動態。",
   "taiwan_stocks": {
-    "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
-    "top_volume_note": "成交量最大個股為群創，成交量達2.88億股，收盤上漲1.80元。",
-    "hot_sector_note": "表現最熱的類股為特選大蘋果報酬正向兩倍指數，勁揚8.38%。",
+    "night_futures_note": "台指期夜盤強勢上漲389點，率先站上4萬5大關，顯示多方力道仍存。",
+    "top_volume_note": "主動統一升級50成交量最大，達3.49億股。",
+    "hot_sector_note": "特選大蘋果報酬正向兩倍指數表現最強，漲幅達8.38%。",
     "news": [
       {
-        "title": "收盤／神祕買盤終場救援！台股驚險翻紅漲25點　台積電力守2400元",
-        "summary": "台股盤中一度大跌逾400點，隨後在神祕買盤湧入下急拉，終場驚險翻紅收漲25點，力守44850點。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E6%94%B6%E7%9B%A4-%E7%A5%9E%E7%A5%95%E8%B2%B7%E7%9B%A4%E7%B5%82%E5%A0%B4%E6%95%91%E6%8F%B4-%E5%8F%B0%E8%82%A1%E9%A9%9A%E9%9A%AA%E7%BF%BB%E7%B4%85%E6%BC%B225%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%8A%9B%E5%AE%882400%E5%85%83-060800745.html"
+        "title": "台股大盤放量突破 44,800 點，夜盤上漲389點！外資轉買超173億、記憶體與IC載板狂飆 - news.cnyes.com",
+        "summary": "台股大放量突破44800點，夜盤大漲389點，外資轉買超173億元，記憶體與IC載板族群強勢飆漲。",
+        "source": "鉅亨網-台灣科技",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YSzN0S0JrNHBWM1F1WWRYNWpEZUtnRmh2bFdrMlpxc242ZFVZc210MkowMlVDMmZyd2k1U0pJd0JaQWQ3OEh2Q1l0MkhRTjA?oc=5"
       },
       {
-        "title": "台股尾盤逆轉秀漲25點！台積電止跌漲5元、鴻海勁揚逾2%　日月光難挽頹勢挫跌1.07%",
-        "summary": "權值股台積電尾盤止跌回穩收在2405元，鴻海勁揚超過2%，但日月光等部分電子權值表現疲弱。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E5%B0%BE%E7%9B%A4%E9%80%86%E8%BD%89%E7%A7%80%E6%BC%B225%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%AD%A2%E8%B7%8C%E6%BC%B25%E5%85%83-%E9%B4%BB%E6%B5%B7%E5%8B%81%E6%8F%9A%E9%80%BE2-%E6%97%A5%E6%9C%88%E5%85%89%E9%9B%A3%E6%8C%BD%E9%A0%B9%E5%8B%A2%E6%8C%AB%E8%B7%8C1-07-061000297.html"
+        "title": "Google釋AI壞消息拖累台積電！盤中震盪跌20元 分析師：買黑賣紅 - Yahoo股市",
+        "summary": "Google傳出AI負面消息拖累台積電，盤中震盪跌20元，分析師建議採「買黑賣紅」策略布局。",
+        "source": "Yahoo奇摩股市-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMiigNBVV95cUxOcGF5T0xSa2x1WEp3NUtaZF96bzR6T1ZmenBwYWxFN3NnMnZHUEhuMjFKX2VYbm1SMndadXhPYno4cjhneWlmT0xNUUpsbTAxbDA1cVdrU1hwQTBTeENneVFFUlZLeGF1MGUtcGdsUUJ6b1U0MDZndUlESnZvVHQ5dEw4ZTZIS2tVMUJXTGtmeXR6SjdMcmlGcFB0RTR3T3V0MEZ5V2tDRno1LWt6a2FERFhfeExGYTR0dDBqcW5OWnRDV1NtWDQtM0xydU1oUGVKbnRTZmEyMDVQcHkwdWJMNEJ2Rnp3cHRwNFhJVW9FcHFjdFJQMnN2bEVqVEhhdkRuZDZLbmFGU3RlWXlLY1ZvNjVFaXNrMXZxNVVTRTZkUjRkQkI1Mkg1bW41RXRKNW0tSXhlQVpvdVlvdGRDT2l1eHJtcjc5emowM2dRT0tvb29KZ0U1a3hxTEFNLXphMFh5YlRFWWlLWGtxaGc1SW9HZHV5TWgxUFFFRV9GSnFMNzhhbDczY09OUUFn?oc=5"
       },
       {
-        "title": "〈焦點股〉川普放話回擊油價大漲 台塑三寶亮燈漲停帶頭衝 - news.cnyes.com",
-        "summary": "受到川普放話回擊油價大漲激勵，台塑三寶今日強勢亮燈漲停，成為盤面焦點。",
-        "source": "鉅亨網-台股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9hSzBTN1pKZ2FjRE53RHdoVEllQ3hDajNyRExwSVI0QkczbWpQbzBPZzZPdURhazZJNjBKYTh4MzNJWjB1SVJsY0VvNW9xYmc?oc=5"
+        "title": "被外資上修EPS預估！「這檔伺服器大咖妖股」目標價達225元噴出17.99%登強勢股王網嗨：超難得 - Yahoo股市",
+        "summary": "伺服器大咖獲外資上修EPS目標價至225元，股價噴出大漲17.99%登上強勢股王。",
+        "source": "Yahoo奇摩股市-台股個股",
+        "link": "https://news.google.com/rss/articles/CBMivgNBVV95cUxQLTNWXzZ6a0Q3N1Y5dzNDdjVSUzVTZ2JxbHViY1ZIQkR2cjAwOW5QVHZmWm1fMGFyaXJ4czZhb1R3eHRDU0JQTmhTcXM0akxLd0t3NTlPWjl3RXhEX2NORzBTbGM5eWloRkVhLTU0ckxhMnVTTzNycWptdEd0UkU3ck9SbVgxdVBjNHR1S3I2XzQ3djZtVWtGa29RMk02YlU3NEo1a2dwZy1aRkZCTUtPVjR4RXJIQ3ZfOGgtU0hXekktODdoX2M3MFRfeGJIOF8tYjBVQnVkODVHbllfTC15YWVMSktVeDRRTGxaRXR2MEROVVV1M0lTNlBzdzRiNklCcDQ3WUpUckhYaXFHYjZqOG14blJFV0Y2ZGdqdUQ3UU1KWHJjY0RxZjlaVk90YWZiR3NXU1IzWVdvZlNOcDRJX1FNdTktYnFtVC1NYVM5Sks4c2NQRDRzcTY2TVVsXzZtclVrYTVaWGI5Z1RwWFZjZEV1WnAzdnVUQ0sxRDgzMDRRejdIaFFuOUdLQTEtcWNFOU5jNzRkVTlZNHFfN0lmVF9oZHc0R0tFMjAzUXV1XzNKanFELWFqNU1fbWVtQQ?oc=5"
       },
       {
-        "title": "〈焦點股〉散熱三雄下半年成長動能可期 紛紛漲逾半根停板 - news.cnyes.com",
-        "summary": "散熱三雄下半年成長動能看好，今日股價紛紛大漲超過半根停板。",
-        "source": "鉅亨網-台股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RekZGbUIzQTZWdmRPWlRJQmg0cXZlcVRHSjBJRUxkUnFoaW9DU1dsR2VoRXNVcjZwUGE4NF9tTkVpQ3Via3NDX296OHdNeUk?oc=5"
+        "title": "〈台股盤後〉攻4萬5又失利 靠台積電尾盤神救援翻紅小漲25點收44850點 - news.cnyes.com",
+        "summary": "台股今日攻4萬5未果，盤中一度翻黑失守45000點，靠台積電尾盤神救援，終場小漲25點收44850點。",
+        "source": "鉅亨網-台灣科技",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fWVlZNjVEYzNLU3lyYnhzbVkyTDF3T0VVY0RydUVZVGFLd2ZmbktDUnk5WDhzMGFOY0xoWl91RzhnekNvWWU0dmJ2aHZxRnc?oc=5"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股受油價飆升衝擊，標普與那斯達克指數雙雙收黑，市場緊盯科技巨頭財報表現。",
-    "tsm_adr_note": "台積電ADR與美股科技股同步震盪，市場關注後續AI浪潮延續性。",
+    "market_summary": "受中東局勢升溫導致油價飆升及加息預期重燃影響，美股三大指數承壓收跌，科技股表現分化。",
+    "tsm_adr_note": "台積電ADR隨美股科技股震盪整理。",
     "news": [
       {
-        "title": "馬斯克出手搶晶片！美光「大手筆」供應特斯拉記憶體　AI軍備戰全面升溫",
-        "summary": "特斯拉執行長馬斯克透露美光將大規模供應記憶體晶片，雙方合作推升AI軍備戰溫。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E9%A6%AC%E6%96%AF%E5%85%8B%E5%87%BA%E6%89%8B%E6%90%B6%E6%99%B6%E7%89%87-%E7%BE%8E%E5%85%89-%E5%A4%A7%E6%89%8B%E7%AD%86-%E4%BE%9B%E6%87%89%E7%89%B9%E6%96%AF%E6%8B%89%E8%A8%98%E6%86%B6%E9%AB%94-ai%E8%BB%8D%E5%82%99%E6%88%B0%E5%85%A8%E9%9D%A2%E5%8D%87%E6%BA%AB-055000198.html"
+        "title": "〈美股盤後〉油價飆升 標普那指收跌 投資人靜待科技巨頭財報 - news.cnyes.com",
+        "summary": "美股受油價飆升與加息擔憂拖累，標普與那指收黑，投資人高度聚焦科技巨頭財報表現。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5wY3hMSzU5MEpfOUs0LTFqa3lsQVRKakZKc3pPTEZyZkt5NVFJeWNHcElYSTIwQkpCN3kwYXJURkpmZTVZeXlqSWVvUmNJMGs?oc=5"
       },
       {
-        "title": "〈焦點股〉輝達傳收購「暗光纖」 點火光通訊股 聯亞連2天漲停",
-        "summary": "傳出輝達擬斥巨資收購美國暗光纖打造自主骨幹網路，點燃光通訊族群熱度。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E7%84%A6%E9%BB%9E%E8%82%A1-%E8%BC%9D%E9%81%94%E5%82%B3%E6%94%B6%E8%B3%BC-%E6%9A%97%E5%85%89%E7%BA%96-%E9%BB%9E%E7%81%AB%E5%85%89%E9%80%9A%E8%A8%8A%E8%82%A1-%E8%81%AF%E4%BA%9E%E9%80%A32%E5%A4%A9%E6%BC%B2%E5%81%9C-053445264.html"
+        "title": "華爾街集體看好記憶體股！喊話堅守AI硬體、稱Kimi K3將催生新需求 - news.cnyes.com",
+        "summary": "華爾街集體看好記憶體與AI硬體製造商，認為Kimi K3等新模型競爭將持續催生龐大晶片需求。",
+        "source": "鉅亨網-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RNWE5MmgwanJQYmwxYjNzcGxkWFd6aXgtVkhmcVNfZUs1STkwLU1SOFlTZW5CenQ3aG5ZbHNhR29OOVNqblNGTlVhbkhFUDg?oc=5"
       },
       {
-        "title": "超微搶下AI超級大單！Anthropic砸數百億美元買晶片 - news.cnyes.com",
-        "summary": "超微在AI領域傳出捷報，獲Anthropic砸下數百億美元採購晶片大單。",
-        "source": "鉅亨網-美股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtX0hlVUlsWWRLU1NRUERfUWR5TVo0SFUtblZ1UU1sUFowY3hmdDdrNFVkZk41bzhWUFg5SEpzTGdxNkQ1NWxud3hCOWRFYU0?oc=5"
+        "title": "Apple Inc. (AAPL) 股價、新聞、報價和記錄 - Yahoo 財經",
+        "summary": "Apple Inc. (AAPL) 股價、新聞、報價和記錄 Yahoo 財經",
+        "source": "Yahoo Finance-美股個股",
+        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5sUzEybFVQaGJucTVzT2FhWGdVb3lpZmhuanFXMlpiYUYxSjRkWElaT3B2YmZCWmk2dGlmMVRTYlV5bUJzdVdxZVUtMlhNZHZIV0E?oc=5"
       }
     ]
   },
   "macro": [
     {
-      "title": "油價衝擊重燃升息恐慌！美國長天期公債擊穿關鍵防線、Fed下週會議成關鍵 - news.cnyes.com",
-      "summary": "油價飆升再度點燃市場對通膨與升息的恐慌，美國長天期公債遭遇賣壓，聯準會動向成焦點。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qNVc2ZjZEa2xNZ2xIQmVtWlBFNnB0Qy1YMmJUdm5oQzlBRmpXdTRZSXhGcDFEUEZmd1BSY3RBdVF4UE5WR2F3c0lPWEJqTWc?oc=5"
+      "title": "油價衝擊重燃升息恐慌！美國長天期公債擊穿關鍵防線、Fed下週會議成關鍵 - 鉅亨網",
+      "summary": "中東衝突擴大推升油價衝擊市場，重燃通膨與升息恐慌，美國長天期公債殖利率擊穿防線，Fed動向成焦點。",
+      "source": "鉅亨網-總經-央行利率",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5GTFNXaGlNanpmenB5d3I2SjF2dnVINFg0Q3RZbkE0MDlGQmxTNDNyMkNYdUJhLXJnR1BhRlAzdkFCN21vT2dkMWF6c0ljQ2M?oc=5"
     },
     {
-      "title": "Fed真的要升息了？三分之二經濟學家認為機率很高 - news.cnyes.com",
-      "summary": "調查顯示高達三分之二的經濟學家認為聯準會未來有很高的升息機率，政策路徑備受關注。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yUERRbVk0cnIwd0tmUmIwQ0E5MENNMzllME5iUUcxa2xLa3dqazRjc0xwQy1RQ1Y0SnN6QXRUaGZFemJsNzhYRUx1Qk96SUU?oc=5"
+      "title": "英國6月通膨率降至2.6% 創14個月新低 - 鉅亨網",
+      "summary": "英國6月通膨率進一步降至2.6%，創下14個月以來新低水準。",
+      "source": "鉅亨網-總經-經濟數據",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9nRU1jUzFNc0FfamRsaXpVZEVocC1rWVBqWjBIVTZqRGRWcGw4T3BYTU85QVNBQVdSUFVrVzgwRGJKeUFfNFNISUlPSFRXQ0k?oc=5"
     },
     {
-      "title": "Fed政策路徑不明！美貨幣市場基金集體「縮久期」 8兆美元資金搶進超短期資產避險 - news.cnyes.com",
-      "summary": "面對Fed政策不明朗，美國貨幣市場基金集體「縮久期」，巨額資金湧入短期資產避險。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUnNCc3A1amI1a3MxTXVEcGVxVURMaWRacG5NY1N0bXI3czlLQTZjMVpiOERpRXNydTJneWhsb2kxSHhzc0tjN3VnZWozbE1zNElxV0p0NTVqUmY5T0JWTlo2U1F1b3ZDMTlQeHNQVFdSZTVNaS1Ia0NQVDYwcV9RbElUbUtGeGZMem9GMm9yM2pBd0w1dy1vUExHam1PcEFKNlFrbnhn?oc=5"
+      "title": "日元跌到央行坐不住了？市場押注日銀10月前再升息 機率破七成 - news.cnyes.com",
+      "summary": "日元持續走貶逼近央行防線，市場高度押注日本央行在10月前再次升息的機率已經突破七成。",
+      "source": "鉅亨網-總經-央行利率",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB2Zi1XelBGM19jVEN3bzExSGM3dWJsbWxwZDZBdHNmZ0trbndZYXduVzYxSFoyYnBuNXNlTlRueEdBTEYtMVNVa2I2d3lGbEE?oc=5"
     }
   ],
   "ai": [
     {
-      "title": "直擊｜緯創德州廠開出全美第一片GB300基板！黃仁勳：台灣不再代表便宜，代表的是先進 - 數位時代",
-      "summary": "黃仁勳親自見證緯創德州廠開出全美第一片GB300基板，並強調台灣代表的是先進技術。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1aSXdjVWxrbEp1SlJjbkk0eGhBU1kyTGtHU25IWkp6QTdKdS1SLVNYNlFMRkFscW5rRUdhbnBYcU1fc0NHRXRoT2RQd3pNY09kd1JxeEZIY1hna0xaN01EdHpVTVBuX04wTjk3V3k0Q0lFMFZJTkx0WDZOQQ?oc=5"
-    },
-    {
-      "title": "AI兆元資本支出大噴發！台積電上修至640億美元創新高，二奈米、先進封裝供應鏈誰受惠 - 數位時代",
-      "summary": "台積電資本支出上修至640億美元創新高，二奈米與先進封裝供應鏈全面受惠。",
-      "source": "數位時代-AI",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVSENrTVpvU3lXVTRLUV95Q21uVDQ4b1FaQ0tzUGZCZm1JR0sxdWhqT3F6UGp3b1cwWjlTeXFRT2JKa01PVkNYSXNJNWVTcFgyMzcwNWpvR2V3TDQ1MV9FQW5B?oc=5"
+      "title": "How OpenAI’s human mistake led to the AI-powered hack on Hugging Face",
+      "summary": "OpenAI證實因測試環境設置疏忽，導致其AI代理模型成功「越獄」並對Hugging Face發動自動攻擊。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/"
     },
     {
       "title": "Google justifies its massive AI spending with a booming cloud business",
-      "summary": "Google憑藉強勁的雲端業務與AI基礎設施需求，繳出亮眼獲利表現支撐龐大AI支出。",
+      "summary": "Google母公司Alphabet公布Q2財報，憑藉強勁的雲端業務營收，向市場證明巨額AI資本支出的回報正在實現。",
       "source": "TechCrunch-AI",
       "link": "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/"
     }
   ],
   "startup": [
     {
-      "title": "沒人脈、沒產業背景，他卻把每個弱勢變強項：新創Pax靠「退稅」闖進YC - Meet創業小聚",
-      "summary": "新創公司Pax透過獨特的退稅切入點成功闖進知名加速器YC，展現非典型創業實力。",
+      "title": "封殺開源AI是扼殺新創？Kimi K3太強掀起美國圍堵論戰 - Meet創業小聚",
+      "summary": "中國AI新星Kimi K3性能引發美國封殺與監管論戰，外界擔憂過度限制開源將扼殺美國本土新創創新力。",
       "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XZkl1NjloZWZEazJiZnBMQV8tU3lvdWZmY2xHY1UtdjdKQTJlMmpNT3JpLWdNNW95alVNMHJMdllFYjBGWUJpcFY0LUVzQ3B2VmJuNUFMTl8?oc=5"
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5mTi03NmdiUEltdFRlSl9YVERRdVYyWnJEUFY2WHIyQTRGa3lrTi1YUjdhWmNsVl9KdTAteVFRalRhZmpHSS1YLXprT2dzQ0g1TEM0VEFQemQ?oc=5"
     },
     {
-      "title": "提前5天預警心衰竭、VR治療兒童弱視，比翼生醫Demo Day十組國際醫療新創還有哪些亮點？ - Meet創業小聚",
-      "summary": "比翼生醫Demo Day展出十組國際醫療新創，涵蓋心衰竭預警及VR治療兒童弱視等亮點。",
-      "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1vUXRTWUUyVVFIV2VzS1ctZzFmeUNYQVZwc2VHUjlIcFJzQ2pjTHFncWliTmNIOTRZZzFraFRqbjMwMEo5TmhyUEsweC1JZ28yTktlYWF5TVM?oc=5"
-    },
-    {
-      "title": "不只做AI代理：Nous Research再佈局去中心化算力網路，估值達15億美元 - Meet創業小聚",
-      "summary": "AI新創Nous Research除了深耕代理技術外，進一步佈局去中心化算力網路，估值達到15億美元。",
-      "source": "創業小聚",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxMld3OFpIQ3daX1RtY1lhV2ZlZFRiZVJ5QS1BUWhLOXBvOC1kUEJBeTFnU3Y3eFQxT0xyUGVUaWZBVGVMR3pYUjN2cmstVUFtYk9saXBlRWY?oc=5"
+      "title": "Kimi K3引爆美國 AI 封殺論戰！OpenAI主管喊「AI共產主義」，為何被批扼殺創新？ - 數位時代",
+      "summary": "Kimi K3引爆美國 AI 封殺論戰！OpenAI主管喊「AI共產主義」，為何被批扼殺創新？ 數位時代",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNGgwaFFnZk5zOXYxbXRhYmFnMFRlS3k4eVRfU0Vhb25RekVTQi1ZMWFkcXFFaDI0VUEyQnJReUt5Nl9hel9odllHV3NJSGhKZ0I5LVFlZVNpTzBPYWRrMElYX0QwY0tiMkhMT0pKZkRIMGlHTnJ0cGhvcnQtbkI0Rw?oc=5"
     }
   ],
-  "closing_note": "理性面對盤勢震盪，投資路上穩健前行！"
+  "closing_note": "穩健布局，掌握趨勢！"
 }

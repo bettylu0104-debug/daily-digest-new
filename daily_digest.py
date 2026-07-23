@@ -18,9 +18,19 @@ import sys
 import json
 import datetime
 import traceback
+from urllib.parse import quote
 
 import requests
 import feedparser
+
+
+def google_news_rss(query: str) -> str:
+    """透過 Google 新聞的 RSS 搜尋，取得指定網站/關鍵字的新聞。
+    這是 Google 公開提供的功能，不需要申請金鑰，也不受個別網站自己
+    有沒有做 RSS 的限制，可以用來抓鉅亨網、數位時代這類沒有穩定 RSS 的網站。
+    語法：site:網域 可以限定只抓某個網站；when:2d 限定只抓最近兩天的新聞。
+    """
+    return f"https://news.google.com/rss/search?q={quote(query)}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
 
 # ============================================================
 # 1. 設定區：新聞來源清單
@@ -30,30 +40,37 @@ import feedparser
 RSS_SOURCES = {
     "台股": [
         ("Yahoo奇摩股市-台股動態", "https://tw.stock.yahoo.com/rss?category=tw-market"),
-        ("鉅亨網-台股新聞", "https://news.cnyes.com/rss/cat/tw_stock"),
+        ("鉅亨網-台股", google_news_rss("site:cnyes.com 台股 when:2d")),
     ],
     "美股": [
         ("Yahoo奇摩股市-國際財經", "https://tw.stock.yahoo.com/rss?category=intl-markets"),
-        ("鉅亨網-美股新聞", "https://news.cnyes.com/rss/cat/us_stock"),
+        ("鉅亨網-美股", google_news_rss("site:cnyes.com 美股 when:2d")),
     ],
     "AI": [
         ("TechCrunch-AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("VentureBeat-AI", "https://venturebeat.com/category/ai/feed/"),
-        ("數位時代-AI與大數據", "https://www.bnext.com.tw/rss/category/AI"),
+        ("數位時代-AI", google_news_rss("site:bnext.com.tw AI when:3d")),
     ],
     "新創": [
         ("Y Combinator Blog", "https://www.ycombinator.com/blog/rss"),
         ("a16z", "https://a16z.com/feed/"),
-        ("創業小聚 Meet", "https://meet.bnext.com.tw/rss"),
+        ("創業小聚", google_news_rss("site:meet.bnext.com.tw when:5d")),
     ],
 }
 
-# 總經新聞：直接用關鍵字去 Yahoo/鉅亨網搜尋 Fed、CPI、非農等關鍵字
+# 總經新聞：一樣透過 Google 新聞抓鉅亨網的總經relevant新聞，鎖定Fed/CPI/非農等關鍵字
 MACRO_KEYWORDS_SOURCES = [
-    ("鉅亨網-總經", "https://news.cnyes.com/rss/cat/macro"),
+    ("鉅亨網-總經", google_news_rss("site:cnyes.com (聯準會 OR Fed OR CPI OR 非農) when:3d")),
 ]
 
 TIMEZONE_OFFSET_HOURS = 8  # 台北時間 UTC+8
+
+# 模擬真實瀏覽器的請求標頭，避免部分網站把伺服器的請求誤判為機器人而拒絕回應
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml, text/xml, */*",
+}
 
 
 # ============================================================
@@ -65,12 +82,17 @@ def fetch_rss_category(sources, max_per_source=8):
     items = []
     for source_name, url in sources:
         try:
-            feed = feedparser.parse(url)
-            if feed.bozo and not feed.entries:
-                print(f"[警告] 來源可能失效，略過：{source_name} ({url})")
+            # 先用一般 requests 帶上瀏覽器標頭抓內容，避免被網站當成機器人擋掉，
+            # 再把抓到的內容交給 feedparser 解析
+            resp = requests.get(url, headers=BROWSER_HEADERS, timeout=15)
+            resp.raise_for_status()
+            feed = feedparser.parse(resp.content)
+            if not feed.entries:
+                print(f"[警告] 來源可能失效或格式不符，略過：{source_name} ({url})")
                 continue
             for entry in feed.entries[:max_per_source]:
                 items.append({
+                    "id": len(items),
                     "source": source_name,
                     "title": entry.get("title", "").strip(),
                     "link": entry.get("link", ""),
@@ -250,13 +272,19 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 
 
 def call_gemini(raw_data: dict) -> dict:
-    """把原始資料交給 Gemini，請它輸出結構化 JSON 晨報"""
+    """把原始資料交給 Gemini，請它輸出結構化 JSON 晨報
+
+    設計重點：新聞的「標題/連結/來源」一律使用原始資料裡的 id 對應回去，
+    不讓 Gemini 自己重新輸出網址文字，避免 AI 抄錯連結導致點進去打不開。
+    Gemini 只需要負責寫「摘要」跟少數需要它綜合判斷的整理句子。
+    """
     if not GEMINI_API_KEY:
         raise RuntimeError("找不到 GEMINI_API_KEY，請確認 GitHub Secrets 有設定")
 
     system_instruction = """
 你是使用者的私人財經與科技新聞助理，語氣親切、像信任的朋友在跟他簡報，但內容要專業精準，不浮誇。
-請根據我提供的原始資料，整理成「今日晨報」，並且【只能輸出 JSON，不要有任何其他文字、不要markdown code fence】，格式如下：
+我提供的原始資料裡，每一則新聞都有一個數字 "id"。
+請根據原始資料，整理成「今日晨報」，並且【只能輸出 JSON，不要有任何其他文字、不要markdown code fence】，格式如下：
 
 {
   "greeting": "一句今天的簡短問候語，可以提到天氣感或市場氣氛，20字內",
@@ -264,22 +292,22 @@ def call_gemini(raw_data: dict) -> dict:
     "night_futures_note": "根據原始資料整理台指期夜盤漲跌重點，若無資料請寫'今日無夜盤資料，建議至台灣期貨交易所官網查看'",
     "top_volume_note": "用一句話總結成交量最大的個股是誰、量有多大",
     "hot_sector_note": "用一句話總結最熱的類股是誰、漲了多少",
-    "news": [ {"title": "...", "summary": "20-40字重點摘要", "source": "...", "link": "..."} ... 十條 ]
+    "news": [ {"id": 原始資料的id數字, "summary": "20-40字重點摘要，用你自己的話說重點，不要照抄原文整段"} ... 從 taiwan_stock_news 裡選最多十條最重要的 ]
   },
   "us_stocks": {
     "market_summary": "用1-2句話總結美股大盤走勢",
     "tsm_adr_note": "台積電ADR漲跌幅一句話重點",
-    "news": [ {"title": "...", "summary": "...", "source": "...", "link": "..."} ... 十條 ]
+    "news": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 裡選最多十條 ]
   },
-  "macro": [ {"title": "...", "summary": "...", "source": "...", "link": "..."} ... 三條，聚焦美國經濟數據或Fed動態 ],
-  "ai": [ {"title": "...", "summary": "...", "source": "...", "link": "..."} ... 十條，涵蓋LLM、垂直AI應用、AI工具 ],
-  "startup": [ {"title": "...", "summary": "...", "source": "...", "link": "..."} ... 五到八條，來自YC/a16z/創業小聚 ],
+  "macro": [ {"id": ..., "summary": "..."} ... 從 us_stock_news 或 macro_news 裡挑最多三條，聚焦美國經濟數據或Fed動態 ],
+  "ai": [ {"id": ..., "summary": "..."} ... 從 ai_news 裡選最多十條，涵蓋LLM、垂直AI應用、AI工具 ],
+  "startup": [ {"id": ..., "summary": "..."} ... 從 startup_news 裡選最多八條 ],
   "closing_note": "一句鼓勵/提醒的結語，15字內"
 }
 
 規則：
-- 新聞條數不夠就盡量整理現有的，不要編造不存在的新聞。
-- summary 一定要是你自己整理的重點，不要整段照抄原文。
+- id 一定要是原始資料裡真實存在的數字，不可以自己編號。
+- 新聞條數不夠就盡量整理現有的，不用湊數，不要編造不存在的新聞。
 - 台股/美股新聞挑當天最重要、對投資人最有意義的。
 """
 
@@ -301,6 +329,28 @@ def call_gemini(raw_data: dict) -> dict:
     data = resp.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
+
+
+def resolve_news_items(gemini_items, *source_lists):
+    """把 Gemini 回傳的 {id, summary} 對應回原始資料，補上真正的 title/link/source，
+    這樣連結一定是原始資料裡真實存在的網址，不會被 AI 抄錯。"""
+    by_id = {}
+    for source_list in source_lists:
+        for item in source_list:
+            by_id[item["id"]] = item
+
+    resolved = []
+    for g_item in gemini_items or []:
+        original = by_id.get(g_item.get("id"))
+        if not original:
+            continue  # Gemini 給了不存在的 id，直接跳過，不要顯示壞掉的項目
+        resolved.append({
+            "title": original["title"],
+            "summary": g_item.get("summary", ""),
+            "source": original["source"],
+            "link": original["link"],
+        })
+    return resolved
 
 
 # ============================================================
@@ -731,6 +781,19 @@ def main():
         print(f"[錯誤] Gemini 整理失敗：{e}")
         traceback.print_exc()
         sys.exit(1)
+
+    # 把 Gemini 回傳的 id 對應回原始資料，補上真正可以打開的連結/標題/來源
+    digest["taiwan_stocks"]["news"] = resolve_news_items(
+        digest["taiwan_stocks"].get("news", []), raw_data["taiwan_stock_news"]
+    )
+    digest["us_stocks"]["news"] = resolve_news_items(
+        digest["us_stocks"].get("news", []), raw_data["us_stock_news"]
+    )
+    digest["macro"] = resolve_news_items(
+        digest.get("macro", []), raw_data["us_stock_news"], raw_data["macro_news"]
+    )
+    digest["ai"] = resolve_news_items(digest.get("ai", []), raw_data["ai_news"])
+    digest["startup"] = resolve_news_items(digest.get("startup", []), raw_data["startup_news"])
 
     print("== 步驟 3.5/4：抓取今日 Google 日曆行程 ==")
     calendar_events = fetch_todays_events(now_tw)

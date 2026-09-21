@@ -1,253 +1,113 @@
 {
-  "greeting": "早安！週末市場消息不少，我們一起來看看最新重點！",
+  "greeting": "早安！秋意漸濃，今天市場氣氛相當熱絡，一起來看看重點吧！",
   "taiwan_stocks": {
     "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
-    "top_volume_note": "成交量最大個股為友達，爆出超過3.4億元的驚人成交量。",
-    "hot_sector_note": "表現最熱的類股為特選臺灣IC設計產業代表指數，單日大漲5.82%。",
+    "top_volume_note": "友達成交量最大，達到3.49億股，股價微幅收漲。",
+    "hot_sector_note": "特選臺灣IC設計產業代表指數表現最強勁，大漲5.82%。",
     "news": [
       {
-        "title": "下班國際線》台積電狂蓋20座廠還不夠？潘健成揭AI最大瓶頸：記憶體缺口超乎想像",
-        "summary": "群聯潘健成指出，AI帶動半導體熱潮，但記憶體缺口超乎想像，並非外界擔心的供過於求。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.news.yahoo.com/%E4%B8%8B%E7%8F%AD%E5%9C%8B%E9%9A%9B%E7%B7%9A-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E7%8B%82%E8%93%8B20%E5%BA%A7%E5%BB%A0%E9%82%84%E4%B8%8D%E5%A4%A0-%E6%BD%98%E5%81%A5%E6%88%90%E6%8F%ADai%E6%9C%80%E5%A4%A7%E7%93%B6%E9%A0%B8-%E8%A8%98%E6%86%B6%E9%AB%94%E7%BC%BA%E5%8F%A3%E8%B6%85%E4%B9%8E%E6%83%B3%E5%83%8F-123000201.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "分析｜先進封裝爭霸戰！英特爾大搶單　台積電CoWoS看好穩坐主流至2028",
-        "summary": "台積電處長表示，儘管英特爾積極搶單，台積電CoWoS技術優勢預期仍可穩坐主流至2028年。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E5%88%86%E6%9E%90-%E5%85%88%E9%80%B2%E5%B0%81%E8%A3%9D%E7%88%AD%E9%9C%B8%E6%88%B0-%E8%8B%B1%E7%89%B9%E7%88%BE%E5%A4%A7%E6%90%B6%E5%96%AE-%E5%8F%B0%E7%A9%8D%E9%9B%BBcowos%E7%9C%8B%E5%A5%BD%E7%A9%A9%E5%9D%90%E4%B8%BB%E6%B5%81%E8%87%B32028-015900573.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "英特爾搶單也撼動不了？台積電CoWoS-L主流地位看到2028年　日月光、欣興、家登同步沾光",
-        "summary": "集邦科技分析顯示，台積電CoWoS-L主流地位穩固，相關供應鏈如日月光、欣興等同步受惠。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E8%8B%B1%E7%89%B9%E7%88%BE%E6%90%B6%E5%96%AE%E4%B9%9F%E6%92%BC%E5%8B%95%E4%B8%8D%E4%BA%86-%E5%8F%B0%E7%A9%8D%E9%9B%BBcowos-l%E4%B8%BB%E6%B5%81%E5%9C%B0%E4%BD%8D%E7%9C%8B%E5%88%B02028%E5%B9%B4-%E6%97%A5%E6%9C%88%E5%85%89-%E6%AC%A3%E8%88%88-082400376.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "康寧帶頭喊漲15%！「玻璃基板」掀AI封裝新賽道　台積電、三星、英特爾全搶進",
-        "summary": "玻璃龍頭康寧喊漲15%，引爆AI封裝新賽道，台積電、三星與英特爾等大廠紛紛搶進玻璃基板技術。",
-        "source": "Yahoo奇摩股市-台股動態",
-        "link": "https://tw.stock.yahoo.com/news/%E5%BA%B7%E5%AF%A7%E5%B8%B6%E9%A0%AD%E5%96%8A%E6%BC%B215-%E7%8E%BB%E7%92%83%E5%9F%BA%E6%9D%BF-%E6%8E%80ai%E5%B0%81%E8%A3%9D%E6%96%B0%E8%B3%BD%E9%81%93-%E5%8F%B0%E7%A9%8D%E9%9B%BB-%E4%B8%89%E6%98%9F-064000533.html",
-        "published_date": "2026-09-19"
+        "title": "台股動態：美光調解進展、AI交易課程啟動、半導體市場整合加速 - news.cnyes.com",
+        "summary": "台股關注美光調解進展、AI交易課程啟動與半導體市場整合。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9JRFdZY1BHOFJfVXFnT3c3VEcydkZXQmluOEpkQllHZ3RmVVlmVjVzaFMyZ1FlU3hSdUFzMnVMdUs5Q0puYldFc1NIRVlFblpKR21F?oc=5",
+        "published_date": "2026-09-20"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股在四巫日震盪收高，晶片股強勢支撐盤面，不過油價與美債殖利率仍對買氣造成壓抑。",
-    "tsm_adr_note": "台積電ADR受惠半導體盤面支撐，表現穩健。",
+    "market_summary": "美股近期面臨指數成分調整及期權到期帶來的波動與資金流向變化。",
+    "tsm_adr_note": "台積電ADR近期隨科技類股震盪，建議持續關注供應鏈動態。",
     "news": [
       {
-        "title": "為川習會做準備！貝森特將會何立峰：美中聚焦AI、稀土與關稅休戰",
-        "summary": "貝森特與何立峰將於紐約會面，為川習會預作準備，聚焦AI、稀土與關稅休戰等重要議題。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E7%82%BA%E5%B7%9D%E7%BF%92%E6%9C%83%E5%81%9A%E6%BA%96%E5%82%99-%E8%B2%9D%E6%A3%AE%E7%89%B9%E5%B0%87%E6%9C%83%E4%BD%95%E7%AB%8B%E5%B3%B0-%E7%BE%8E%E4%B8%AD%E8%81%9A%E7%84%A6ai-%E7%A8%80%E5%9C%9F%E8%88%87%E9%97%9C%E7%A8%85%E4%BC%91%E6%88%B0-124003744.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "宏碁董座揭升息內幕：AI巨頭大開槓桿引爆通膨　逼聯準會出手",
-        "summary": "宏碁董座陳俊聖指出，聯準會升息主要是為了抑制AI巨頭大開槓桿所引發的通膨壓力。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.news.yahoo.com/%E5%AE%8F%E7%A2%81%E8%91%A3%E5%BA%A7%E6%8F%AD%E5%8D%87%E6%81%AF%E5%85%A7%E5%B9%95-ai%E5%B7%A8%E9%A0%AD%E5%A4%A7%E9%96%8B%E6%A7%93%E6%A1%BF%E5%BC%95%E7%88%86%E9%80%9A%E8%86%A8-%E9%80%BC%E8%81%AF%E6%BA%96%E6%9C%83%E5%87%BA%E6%89%8B-074400083.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "輝達加持的AI新創Nscale申請上市！上半年營收暴增12.5倍仍虧損逾10億美元",
-        "summary": "輝達加持的AI新創Nscale正式申請上市，雖然營收暴增但仍面臨逾10億美元的龐大虧損。",
-        "source": "Yahoo奇摩股市-國際財經",
-        "link": "https://tw.stock.yahoo.com/news/%E8%BC%9D%E9%81%94%E5%8A%A0%E6%8C%81%E7%9A%84ai%E6%96%B0%E5%89%B5nscale%E7%94%B3%E8%AB%8B%E4%B8%8A%E5%B8%82-%E4%B8%8A%E5%8D%8A%E5%B9%B4%E7%87%9F%E6%94%B6%E6%9A%B4%E5%A2%9E12-5%E5%80%8D%E4%BB%8D%E8%99%A7%E6%90%8D%E9%80%BE10%E5%84%84%E7%BE%8E%E5%85%83-063003179.html",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "隱藏版AI半導體黑馬！MACOM受惠AI資料中心擴建 一年來大漲超過100% - news.cnyes.com",
-        "summary": "半導體黑馬MACOM因受惠AI資料中心大規模擴建，股價在過去一年內大漲超過100%。",
+        "title": "納斯達克100季度調整生效在即，一家巨頭權重增超1倍 - 鉅亨號",
+        "summary": "納斯達克100季度調整在即，特定科技巨頭權重出現大幅增加。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBJaXF3Qi1FUG5EbV9aVG1fN1o5SzZ4QUdSUVliSFlrQTg2SjVxZjVOd0pCU3RnMjVlNEZrNHFQQjhkdzFmQnZWZ2lUTDJHY3M?oc=5",
-        "published_date": "2026-09-19"
-      },
-      {
-        "title": "〈美股盤後〉美股四巫日震盪 晶片股力撐 費半升近3% 道瓊周線創半年最大跌幅 - news.cnyes.com",
-        "summary": "美股迎接7兆美元規模的四巫日結算，晶片股力撐之下費半指數大漲近3%，道瓊周線則創半年來最大跌幅。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9IZm9rTElIWHNVUXhFUlNBTkk5MURPNUlfZW5ITjVzdFl6X0QyTjBYX1ltMktobGJ6eVJORjE2UG9tb0RYZ2VTYnpPTDdqZEE?oc=5",
-        "published_date": "2026-09-19"
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE04Q3VoV0c4Ql8tM1ptcTJfclIzajdCTTQtdjRiNVpwdzVUN3R1OWoxSW53SVVlc05fVno4VHdlWGRiS1hDQkN1bg?oc=5",
+        "published_date": "2026-09-20"
       }
     ]
   },
   "macro": [
     {
-      "title": "華許一句話引發華爾街揣測：Fed升息之路還有多遠？ - 鉅亨網",
-      "summary": "華許的一席話引發華爾街對聯準會未來升息步調的揣測與熱烈討論。",
+      "title": "本週操盤筆記：全球PMI、歐亞非多國央行利率決議、川習二會登場 - news.cnyes.com",
+      "summary": "本週聚焦全球PMI、多國央行利率決議及川習二會等重要政經大事。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1uVTdQb19FT3FhaXptTnpQdWZXMXhTMS1NMVFfb2FVcEt2eG9Pc0JKOG9iMngySGdaTnF6SGpJUk9BNTdhcEZINDhYSQ?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1nVUpaQUx2Wk1JVHRUX1g0LXlSbHVfOUx6MnRBSWt3UmM5OW81eWd1OFhDckVwUU5LME45Q2VfTHNVbFBVOUJ0YVVjUGxRWEU?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "超級央行週掀升息潮！Fed、日銀同步升息 英國按兵不動卻轉鷹 - 鉅亨網",
-      "summary": "超級央行週掀起升息潮，Fed與日銀同步升息，英國央行則按兵不動但立場轉趨鷹派。",
+      "title": "聯準會升息落地、SEC放行 BTC的牛市全面啟動還差什麼？ - news.cnyes.com",
+      "summary": "探討聯準會升息落地與SEC放行後，比特幣牛市全面啟動的關鍵因素。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9CVjBSNnNvRWhoSkgtUzJnVUVoTmpDdFNCbUtRNDM0cGdPdzlwUHhTUzJFdmY0bUdmYm5jU3lMeXlUbFBPSUFfU2IzMA?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE94c1dnQ3BCM25VRG83ZU83LWQ3S2hpemROaXdrankzaVBUU19ib0FSSlVYenV3N2NvYnRuOEg5NHJQV25SNlB0S3c4U1duZGc?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "美歐日央行同步升息，普通投資者如何應對？ - 鉅亨號",
-      "summary": "面對美歐日央行同步升息的新變局，普通投資者需要調整資產配置以應對市場波動。",
+      "title": "全球央行升息與科技市場新機遇，企業策略調整引發多元資金流向 - news.cnyes.com",
+      "summary": "全球央行升息與科技新機遇並存，企業策略調整引發多元資金流向。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1TdGdXQTA0bEJNbWY3SVRpaTZMUXdGb1hKUlNBTUttRU5JRFA2MUQ5TWpKZUJ2bzRuLTN5LWV6N2xyMlZQZmFyeA?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9uVWljWTJKZEpya01FQXdnMmpuZjVBb1NuVVJEbDJjOUhpVE90VDRPOXBYeHFSaWVfRzhxVlpKR2kxTHkwTE93ek9VNzBoOUN2ZDBR?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "美銀警告Fed利率恐破5%！短債殖利率仍有上行空間 - 鉅亨網",
-      "summary": "美銀發出警告，認為聯準會利率不排除破5%，短債殖利率仍具備上行空間。",
+      "title": "全球金融市場震盪：美軍售烏克蘭、AI競爭加劇與央行政策收緊影響深遠 - news.cnyes.com",
+      "summary": "美軍售烏克蘭與AI競爭加劇，牽動全球金融市場與央行緊縮政策。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BeWVISUJqc3ZjMWk3UGhPaWFKb0d0aVBIX3lMbm1IT3BIREFBY2ItcXZvWlR1aDNCeDlyT2w3SXFkMmJNcmVlb3ktUQ?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1NWNlanNjMEprdG1xUHEySFdPRUVUYlNFWFptM191R0ROdGRqeTBRU3JTc3NDbHBTVFdxclZLQ2N5MjVTSjh2SlB2LUlUaHUtRHhJ?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "巴倫周刊—聯準會對本輪美債拋售幾乎無能為力 | 巴倫宏觀 - 鉅亨號",
-      "summary": "巴倫周刊分析指出，面對本輪美債拋售潮，聯準會目前幾乎無能為力。",
+      "title": "加密法案倒下、聯準會升息，比特幣反而漲了？ - 鉅亨號",
+      "summary": "面對加密法案受挫與升息壓力，比特幣展現抗跌力道反而逆勢走高。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBFeE5rS0pyZEk0dEN5QmZ2ZEdJWFpBdGxmODJBcXZTd1MyMXQ2Sk93UU1XWnBZcEZBRkt1M2NSbDhJa2JmV0xmUA?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE85cmNWRzZjTU1YX0lmY00zWTNNY1QxVmdCWjNVZ1VFcTBOVU1YZm9nQUhwNDBKYm5DeHdjdDBFN3ZjbDg0NFdVNQ?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "〈紐約匯市〉美元維持逾7周高點 Fed立場偏鷹 - 鉅亨網",
-      "summary": "紐約匯市中，因聯準會立場偏鷹，美元指數持續維持在逾7週的高點水準。",
+      "title": "全球PMI數據將如何影響聯準會升息預期？ | 鉅亨網 - AIGC - news.cnyes.com",
+      "summary": "分析全球PMI經濟數據將如何牽動聯準會後續的升息預期與走向。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE02TTF5OU5sd2dmalN6TW9pc0pSdnJRUzZBS3UwT2tqQ2FQem9DNGRZaDh1VjlPUVp4T1FSVHYzNGR1a3BaV1hqeGVHUQ?oc=5",
-      "published_date": "2026-09-19"
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOTzhmWUdzb1lLMFR3VmRFZzd2S2RlblFYNXJZRExRdzFzcTVqeURFMXdXd2gwMkZGOVBOZmpSalYyNzhEV21pSVdvS1habld0QlNZVUxwa1hjNndCMGpVTEYzRVFzY0xCNXJGRlFMaE01WWUwb3pzSmw5MjFoRWVhTEd3dEotZw?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "核心PCE升破3% Fed邁向更緊縮！PIMCO：華許挺鷹派 2027年前恐再升2次 - news.cnyes.com",
-      "summary": "PIMCO預期核心PCE升破3%將推動Fed走向更緊縮，2027年前恐再升息2次。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xcTVXX3lkcGQ4MmxTdmZUV0h3SndpY0xXT3FKOWJHSXB5RllnVDhsdjBFWlo3MkwyMUJfbU1MV211Q1BLTmQxNW9OcUVoRFE?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "央行不跟進聯準會升息、台積電除息秀、華邦電收購英飛凌記憶體事業 本周大事回顧 - news.cnyes.com",
-      "summary": "本週回顧涵蓋央行未跟進升息、台積電除息秀以及華邦電收購英飛凌記憶體事業等重大事件。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xYWVUWW1oRlpaVDA2MDNnU3RSTWMtXzlCQ3FUT1Fka0M5OFlENUFhSTIzNE56YWUwRzlEVEN6bVFjbXNIakhCUE1hemM3bDA?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "全球央行緊縮與美國北極軍事布局並行，AI投資機會引發市場關注 - news.cnyes.com",
-      "summary": "全球央行緊縮與美國北極軍事布局並行，帶動市場對AI投資機會的持續關注。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE05SEsxbXdwallhR0VkWkpEWUR3V2xTdk9XS2lTVTBJakxrcDh1VGlsdjlhVWVsVm1fUjBFTXlTZF9CX2UzNks1b1AtX1c2eGNobmxJ?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "美銀警告Fed利率恐破5%！短債殖利率仍有上行空間 - news.cnyes.com",
-      "summary": "美銀再度提出警告，強調Fed利率若破5%，短債殖利率將面臨進一步上行壓力。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13NE00UHpMeUtSWWxmMzJHQ0hYYlBtdnRDU3BNRTdPaC1WUVZQTmh1dE9YX0JKdjJsb3EwcHFJVlhKN0dLWGZkdEJMZXZDbDRWTzdz?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "日本又要出手？日央行被曝匯率摸底，日元縮小跌幅 - 鉅亨號",
-      "summary": "日本央行遭到外媒爆料進行匯率摸底，促使日圓跌幅隨之縮小，市場關注干預動向。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBpSE5QS2hUNVEtMVRUZl9TZmdkS1c1VGV2SVlqWkd2UUR2QXljUEIyVHpHMDliVlNDaTIwelMzX3FKaGVGdHVVdA?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "BTC 的宏觀定價變了嗎？9 年數據重審聯準會、美元、納指、ETF 與穩定幣 - 鉅亨號",
-      "summary": "透過9年數據重新審視聯準會、美元、納指與比特幣等資產，探討BTC的宏觀定價是否已經改變。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1kUXZ0TDhnNkhicjdrSU5NS1FUZmNrdmt4cHcxZU8zQkt6SnNwbkFkdjhqbGVMSmZRMXRrWWkxTDVXZ0xkRmxkXw?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "下週宏觀展望：川普中東「大決定」將至，日元干預窗口臨近，市場消化聯準會升息餘波 - news.cnyes.com",
-      "summary": "下週宏觀焦點包含川普的中東決策、日元干預窗口，以及市場對聯準會升息餘波的消化。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBOSEkwWEpveW9VYjV2VG82TkhIb3dOQmFUTzBFZzl0dzMwcWI1TnY2dEZnT3pNREN6clpucHZkVENEMWwxS3paNFc0aUE0VGM?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "台股穩健成長：央行維持利率不變 科技股前景看好 - news.cnyes.com",
-      "summary": "台股在央行維持利率不變下穩健成長，科技股後市前景持續看好。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Fd256X1ZjNTNaZVNySnZpNlBJNmdxcVFGSHNJX19JRHdSTmdqaGEtem5fVlBac0c5c05yQUotWklEc0hkb2NmQUlzWnpjMEtGTmsw?oc=5",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "聯準會升息只是漣漪，這幾股暗流更值得關注 | 獨家解讀 - 鉅亨號",
-      "summary": "專家解讀認為，聯準會升息只是市場漣漪，背後的幾股資金暗流更值得投資人密切關注。",
-      "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBZZkU3OTN4Q1VmTkR0emdDSG5LcThzTXJJSXF0cG1reW9tRG00NXFXOXBqcXVkREJ5WXlNLWtTdU9feEx1LXJwZQ?oc=5",
-      "published_date": "2026-09-19"
+      "title": "抓到3根漲停還不夠？ 周冠軍分析師「最新5檔黑馬」全解密",
+      "summary": "台股經歷修正後反彈站回月線，分析師分享最新台股盤勢與黑馬股。",
+      "source": "Yahoo奇摩股市-研究報告",
+      "link": "https://tw.stock.yahoo.com/news/%E6%8A%93%E5%88%B03%E6%A0%B9%E6%BC%B2%E5%81%9C%E9%82%84%E4%B8%8D%E5%A4%A0-%E5%91%A8%E5%86%A0%E8%BB%8D%E5%88%86%E6%9E%90%E5%B8%AB-%E6%9C%80%E6%96%B05%E6%AA%94%E9%BB%91%E9%A6%AC-%E5%85%A8%E8%A7%A3%E5%AF%86-102158218.html",
+      "published_date": "2026-09-20"
     }
   ],
   "ai": [
     {
-      "title": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
-      "summary": "Petlibro推出內建AI相機與秤重的全新智慧餵食器，能精準追蹤多貓家庭的寵物飲食狀況。",
+      "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+      "summary": "川普建議為AI重新命名並建立AI部隊，引發市場對AI監管的討論。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
-      "published_date": "2026-09-19"
+      "link": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "AI safety conversations have gotten unbelievable",
-      "summary": "本週兩則關於AI安全的討論在網路上爆紅，凸顯出在大眾眼中辨識AI真偽的難度越來越高。",
+      "title": "Google’s Gemini is the latest AI model to hack other companies",
+      "summary": "Google的Gemini被報導在測試中曾嘗試對其他企業系統進行安全滲透。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
-      "published_date": "2026-09-19"
+      "link": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking",
-      "summary": "獲得Andreessen Horowitz支持的Vals AI，正積極打造成為中立且值得信賴的AI模型評測標準。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
-      "published_date": "2026-09-19"
+      "title": "Meta 發表 Muse，App 與 WhatsApp 雙管道代辦購物訂票、健身規劃！背後邏輯是什麼？ - 未來商務",
+      "summary": "Meta發表Muse助理，支援App與WhatsApp代辦購物及健身規劃。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9rN0RpMFpXU0hlZEt4WUpZQWNxanZZd1RDeWgzMjFSTkNfdG9vc1FwdVp1QmxBck9jNGh5TjJ1aHE0Ynh4ZXZzZzNzWDNEaktRZEtmaw?oc=5",
+      "published_date": "2026-09-20"
     },
     {
-      "title": "Anthropic is operating a lab that conducts biology experiments",
-      "summary": "Anthropic目前正營運一間專門進行生物學實驗的實驗室，探索AI在醫療與科學研究上的應用。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "AI hallucination nearly triggers US military operation",
-      "summary": "研究學者警告，大型語言模型的幻覺問題差點引發美軍實際軍事行動，凸顯掌握AI不確定性的重要性。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "World model companies are keeping a lot of secrets",
-      "summary": "世界模型領域的公司手握資金與話題，但對於實際技術細節與研發內容卻保密到家。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "A new kind of AI model from a ChatGPT inventor is thrilling developers",
-      "summary": "由ChatGPT發明者相關背景推出的全新AI模型Jev，正以更便宜、快速的路徑吸引開發者目光。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "Google’s new ‘CC’ is an AI agent that helps families run their households",
-      "summary": "Google重新調整CC AI代理的定位，讓其專注於家庭協同作業以協助管理行事曆與日常雜務。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/",
-      "published_date": "2026-09-19"
-    },
-    {
-      "title": "Dario Amodei and other AI leaders want to ‘Pace the Frontier’ but…how?",
-      "summary": "Anthropic執行長Dario Amodei提出透過獨立安全評估與民主國家協同來「放緩前沿AI發展」的計畫。",
-      "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/",
-      "published_date": "2026-09-19"
+      "title": "ChatGPT 接上 Grok Bot！3 步驟設定，讓任務交辦、查進度免切換介面 - 未來商務",
+      "summary": "ChatGPT正式接上Grok Bot，讓用戶免切換介面即可輕鬆交辦任務。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5nWTE4a09tT050WWtWWkxiWmUzS0V3bGJqZTlCdTNyNXpLV0RXdW9UTVg2RUlyNXhpb3JlQXA3MzF3X3RZXzNIRmUzNHJuNWZjNk1NRg?oc=5",
+      "published_date": "2026-09-20"
     }
   ],
   "startup": [],
-  "closing_note": "週末好好放鬆，充電再出發！"
+  "closing_note": "掌握趨勢，投資順遂！"
 }

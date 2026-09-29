@@ -1,380 +1,323 @@
 {
-  "greeting": "早安！秋涼的早晨，來看今天的科技與財經重點。",
+  "greeting": "早安！今天市場多空交織，來看看最新的財經重點吧！",
   "taiwan_stocks": {
     "night_futures_note": "今日無夜盤資料，建議至台灣期貨交易所官網查看",
-    "top_volume_note": "成交量最大個股為友達，成交量達5.42億股，收盤微跌。",
-    "hot_sector_note": "盤面表現最熱類股為塑膠類指數，漲幅達到3.6%。",
+    "top_volume_note": "成交量最大個股為友達，爆出超過5.4億元大量，股價收在34.20元。",
+    "hot_sector_note": "最熱類股為塑膠類指數，強勢大漲3.6%。",
     "news": [
       {
-        "title": "台股市場動態：鋼鐵配額調整助穩銷售，外銷訂單創新高，AI與資安股蓬勃發展 - news.cnyes.com",
-        "summary": "台股受鋼鐵新規與外銷訂單創新高激勵，AI與資安類股表現蓬勃發展。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBzRW5WRVlKNnk4cGF1SkxpLXdXcmwxcW9OekUyRmxfN0t3MlFucGJ4STduLUxVZkkyamN4T0xsYVl1dFVXN2Exb21ob2RYRUtjSTRN?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台股市場動態：鋼鐵配額調整、外銷訂單創新高、AI需求推動PCB股價上漲 - news.cnyes.com",
-        "summary": "在鋼鐵配額調整與外銷訂單創高帶動下，AI強勁需求進一步推升PCB股價。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9sR0YyVXpvbzNtZVFlT25IM04xakdQcHpFNkRSbnJJbEJPUG1iRDMteVQ1VUhrY2k4Z2lhM3ROMFVoR09xclc5a3ZFSXg5ZGloeDBN?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台股市場動態：鋼鐵配額調整、外銷訂單創新高及AI需求推動科技股上漲 - news.cnyes.com",
-        "summary": "受惠於鋼鐵新規穩定銷售、外銷訂單亮眼及AI需求，科技類股全面走高。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1LeFVzcDNITmtsMENRVVMxWjdFSUhqb1g3UzVGQ0l6UTlmcXFfM0lnNjNvenphM014YlVjUVMtM2ZyamdWajZEQnVLRllMU0duOUpJ?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台股蓬勃發展：鋼鐵新規穩定外銷，AI需求驅動市場熱潮 - news.cnyes.com",
-        "summary": "台股市場買氣熱絡，鋼鐵政策助攻外銷，AI應用持續驅動盤面熱潮。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9VZE9xNVZTdDNYcUl3YzItSF9sSFZISlVzSi1mU2E1YlJza24tQk51OHM4UGJXbXNPZmlkSWd5R2toa0VNazhnVXB3ZGYybjJKclo4?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台股市場動態：鋼鐵新規穩銷售，AI需求推升PCB股價，Gogolook資安表現亮眼 - news.cnyes.com",
-        "summary": "台股展現韌性，鋼鐵新規與AI需求推升PCB走揚，資安廠Gogolook表現亮眼。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAxeVRLNHdvd2w2NVR5dnh0aXNHV1doZ29hdTJqRy1ab0RISW1lWVR3Q3h2QkJDWE04Wng2SENvY0FrbEdKOWtyWGJlaHlWTHZ0Qzdj?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台積電又有漲價題材！「含積量」成焦點 00881包下AI四大電子族群 - news.cnyes.com",
-        "summary": "台積電再添漲價題材，「含積量」ETF如00881成為市場布局AI電子族的焦點。",
-        "source": "鉅亨網-台股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4wMndWQUZ3bVVvTWFYUnlyQ2wzUVJtT1ZOWC1Bb0NHbU1pdzlERDY2Uk1iNHBKZlp2VG5kckJmQ0RBOTdWQnRqV2w3QzYxb0U?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "台股因外資回流及AI熱潮持續上漲，醫療與科技產業發展前景樂觀 - news.cnyes.com",
-        "summary": "外資回流與AI熱潮持續推升台股，醫療與科技產業後市展望相當樂觀。",
+        "title": "別再只看散熱！下一個翻倍產業 已經浮出水面 - news.cnyes.com",
+        "summary": "市場分析點出除了熱門的散熱族群外，下一個具備翻倍潛力的科技次產業正逐漸浮現。",
         "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1kX2NJbEFTWlkwN0JzamFxNXRLUmNnRUFRa19kZFdmX2o5X2JmdXh2YTdEUXN0RzBsY2pHQ2NFNmhEWnFoVnlVTS1udWZ3ZU9Qc1dN?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pWmJGN0k1QmlYQWtybk5fZEtfc1c3YjBRbzZFZkNnMmUzODFzbDFFMG9JSkwxNUZaYlRxa0pNQm9XSUZHUllQM2huTW5vT00?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "台股受外資回流與AI熱潮驅動，科技與健康產業潛力引國際資金關注 - news.cnyes.com",
-        "summary": "國際資金高度關注台股，在AI熱潮與外資匯入下，科技與健康產業潛力備受矚目。",
+        "title": "台股科技熱潮持續，半導體產業新機遇與挑戰並存 - news.cnyes.com",
+        "summary": "台股科技熱潮延續，半導體產業在迎來新機遇的同時，也伴隨著結構性的挑戰。",
         "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ucmlKQ1hGZzIwTkVSa0JROWctNlFhV1ZwZDM3dUI1VUY4d05VaFRKckFudFIyNW5HMFBYSkxFY1lpUzFqXzlKVFNwakRYU2FUZm1Z?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5sMHFCNzMwRXFETTRGUTVMdk9TXzdRWDBwM3k1UEkwcGNlVEpWbTNQaHRsR2F1dUU5RzBnVVl0TGpoUmhSdEQ3OVU3VTdhNnNxRkJ3?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "台股因外資回流重振，AI與生醫產業迎新機遇，京鼎擴展醫療合作展現技術優勢 - news.cnyes.com",
-        "summary": "台股迎來外資回流與AI商機，京鼎等廠擴大醫療合作展現強大技術優勢。",
+        "title": "台股市場回暖：AI應用與外資回流助力科技與旅遊產業成長 - news.cnyes.com",
+        "summary": "隨著AI應用普及與外資回流，為台灣科技與相關產業注入強勁的成長動能。",
         "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA0TVYzWUJZUlZLTnZMTVJBSTN3emc2RVpjeS10c05xZ1Izd0hYS09KNmgtSHZyOTRjakNCVW1LMVdzU3lHbGRFdGQzQ1I1SHN2TlFN?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5URTZobmFOQzFCTmhnbS1xQ2NmbDNtdlFXWWtpcVhEQzNjWmRhdHNBbEJ5eFhuNXQwWFVvQTQzUjdTMzluSjdyRVE3S0FlOXdKZDlF?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "台股因AI熱潮持續上漲，外資信心高漲，半導體產業迎新機遇 - news.cnyes.com",
+        "summary": "受惠於強勁的AI需求推動，台股持續上攻，外資對半導體前景信心高漲。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1RWGVtMEgtZGVfbmxfbG56NzlfMGgyRDR3OVQtRjBBZXJ6TXZBOVlKeHlaRDJ3TUZjcGFNUDlVZ2NCWVQ5eWhnbm5oSjNOZy0wV0VZ?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "油價飆升至106美元，AI安全憂慮加劇，台股前景看好與半導體供應鏈韌性增強 - news.cnyes.com",
+        "summary": "油價攀高與AI安全憂慮雖干擾市場，但台股科技前景與半導體供應鏈展現韌性。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1jazYzbUVUdzM2SEw3NF9ZTk45YVc4RTcxQXlfSlR6cVZpRWw5SlNLemRrYUFsV01Nc0l4Q3ppTXlkQllNZ0dqU0dCSkR1TXA1SDRr?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "台股動態：5G轉型緩慢、AI技術蓬勃、旅遊市場積極布局 - news.cnyes.com",
+        "summary": "台股產業動態顯示5G轉型步調雖緩，但AI技術蓬勃發展成為盤面核心亮點。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5LNW5HVzJ0ZUxlQW1wZE5CY1VSRXlIWHBlNlZaUTZjN01qNFVTQ2g5SWpSR2pwQUFzdmtVNmRqcFY2UDlSRFpSLVZxX3l3elNrRnNV?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "全球半導體與AI需求激增，台股表現亮眼但油價上漲引發市場擔憂 - news.cnyes.com",
+        "summary": "全球半導體與AI需求持續激增，帶動台股亮眼表現，但油價上漲也引起市場關注。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mZE9VUDF4ZnVNZk9EVmZSVjlOdUs3Y2pzd01kcEpWUmstODNKQ3kxZlU1bWY2QjlwSUN4WHRzTlNkSFNQdENuVHA1dkd5WXV2c1pn?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "比爾蓋茲警告AI威脅 半導體需求激增新加坡VSMC強化供應鏈韌性 - news.cnyes.com",
+        "summary": "比爾蓋茲發出AI威脅警示，同時半導體需求強強滾，亞太供應鏈積極強化韌性。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9LekkzYThzalJLMVVCTTQwaGJ4S0xpemR1QlBjVmRHSC1CUUxSSFVXb1RoUWhlblBNQW5aTjU4Z2t3alNZdGotdjhseGo1ekdzQ0pV?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "台股在AI熱潮推動下創櫃買市場新高，半導體產業前景看好 - news.cnyes.com",
+        "summary": "在AI熱潮強力推動下，櫃買市場創下歷史新高，半導體前景持續看好。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYeXAzUGNrSVlRdERzdGFyczB0WVJNdWVsRU9CV203WVJDd3ozNzJCLWo4ZV9FMXltbnNpWHRxVDVyZ2FCaEY3SFI0Sm96THV6VVBB?oc=5",
+        "published_date": "2026-09-28"
+      },
+      {
+        "title": "川普與AI高層共進晚餐，台股科技股強勁，油價影響市場動態 - news.cnyes.com",
+        "summary": "川普與AI巨頭共進晚餐牽動敏感神經，台股科技股表現強勁，兼受油價波動影響。",
+        "source": "鉅亨網-科技產業",
+        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBIS0lDQkVxMWhyUXNiczdDTy1PbkRST0xiRzVPc25tZWFnM0hXTExjLXpPSE42dVNPRnJYVGV1a08zZFVvbi1vOUk5RDBnR1J1YzVR?oc=5",
+        "published_date": "2026-09-28"
       }
     ]
   },
   "us_stocks": {
-    "market_summary": "美股受美伊進入技術磋商與AI題材支撐，三大指數周線收紅，道瓊勁揚近480點。",
-    "tsm_adr_note": "台積電ADR受惠科技股韌性與AI晶片強勁需求穩步向上。",
+    "market_summary": "受油價與美債殖利率攀升影響，美股主要指數開低，道瓊指數早盤跌逾300點。",
+    "tsm_adr_note": "台積電ADR隨大盤震盪，供應鏈前景依舊受到高度關注。",
     "news": [
       {
-        "title": "本週操盤筆記：美國PCE物價指數、非農就業報告及美光財報 - news.cnyes.com",
-        "summary": "本週美國將公布PCE物價指數與非農就業報告，並將迎來美光財報。",
+        "title": "〈美股早盤〉油價與美債殖利率攀升 主要指數開低、道瓊跌逾300點 - news.cnyes.com",
+        "summary": "因油價與美債殖利率雙雙走高，美股主要指數開盤走低，道瓊跌幅超過300點。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vN0gzdG5rOHhsSGFjQVktSVcybU5IVUNJYkVvMHVoSTVrQUhGdmRBUXV2Z2NrN21lUDRvUUVzaUdURXR3M2ZqR2Fjc3VhRXM?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBWVThSd19TMVN4MkpZQUlyLVBqQ1VNcUVGUVhoWHhjNHRtdUQtUWRRMjY2N1pfTmpBMloxTG1IMk4zVHV5aXB5MHQwZ01wQXM?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "輝達評估導入玻璃基板！最快2028年前應用於下一代GPU、與台積電等合作 - news.cnyes.com",
-        "summary": "輝達正評估最快2028年前將玻璃基板導入次世代GPU，並攜手台積電等夥伴。",
+        "title": "非農還沒公布先翻多！摩根大通交易員看好美股續攻、力挺AI行情 - news.cnyes.com",
+        "summary": "摩根大通交易員在非農就業數據公布前夕轉為看多，公開力挺美股與AI行情續攻。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlTHJrQzJsbUFBd2s4SE50OU9qd2RzMTIwdUNFNml6cU4tNWgtQnlaMVhXdFJ2VkJJZXpneGJqWnVqUnZxajhpXzBRMGwya0U?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBMODlMUEFRZkM1VWVDQmd1OXVBU0dWcWNfbG9kWjByU1VjOXAyd3FIQlNZSHFkZUlOT3JmbnNHc181S2tNZGhKWkNXcUZNd00?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "Meta AI代理爆發！祖克柏談Muse：「元宇宙、智慧眼鏡和大模型」三大賭注完成交匯 - news.cnyes.com",
-        "summary": "祖克柏指出Meta的AI代理Muse交匯了元宇宙、智慧眼鏡與大模型三大賭注。",
+        "title": "市值一年蒸發逾半！股東催支付大廠砍成本、找Palantir助陣 - news.cnyes.com",
+        "summary": "支付大廠市值一年蒸發過半，股東強力施壓要求砍成本，並找來Palantir協助。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8wUlBjYXMtbTFSQ2hZLXVQYXFEbHVsZERKbGYzNmdoX1Vjam9IOVFRVk5KOXFZa1RUcko4cXhlbDlsbF94RHctN2sxclVySlk?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5iNE1aTXVLTmp6REl3YjB2UjhZdzA1NUVrVklxdC1WVEpMRUQ3TzFNYXg2RkdRVVo1QmV3SDdmWlVQSDBKYWF3anY3d3B6eXM?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "川普大砍美國汽車油耗標準！2031年下修至34.5英里、每輛新車省930美元 - news.cnyes.com",
-        "summary": "美國官方下修2031年汽車油耗標準至34.5英里，預期每輛新車可節省成本。",
+        "title": "SpaceX第14次試飛迎突破！馬斯克星艦克服引擎異常 首度進入地球軌道 - news.cnyes.com",
+        "summary": "SpaceX星艦第14次試飛傳出重大突破，克服引擎異常後首度成功進入地球軌道。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFByeXItMHlReGNmdzBaa1IxNS15Y210d1ZPS002emxhVVNock1yMGhWQmJOR2htYnRweW96VTVJV09GTU16SnY5b3haV29IYUE?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NdkhzTzk3UGl5NVd6MUNNMTJJVGpjd2x2VHNTcF9ZQWFEbU9TRzdhMk5yc3lyTEl5cmxyYzdBX1JSM05DQjJ3Mm1mTFZiZnM?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "馬斯克AI算力狂飆！SpaceXAI今年增66萬顆輝達GB300 GPU、總數逼近144萬顆 - news.cnyes.com",
-        "summary": "馬斯克旗下SpaceX AI算力大幅擴張，今年將增66萬顆輝達GB300 GPU。",
+        "title": "〈VSMC開幕〉VSMC建廠僅花20.5個月創新紀錄 第二期挑戰18個月 - news.cnyes.com",
+        "summary": "VSMC建廠僅花20.5個月創下新紀錄，並宣佈第二期工程將挑戰18個月完工。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YUVUyS1VlSThhc1JiZXBqR2VPeXFWVFNEZlhRSnlfOWRMYUlsVU14MlhsS1N6bW9yaGRDQnBKSWtXZU9wTHVzUGhGcjU2SmM?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fYW00MzFNSWE4d2JpVjNXd1pDQ2NrWlIxRkNrRzlqczZTaHVPLUVUcllnSXlVc0JLT3dhTHFUd1pNMGdHVnFlUF92RWxGdVU?oc=5",
+        "published_date": "2026-09-28"
       },
       {
-        "title": "海外資金瘋搶美股！12個月淨買進9420億美元創40年新高、美債需求卻降溫 - news.cnyes.com",
-        "summary": "過去12個月海外資金淨買進美股達9420億美元創下40年新高，美債需求則降溫。",
+        "title": "SpaceX商業化邁關鍵一步！星艦首次成功入軌 搭載26顆V3星鏈衛星開啟「賺錢」任務 - news.cnyes.com",
+        "summary": "SpaceX星艦首次成功入軌並搭載26顆V3星鏈衛星，正式開啟商業化賺錢任務。",
         "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jUF9tdmpiWE9CWklkNTR2b2k0dlE3VnlTdFlYRkNVN1pNVVBXOWtyQjZpSWxXZ1VUQXNnVEd1cXQzX0lhdW8tRjh0LVY0VTA?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "微軟發布AI使用報告 台灣AI使用率33.8%全球排名前進至第19 - news.cnyes.com",
-        "summary": "微軟發布最新AI使用報告，台灣的AI使用率達33.8%，全球排名上升至第19位。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PQ2ZjclZxM0pTdGR0TDFTTGcwUDBGN21DSnk3QU5xa25nYmhPc0lXWm5EajJPU05wZDVrb0lCUlZJRDNyTE9lc3VhcGxVVVE?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美銀警告美股恐迎一波猛烈拋售！「兩大訊號」值得警惕 - news.cnyes.com",
-        "summary": "美銀發出警告，提醒投資人留意美股可能出現的一波猛烈拋售訊號。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE14NmtjODRBb3cwNXRmdlN4MlVsc2JMdkIzemwxX3J5WmxwWjNzcDdwR3F5eFhkLU81UzIyemZEUHFKOEh3cVo4dVNJRktLOTQ?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "對沖基金押注「波動率交易」，AI、油價與美債三重衝擊引爆美股分化 - news.cnyes.com",
-        "summary": "對沖基金押注波動率交易，面對AI、油價與美債的三重衝擊引發美股分化。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBZbmRVbFJsNlhldUZpamVRV2NpOFNSSXBCSXpGZDZaSFplSTV2Yk5uTHdNVHhPS3oyNldqbDYxOHM0T3dZcXNhWEF5NlJJb1U?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "〈美股盤後〉傳美伊進入技術磋商階段 道瓊勁揚近480點 三大指數周線收紅 - news.cnyes.com",
-        "summary": "美伊傳出進入技術磋商階段，激勵道瓊大漲近480點，三大指數周線順利收紅。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBjeHpNYXZad2NWWDgySklEUGxaV2dsU3Y5ejFnZlNoLXBSTkRHcEVnaFdFcnpVMGRVaVh6anN0eURGSG9HcXJoWWpGM0Z4U1U?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股會因債券市場焦慮而迎來猛烈拋售嗎？ - news.cnyes.com",
-        "summary": "市場關注債券市場焦慮情绪是否會對美股造成進一步的賣壓衝擊。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVC1US1M4c3VsWktTOWpFcjR1Z1VkSjBzQlZhNzZMSml6TVFjcEkyRkJsUEZuaklBaVhGMWpHc1BsZnNxc3N6UUFqNG53cDJ6ZGNlYmgzNlo0SS1oUFdtVGdKaGdaY25zTnQtVklUQ29nczlxankwbDJvUm55Zkt2MzlvcmJQMXpUal8tWGNMVmt5YXJoMTJKVE1qRTN2U29SMFNlZVRn?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "分析：美債殖利率飆升至近20年高位，美股卻逆勢堅挺，AI成關鍵支撐 - news.cnyes.com",
-        "summary": "儘管美債殖利率飆升至近20年高位，但美股展現逆勢堅挺，AI成為關鍵支撐力量。",
-        "source": "鉅亨網-美股個股",
-        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RcFhHZUZGbDVuNUJ0V1hQcjRlVHAtTkNHYk1hc0pnb0w0RklMbzM3VG1GS1p5TlpVSmItakxSOXZQbXpSU2hucDlmdXp5eEU?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美國向阿根廷提供70億美元貸款，科技股面臨高利率挑戰與市場變遷 - news.cnyes.com",
-        "summary": "美國提供阿根廷貸款，同時科技股在高利率環境下仍持續面臨成本與市場挑戰。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1qVHlwTnp5NXl4dzRUcHFGMy1kenJFRnhQUzRlX0Q0cE1MNGtoVFVvMmRiNy05Q1hzVWFjUktWLW5US0VMLWpzYUdHSzhjNU1vdXFV?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股高利率新常態下科技股韌性凸顯 全球汽車競爭加劇 - news.cnyes.com",
-        "summary": "美股在高利率新常態下展現科技股韌性，全球汽車產業競爭亦日益加劇。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9XcDBGMmhQUFFuTFVQd1RoRGxzeklSSWlMdkNSRDJ2cmFkYzktSmZ1eEtLem52aWxCcGxpc3NreTBOOGhJZXZrSUJOdkJEOFlQQlRr?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "科技與貿易新動向：AI需求激增、晶片競爭加劇及中美合作亮相 - news.cnyes.com",
-        "summary": "科技貿易動向受關注，AI需求持續激增，帶動晶片競爭與國際合作機會。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8yUzBDTzFHQlZQVjVhZEhZRUxjU1ZzampwbXdWWUM5QzFiSlQ1SlJqNFpuRHprbUtjSjFWOS1lZXpaVmQ4NDRMamEteloyWUFXUGI4?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美國推70億貸款助阿根廷礦業，高利率與科技股韌性成市場焦點 - news.cnyes.com",
-        "summary": "美國推動貸款協助阿根廷礦業，市場焦點持續鎖定高利率與科技股抗跌韌性。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE03ZGRiNUpZWDZ2d3dkaEtyUktyQnE2YXg5YUtETDdnNWtBYXJqeHA0QlpMaWV2b1Z0NlczcHZVUzRnQWpUQWY0ejZ3RjNScTAzV0Fz?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "微軟股價創新高，投資者需調整策略應對市場變化與科技成本壓力 - news.cnyes.com",
-        "summary": "微軟股價創下歷史新高，投資人需動態調整策略以應對科技成本壓力。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MWGNjaUxfWmNrREZjaVlZdUpKd0thV2UzVE5veHNFeTZEc0hkVjRwZ2xudnV3OGY0R2s3d1JwekZqRW5LVjF6bk1VejduUzVLT3pn?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股市場受AI技術擴張與沙烏地原油出口激增影響，國際局勢交織複雜未來走向 - news.cnyes.com",
-        "summary": "美股走勢交織著AI技術擴張與沙烏地原油出口激增等複雜的國際局勢影響。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1BMTZNdExNQkVzVmxVVWRickUwcjJTcG9nc2lIVWpxWl9pWkN0QVRuYXM1VjUyVXV3cTFnRXVDZXJBTnpzVkt5cGN2UlhxZHZmakRj?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美中貿易進展助推市場情緒回暖，科技與AI投資持續攀升面臨新挑戰 - news.cnyes.com",
-        "summary": "美中貿易進展助推市場情緒回暖，但科技與AI投資攀升也伴隨新挑戰。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9MQVBzNUR4bk83YWg1YjNhRm1fODlaZUt1YU4wY2g4cXgyM25CdTQ2TjNHVjhiQ29yLWFlN1ZKLWpPVDJjUnF0WVNZQ0E0LUR4a3NZ?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美國市場熱潮與全球能源波動驅動科技與投資新機遇 - news.cnyes.com",
-        "summary": "美國市場熱潮與全球能源波動同步驅動，為科技與相關投資帶來新機遇。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1kUmd3V1VXN3pxVW04d0duOTlSMDYwM0g5cTVuSHFEdm9qeURXVEJzaUFKT0ZlcFFOd1Z0cUxaMkZIMFZrZGo1MVdLRjVPdDdqMG93?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "市場動態：微軟股價創新高，美國支持阿根廷貸款，科技成本壓力加大，航運股表現搶眼 - news.cnyes.com",
-        "summary": "微軟股價創新高帶動科技股表現，航運股亦同步走強，但成本壓力仍存。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB6Nmp4V0hMVUxEeGNabVVpeGJwZkVkVXdzWnhPT3RPTnR4SDM3aGJSYWg2UWFkR0piYk1HQjRhSTYxZUJweHBtRm9IcTF3ZUVtU3hB?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股上漲反映投資者信心，Oura IPO與AI安全策略成科技股新動向 - news.cnyes.com",
-        "summary": "美股上漲反映投資人信心，Oura IPO與AI安全策略成為科技股最新動向。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5hSkZ4cklMbFhod3o0ZmpGZk01dktBMHhjWk02SG9HV2tPTUJrcFRWVUF6akVKMkkzMHZHQVFrTFZXWXBFRlVvM2tnbzlmbzZWVzdR?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股科技股動態：特斯拉Semi量產、AI驅動晶片需求創新高 - news.cnyes.com",
-        "summary": "特斯拉Semi進入量產階段，強勁的AI需求同步驅動晶片市場創下新高。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9EalZUNlN2RlFSeHQ4UTJUV0o0a3lUak92SlA3SkRyWWtBeFo3RVdaX2RRR1hHMG15Y1gxQVNnMFVUbUd5R1h0LXlhS1RFNml6VG1F?oc=5",
-        "published_date": "2026-09-27"
-      },
-      {
-        "title": "美股動態：AI競賽加劇、南韓資金變化與中東局勢交織影響市場 - news.cnyes.com",
-        "summary": "AI競賽加劇、南韓資金板塊挪移與中東地緣局勢交織影響整體美股表現。",
-        "source": "鉅亨網-科技產業",
-        "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBhUzBMUGYtZ0VzQ19tYVh5V3FvX3JBMEtfbER5ZE5IcDlVNFhTQTgyZW9JWFY5QVBCMWlQREtEaFFGNWE4Q05wSm5xbWNWX3ZvSXJZ?oc=5",
-        "published_date": "2026-09-27"
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MUndEblN3OTd0YlRhZVJzbUNyTWEzQ1NsenZGcEVzbndKV01hWFlJM2pOYkc0NmFYSVFNcWVVUk9acXltMzVMUDRfLVFMWkE?oc=5",
+        "published_date": "2026-09-28"
       }
     ]
   },
   "macro": [
     {
-      "title": "本週操盤筆記：美國PCE物價指數、非農就業報告及美光財報 - news.cnyes.com",
-      "summary": "本週市場聚焦美國PCE物價指數、非農就業報告以及美光最新財報。",
+      "title": "非農還沒公布先翻多！摩根大通交易員看好美股續攻、力挺AI行情 - news.cnyes.com",
+      "summary": "摩根大通交易員在非農數據出爐前夕態度轉樂觀，表態力挺美股及AI相關行情。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vN0gzdG5rOHhsSGFjQVktSVcybU5IVUNJYkVvMHVoSTVrQUhGdmRBUXV2Z2NrN21lUDRvUUVzaUdURXR3M2ZqR2Fjc3VhRXM?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBMODlMUEFRZkM1VWVDQmd1OXVBU0dWcWNfbG9kWjByU1VjOXAyd3FIQlNZSHFkZUlOT3JmbnNHc181S2tNZGhKWkNXcUZNd00?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "本週操盤筆記：美國PCE物價指數、非農就業報告及美光財報 - gfemobile.cnyes.com",
-      "summary": "本週重點關注指標包含美國PCE通膨數據、非農就業與美光財報。",
+      "title": "美財長貝森特籲Fed保持「開放態度」：AI生產率紅利或緩解通膨壓力 - 鉅亨網",
+      "summary": "美財長貝森特呼籲聯準會保持開放態度，認為AI帶來的生產力紅利有望緩解通膨。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUVEtEYTByTG50MlJ5ekhoYTlZa1hTYmVsYTNVUVprZGY1SXlaVG1Cd1FLYmlubEtOdG1YNkdNM2RKNk5ScXBubU1UOGNRaUJRNEItVEdB?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBfZU1JTmhtVUlRMTM3eVFKNXNpa3ZXVXktMHRVTFQ1SFdTbG1WMmYwQjB6Y2NLVFhCNl95Y3dnc1otYm90UFdTbkVxYw?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "下週非農重磅來襲，市場迎「數據超級周」 - 鉅亨網",
-      "summary": "下週將迎來美國非農就業等重磅數據，市場正式進入超級數據週。",
+      "title": "摩根大通交易員為何在非農公布前轉為看多美股？ - news.cnyes.com",
+      "summary": "探討摩根大通交易員在重要非農就業數據發布前夕，集體轉向看多美股的背後邏輯。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YQndkV2c3OWwxNFpEcTgzeThHbWJhWm10c0VseEdqdmo0MHdwckRmWVRzTEVfYk4zQXhvU2VfWkE4R1BPZ3RQODM4eWZYSHM?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxQR2xYWUhybUFNSF9sR2tLN0tmOGMwckM2M0NsZkN6bkNfRGVvQ2I0V1RFUXFYNEdlOFg3cGR5SGxjcDUtVlVsNDJ1QWR4ZVozQkJpalJvSC0tdEFyVkF2M09VWXN4cU01VTlad1FPcXRseXZzRjlyZXFuaFU4OTQ2Y3loMTJXRHZ2X0w1OU5BQk0tdkd2M3pPYXB1akJKWTRZODRYM0s5dnlLZkJ2LU1MM0V1RnpteTJsc2tHaHVIQnYzbkQ1LXFPVnZWaVotQlVyWjY0a2xLaU5HNUtBMEM0YUVRbEFMUnE2UTN5UUotYTZOZG82MVBOS1M1eng5NE1jUG1BOGxmeGwwemozUkhMXy16YnZ6SDB2MEVHTlAtbW83cUdZcFdKNFBybnlacnR6NE5BMnotQWhvTHpqYUYxX2JwVEFuNXZsSFRTS2syTy0tMVhKUlUyVUlOa3ByWkVuTi1IeFVmOVBzdGE3aVpGTU1mVDFuaUlpRTRqMlY2enFEenpXU1AtTkVyVDlEZlBRaDRwV3d6R3dCaE00WnBjZ3plNFBmNXNxM3FMaTI5NjVRZ1hTekhUVzMzY3NpRFl0dXI0TVhhNVpGbnpEREx3c1RwVmMybVBFUnhkV2l4TzJ5dUNURUJURy01ZWlYU3c?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "高盛談升息：市場押得太狠？聯準會或只需再加一次息 - 鉅亨網",
-      "summary": "高盛認為市場對升息預期押得太狠，聯準會可能只需要再升息一次。",
+      "title": "就業市場仍具韌性！經濟學家： Fed「高利率更久」政策再獲一層支撐 - news.cnyes.com",
+      "summary": "美國就業市場維持強韌，經濟學家認為這為聯準會維持「高利率更久」提供支撐。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE95clZrLXBJcFlYNkNZOFYzNHFpYmJOc2tISzc1VlBvUFpHRDNkcjdra0VJT2ZVWVI2MFBpR1JWdkNKS0t0Q3BNcU5rTlM2cGs?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBweEVyelBhSnVnM0NQd1FabFZlU3N0bmxNQjlNd2ticHFOWjdFSm5Cc0c2VnZHbW5NTHZZMjEtZ01heGlKM0pHM1VCY2ltdTA?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "9月非農就業報告若不如預期，對勞動市場釋出何種訊號？ - news.cnyes.com",
-      "summary": "若9月非農就業報告不如預期，將對勞動市場的降溫程度釋出關鍵訊號。",
+      "title": "頭條新聞 - 鉅亨網",
+      "summary": "鉅亨網關注的今日重要財經與市場總體經濟頭條新聞動態。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSjNuQlVOUEVCbVAxU3B3RzdQb2dtelpMUFZJYzJiTWZRSlVRd3V5WUdCaTFTMUUxQWx0WXM4NjM2MmpXY2tZaWhXTGpoQldhNnFCZC0teEYtcndqN2RjSDh3endGY21xTFFJVVNQUGlBVFk5SWh2WEViamNVaHZsOVZZaF9HUWlTLXJyVDRHMUs1MFBvMUI3VHRUWQ?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA1TGd6MVlselJ2M1pMZi1ncmNNNmlkYlNEWHV6N255WTc0SS0tZy01X2tUd0U2aGctRjVKZ3dsUW9tVEJTSzRUTks3dW1fbU0?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "聯準會「高利率更久」預期升溫，因就業與消費保持韌性 - news.cnyes.com",
-      "summary": "由於美國就業與消費數據保持韌性，聯準會「高利率維持更久」的預期持續升溫。",
+      "title": "Fed升息錯了嗎？知名避險基金大亨警告：AI改寫通膨邏輯、緊縮貨幣政策恐適得其反 - 鉅亨網",
+      "summary": "避險基金大亨警告聯準會若持續緊縮恐適得其反，因AI技術正在根本改寫通膨邏輯。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jV1BsOXFMZ2ZfdWs0MWNXdG9WbDlKSFJGblcwNG9uczJuYmpibEZ3ZVRwTFhKZm52a2tGWFFWTU1ZMjRPME5PcTFJOHdPekk?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE96NEMydU03cHJMLWE1REhNZXhrelMzOE5sWnpoeXRWc0tSYzBxWFdnN2lnZnYxOEFJZ3lLQWlyOTVvT2JINXlSdjd3SQ?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "下週宏觀展望：非農與PCE重磅來襲，美光週三盤後發佈財報 - news.cnyes.com",
-      "summary": "下週宏觀面臨非農與PCE考驗，週三盤後則有美光財報將登場。",
+      "title": "美股聚焦PCE與非農數據，AI技術熱潮與安全挑戰交織影響經濟前景 - news.cnyes.com",
+      "summary": "美股市場高度聚焦PCE與非農數據，同時AI熱潮與安全挑戰交織影響整體經濟。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4zRGxIT2FOd1pIRUF4YXNCZzU3a0plUGlCZ1QxVVZhSXlHSlp5SXdackxzaUQ5QVJYQjVhQXlEcGZDZExNNGZkN1NhLXhYY0E?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9leDMyUmJmR2ZvUHFHN29DU2J0dkVJR1M5UVRxTjJBRnJQa2Rnd0kwNWtLM3p1aFg2LXE3QUozT1VuUW9lU3lzQ1FZdFpnTFNCZ3RF?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "區塊鏈重點動態2026年9月25日早參考 - news.cnyes.com",
-      "summary": "提供區塊鏈市場在9月下旬的重點動態與早盤參考資訊。",
+      "title": "美股市場動態：PCE與非農數據影響升息，AI技術競爭激烈 - news.cnyes.com",
+      "summary": "總經數據將牽動聯準會利率動向，市場持續關注AI技術競爭對產業的深遠影響。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yOUc4b1djeGd4ek4ydVNNNm5MR0pkVmNCWjJhMnAwbVY0bTluTGYwWmJZYmNZN0pvaTlaRDljNzVqclZDcnh4WjVQSjd1MEU?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9qdTM5bzFEZ0VNajdkYWFTZVF1RVlEcm0yZkdITnJWUFhxLW53d2ZrV0lrSWhjZE00Qko4b0t1Q1VtME9DazhTV1ozaUwyYXpzSDgw?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "美國駕駛者面臨油價上漲，新油耗標準是否會增加其燃料支出？ - news.cnyes.com",
-      "summary": "美國駕駛者面臨油價上漲，新油耗標準是否會增加燃料支出引發討論。",
+      "title": "美國經濟數據影響聯準會政策，Meta AI助手熱潮及油運市場升溫引關注 - news.cnyes.com",
+      "summary": "美國經濟數據牽動Fed政策走向，Meta AI助手熱潮與油運市場變化備受關注。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMitwRBVV95cUxOb1hsd1hNVHFsR19hSkw2UkVjdWFqZzRXU0kyVU1QWHY4TFBzanBkanpodjkxQzVwelN6WVF5Z19mN3RUOHJCX2syY3pXampTWlFRWG5JWlJRWWF6ck9XVDBMOFRQWF9lLTlLQnpzOXRiMVNrTFJ0blhuakx3S2drcWxzWTQ3bXhBbTNmU2dRREt4OGlhbEFsQW4wMEt2c3dHZHBiS3pDRjBIblVUVzBmaEZaVVRGYjR0RWNxamFfSTJKcTNXM0YzWF9oVDhwb1B2YmZDeVVsdF91SG1sV29MdEJOM0c3WVZkWTJLVkFja1I3X2s2RkNaMWZmalpCYzNDSzR1bXhGdzBmR0JFM0l4cW5oV3FPdmY1YkFudUktbHEtZjVFeGtvWElMbkRwcEVOQm9RNEFNbVNsSVpQbFBIODRmWTZpMkpwMnVMRlBvRVJseXpJbHk3cktyM1hvS0FBRklYcUV1RENCZjJnUFFvbUthM1V5enBvQ0wxVUZpXzBSNUxZRm5ZMUpmcFhUY1BvX29kMUQyY2hqSFl4VFljSnVyS1B5NklIaUptaGEtc2NaX2haczZVNHRIMFJBb3N1dlg4Y1djVXBoNlZ5djZrekh2dGhZa015azk5b2tab0ZGb0EwcnNOR0ZFYm5Mei1DY3VBWE41cDhPTmlpcUtCU3BnS2JyUHV2bEg2RWhPa3RxWU45T0pLb0p4elhXMHZvVzkwOTItcUhya012VjhOeVVDMlFmWEk?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB2RERRUWpUVElxMW5xWGNHam1WSzFpWE1UX2pVVFF5SWxSbW5OX1ZSZDZLOUNqY1BPbzBibUktTl9PYjJIdGJCNUR4MENNb2I3N3JR?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "搶升息後第一波高利｜合庫、一銀美元定存最高4.05% 公股銀最新優惠一次看 - news.cnyes.com",
-      "summary": "公股行庫如合庫、一銀搶推升息後美元定存高利，最高來到4.05%。",
+      "title": "美股聚焦PCE指數與非農報告，Meta AI助手快速增長引發市場期待 - news.cnyes.com",
+      "summary": "美股聚焦PCE指數與非農報告，Meta旗下AI助手快速增長為市場帶來強烈期待。",
       "source": "鉅亨網-總經",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1SZjVSNXYtREhoYUZNX19hXzBfX0k2c1RBSGotQ2Vzbng5Y3BNQ19qUTg0Rl96bGJlOUFkRjhkQmVuV3NaWi1yX19RNzVsLUE?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBfNUc5bGs2dFBKcDNvTUsyNnZQem92bDhHSnRVZEZFbUNqQmhpNm9hTENEZ3ZUellZU2oyWHlrdmVoYkt5S0hHWlhhOWhXb1ZaM1VN?oc=5",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "年底狂奔5萬點？知名分析師押「5檔大魔王」 不只聯茂 矽晶圓也入列",
-      "summary": "分析師看好台股基本面與資金面，第四季在低位潛力股帶動下蓄勢待發。",
+      "title": "全球央行狂掃黃金，其長期佈局策略為何？ - news.cnyes.com",
+      "summary": "全球央行持續大舉掃貨黃金，其背後的長期資產配置佈局策略引發市場探討。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZF9vQW00RE9LT2ZGUzdDeXAzd19peFBpVlpwQm5CbDQtdlloWnVKOHd1RktfeFo1YXNhUHNlczI5cElkMVlhMFN0TGtUcmpDU3BIUmRFQm1MVDkxYVJWakhrX1V3dktXMFFPUVcwZWJQbGJGdTRtTHlRMEJZNkR6Z3lncUFnSEtpeWVxQUl1Y01lQkRTWk03c0JXaVpxZ2RhVy1HZGFB?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "VAHA Financial : 非農與PCE考驗聯準會利率路徑，AI新品密集落地，霍爾木茲談判生變推升油價風險 - 鉅亨號",
+      "summary": "分析指出非農與PCE將考驗Fed利率路徑，AI新品密集落地，油價則面臨地緣風險。",
+      "source": "鉅亨網-總經",
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5zY3ZMOVZGSEJSUGJ6UGxtbXBWaWlOM0hDOV9sajlvR18zUk9pRWJ0aE5YOVowb0VmaGxKemtpRmhZbE1Nall3QQ?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "AI需求神話被戳破！ 分析師點名「3大瓶頸黑馬」逆勢衝新高",
+      "summary": "資深分析師對雲端大廠AI資本支出的「10年需求能見度」提出質疑，點名潛在瓶頸。",
       "source": "Yahoo奇摩股市-研究報告",
-      "link": "https://tw.stock.yahoo.com/news/%E5%B9%B4%E5%BA%95%E7%8B%82%E5%A5%945%E8%90%AC%E9%BB%9E-%E7%9F%A5%E5%90%8D%E5%88%86%E6%9E%90%E5%B8%AB%E6%8A%BC-5%E6%AA%94%E5%A4%A7%E9%AD%94%E7%8E%8B-%E4%B8%8D%E5%8F%AA%E8%81%AF%E8%8C%82-%E7%9F%BD%E6%99%B6%E5%9C%93%E4%B9%9F%E5%85%A5%E5%88%97-075530431.html",
-      "published_date": "2026-09-27"
+      "link": "https://tw.stock.yahoo.com/news/ai%E9%9C%80%E6%B1%82%E7%A5%9E%E8%A9%B1%E8%A2%AB%E6%88%B3%E7%A0%B4-%E5%88%86%E6%9E%90%E5%B8%AB%E9%BB%9E%E5%90%8D-3%E5%A4%A7%E7%93%B6%E9%A0%B8%E9%BB%91%E9%A6%AC-%E9%80%86%E5%8B%A2%E8%A1%9D%E6%96%B0%E9%AB%98-110401415.html",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "連假後下好離手！周冠軍分析師押「最新5檔黑馬」 全解密",
-      "summary": "連假前夕台股雖逢賣壓震盪，分析師建議關注第四季黑馬選股方向。",
+      "title": "日銀升息壓力增 分析師估10月或12月再調高利率",
+      "summary": "日本銀行會議紀錄顯示通膨壓力升溫，分析師預估日銀可能在10月或12月再度升息。",
       "source": "Yahoo奇摩股市-研究報告",
-      "link": "https://tw.stock.yahoo.com/news/%E9%9D%A0-%E6%BC%B2%E5%81%9C8%E6%8B%9B-5%E9%80%A3%E9%9C%B8-%E5%91%A8%E5%86%A0%E8%BB%8D%E5%88%86%E6%9E%90%E5%B8%AB-%E6%9C%80%E6%96%B05%E6%AA%94%E9%BB%91%E9%A6%AC-032436493.html",
-      "published_date": "2026-09-27"
+      "link": "https://tw.stock.yahoo.com/news/%E6%97%A5%E9%8A%80%E5%8D%87%E6%81%AF%E5%A3%93%E5%8A%9B%E5%A2%9E-%E5%88%86%E6%9E%90%E5%B8%AB%E4%BC%B010%E6%9C%88%E6%88%9612%E6%9C%88%E5%86%8D%E8%AA%BF%E9%AB%98%E5%88%A9%E7%8E%87-042238098.html",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "連假後押什麼？明星分析師「5檔攻擊股」開牌 4檔搶先噴漲停",
+      "summary": "台股連假後震盪整理，投顧分析師點名多檔攻擊股，部分個股在盤中表現強勢。",
+      "source": "Yahoo奇摩股市-研究報告",
+      "link": "https://tw.stock.yahoo.com/news/%E9%80%A3%E5%81%87%E5%BE%8C%E6%8A%BC%E4%BB%80%E9%BA%BC-%E6%98%8E%E6%98%9F%E5%88%86%E6%9E%90%E5%B8%AB-5%E6%AA%94%E6%94%BB%E6%93%8A%E8%82%A1-%E9%96%8B%E7%89%8C-4%E6%AA%94%E6%90%B6%E5%85%88%E5%99%B4%E6%BC%B2%E5%81%9C-210530581.html",
+      "published_date": "2026-09-28"
     }
   ],
   "ai": [
     {
-      "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
-      "summary": "Google正在印度測試透過Gemini與AI Mode直接購買沃爾瑪旗下Flipkart商品。",
+      "title": "Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026",
+      "summary": "Anthropic、Gamma與Clay等代表在TechCrunch活動中，分享企業實際部署AI的實戰經驗。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
-      "published_date": "2026-09-27"
+      "link": "https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "Insurers claim AI is already increasing healthcare costs",
-      "summary": "保險業者藍十字藍盾指出，醫院使用AI工具在兩年間額外增加了9.42億美元醫療支出。",
+      "title": "Anthropic’s CEO is about to have dinner with President Trump",
+      "summary": "Anthropic執行長Dario Amodei將與美國總統川普進行首次一對一晚宴會面。",
       "source": "TechCrunch-AI",
-      "link": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
-      "published_date": "2026-09-27"
+      "link": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "AI 做決策可靠嗎？同一段指令跑 3 次排序都不同，我用這段提示詞讓它先列出判斷規則 - 未來商務",
-      "summary": "探討如何透過精準的提示詞規則，解決AI在決策與排序上不穩定的問題。",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAteGFjWFBSWFpIcWNUNEFUTjdGenFXd0gwZ05NSlFoWFNnWWRmYVZfOEJxYzNlc0hpekpPNkxkN1ZtRzFyelVrUG5ZZmVSRUd3eWZuZw?oc=5",
-      "published_date": "2026-09-27"
+      "title": "Can Muse overcome Meta’s trust issues?",
+      "summary": "討論Meta最新的AI動態能否成功突破市場的信任考驗，並搶走同業目光。",
+      "source": "TechCrunch-AI",
+      "link": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+      "published_date": "2026-09-28"
     },
     {
-      "title": "SPAC 之王：工程師恐成「拉霸老人」！AI 讓寫程式不再是瓶頸，人還該把關什麼？ - 未來商務",
-      "summary": "探討當AI讓寫程式不再是瓶頸時，軟體工程師的核心價值與把關能力。",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "summary": "OpenAI擴大支持藍費斯特新聞研究所，投入資金與軟體額度深化新聞與AI合作。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "Are you a Codex Original?",
+      "summary": "OpenAI正招募真實的Codex開發者與研究員故事，尋找下一批創意應用的創造者。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/form/codex-originals",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+      "summary": "OpenAI實測顯示最新模型GPT-6 Astra在處理複雜稅務工作簿的效率比前代快上一倍。",
+      "source": "OpenAI 官方新聞",
+      "link": "https://openai.com/index/basis-tax-workbook-with-astra",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "「好問題，才有好答案！」品牌怎麼問AI才精準？5套企業提示詞框架一次看 - 數位時代",
+      "summary": "介紹5套企業專用的AI提示詞框架，幫助品牌與行銷人員更精準地向AI提問。",
       "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBWU09SMlBPYmpLbzQzWE15ZFliRlVDMmF0amNjRGthYWJqeEMwUzRJaE84NGNhQ2FSQmJWTTZwTXUwcGs0RVpOLVUxLWJ1QWNsM3FnYg?oc=5",
-      "published_date": "2026-09-27"
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPc1Q2ZWxraVpGT01rakEtOGlGSlhBX3gxbnJzaTBwbmZqNkJZS1VOdXJCSnNwZG5VZ3hBX0VUV0N3R2dFV1FxMkt0SmFLWlVzQUNyY1NpUHRtRGlLSjNDYmVYakVJTGgwRUZqbC1uczJ1alYyX05zNTc0UHZfR2F5d3lieEE5aEliZmpRUzBIVDVlTEU?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "AI進化太快！解讀Anthropic執行長3800字長文，通用人工智慧安全有哪些挑戰？ - 數位時代",
+      "summary": "深度解讀Anthropic執行長長文，探討通用人工智慧（AGI）安全所面臨的各項挑戰。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQQ3lBR2EtUzkwcHpnME1hVXE0X294S2tfVHRDbzQ1aEt3ZEhjQ0RCWkwyaXRjbDFobUdWSXQ4V0FfNnRaQzBiV2dsME0xeWhpYUE1UGVkYVFCZWVjTnViZ0ZQUlR0TVY2US05Z01lUFBhbmF3bTI1ZWM5RzROU0o3VWtaVFAyd3JpR2Mw?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "換AI不用重教一次！Claude⇄ChatGPT雙向搬家，記憶、對話紀錄、Skills轉移教學一次看 - 數位時代",
+      "summary": "提供Claude與ChatGPT之間的雙向搬家教學，讓用戶無痛轉移記憶與對話紀錄。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jQWxzV05zT08tcTNudG93N0RiM0ZyZ3RWNERteHZUTVhfSUdOdHI3QlNrWDJpYktxSThleHlSaFpfbW9lMlZqS2g1RERaRUI2bU9XLW9JWlRlOC10VHl2ZFg2emt5bWJ3ZkJ3OE1JN2k?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "Claude幫自己寫Code！Anthropic兩周讓App快3倍：如何用4撇步，讓AI自己找問題跟驗收？ - 數位時代",
+      "summary": "分享如何透過Anthropic的方法論，讓Claude自動寫code並自行找問題與驗收。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbklPNWM4aVFoYTJuUFctUHJ1OG02NkxEbnRDTlkwbWtJN0VsLTNYVXBRaW1CQzF4dGlpTGNiYVJzVHZtbEFQUjd5S1FKclF2T2lrNDcyWVFCdmlpcEpTNkdid2JnbkExNE1mcmpybllRdmlDd3lJd0d1UmdZTzZFaG9ndmtjRERBcU9rbEl3cmQ?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "記者茶水間237.經典 IP 重製大爆發！直擊東京電玩展亮點：從《薩爾達》懷舊風潮到三麗鷗跨界，玩家為什麼對 AI 遊戲不買單？ - 數位時代",
+      "summary": "東京電玩展觀察指出，玩家對於在遊戲中全面導入AI應用的接受度仍然偏低。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wZTBuWU5JRXNtY1U4aXd3cW1yS09kbzhWTzFmQ2tRLUxwNEVNYjFQSEhPQ2JrbWstNzhRbzNpT0NSck44aklqSmI4TUZlTTVlVHRtMUl6LVhLTi1YLS1ieGNhaUlnZkl3Q2N3bE5ENGQ0Skpx?oc=5",
+      "published_date": "2026-09-28"
+    },
+    {
+      "title": "數位關鍵字259｜OpenRouter 和 Hugging Face 為什麼重要到被收購？AI 圈在紅的 Jev 到底在紅什麼？ft. AWS 社群英雄蔣鐙緯 Ernest - 數位時代",
+      "summary": "探討OpenRouter與Hugging Face被收購的關鍵意義，以及近期AI圈爆紅話題。",
+      "source": "數位時代",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9kMjVtZW9oYms5WmhvOVZxZEpldFVZVEZQVkxqTDRhQ0FuRXhsZFRFTmpIQ3JQVnhFQTIwOERlekZnN2xUN3M0TjBvaVY5bjVVRDNIajU4X0Y4RkwtTDV4NGVXTkoyUG9nQU5tTHNkaWUxYWl1?oc=5",
+      "published_date": "2026-09-28"
     }
   ],
-  "startup": [
-    {
-      "title": "日本 8 成百貨營收下滑，電商與老樓是 2 大難題！大丸松坂屋「去百貨化」怎麼做？ - 未來商務",
-      "summary": "面對日本百貨營收下滑挑戰，大丸松坂屋積極轉型推動「去百貨化」策略。",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9SemxtczhGWlJyVlR4Tk0tbjRyNlprSDh1YUg1U2lObUZ0SGpkaWJtMGlxVVY5WmNxRFJCTS1BV29JeC1qaVdidXlMXzJyYThjTTVLbQ?oc=5",
-      "published_date": "2026-09-27"
-    },
-    {
-      "title": "營收逾 7 千億日圓、創最高獲利！思夢樂擺脫連 3 期衰退，平價服飾如何找回消費者？ - 未來商務",
-      "summary": "平價服飾品牌思夢樂擺脫連三期衰退，創下營收與獲利新高紀錄。",
-      "source": "數位時代",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE82WnljZWJ3cG9fa0NMUjNrbG9UWWVsc2xOS2gtWlJEMTFZbGgyN0tnMkx6REZFcy1rRV9MVVVjRzg0c1J5WENIdGd1NnBuVmNISDlMcA?oc=5",
-      "published_date": "2026-09-27"
-    }
-  ],
-  "closing_note": "穩健布局，掌握先機！"
+  "startup": [],
+  "closing_note": "面對市場波動，穩健布局才是長久之道！"
 }
